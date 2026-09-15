@@ -12,16 +12,75 @@
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./static/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 
 <body>
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="rpm-meter">
+        <svg viewBox="0 0 200 120" class="rpm-svg">
+          <!-- Dial Background -->
+          <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#444" stroke-width="12" stroke-linecap="round" />
+          <!-- Red Zone -->
+          <path d="M 156.5 43.4 A 80 80 0 0 1 180 100" fill="none" stroke="var(--red, #ff0000)" stroke-width="12" stroke-linecap="round" />
+          <!-- Center point cover -->
+          <circle cx="100" cy="100" r="14" fill="#222" stroke="#444" stroke-width="2" />
+          <!-- Needle -->
+          <g class="rpm-needle">
+            <circle cx="100" cy="100" r="6" fill="var(--red, #ff0000)" />
+            <polygon points="97,100 103,100 100,30" fill="var(--red, #ff0000)" />
+          </g>
+        </svg>
+      </div>
+      <div class="loader-text">
+        <span class="tagline" style="color: var(--red);">RIDE FEARLESS</span>
+      </div>
+      <style>
+        .rpm-meter {
+          width: 150px;
+          height: 90px;
+          margin: 0 auto 10px;
+          overflow: visible;
+        }
+        .rpm-svg {
+          width: 100%;
+          height: 100%;
+          overflow: visible;
+        }
+        .rpm-needle {
+          transform-origin: 100px 100px;
+          animation: revving 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+          transform: rotate(-90deg);
+        }
+        @keyframes revving {
+          0% { transform: rotate(-90deg); }
+          15% { transform: rotate(-20deg); }
+          30% { transform: rotate(-60deg); }
+          50% { transform: rotate(40deg); }
+          70% { transform: rotate(-10deg); }
+          90% { transform: rotate(85deg); }
+          100% { transform: rotate(70deg); }
+        }
+      </style>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+          loader.classList.add('hidden');
+          setTimeout(() => loader.style.display = 'none', 800);
+        }
+      }, 1200);
+    });
+  </script>
   <nav class="nav">
     <div class="brand-container">
-      <a class="brand-logo" href="#top"><img src="./static/images/1784811540903.png" alt="REVVX Ride Fearless"></a>
+      <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"></a>
     </div>
-    <div class="navlinks"><a href="#products">Products</a><a href="#fitment">Fitment</a><a href="#story">Our Story</a><a
-        href="#contact">Contact</a><a href="#" onclick="toggleTheme(event)">◐ Theme</a></div><button class="cart-button"
+    <div class="navlinks"><a href="#machine-selector">Products</a><a href="#fitment">Fitment</a><a href="#story">Our Story</a><a
+        href="#contact">Contact</a></div><button class="cart-button"
       onclick="openCart()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="5" y="2" width="14" height="7" rx="1" />
@@ -46,8 +105,7 @@
         <p class="eyebrow">ENGINEERED IN BANGALORE · EST. 2018</p>
         <h1>PRECISION<br><i>BUILD.</i></h1>
         <p class="hero-copy">OEM - grade automotive parts with uncompromizing quality and style.</p>
-        <div class="hero-actions"><a class="button primary" href="#products">Explore products <span>→</span></a><a
-            class="button ghost" href="#fitment">Book fitment</a></div>
+        <div class="hero-actions"><a class="button primary" href="#machine-selector">Explore products <span>→</span></a></div>
       </div>
       <div class="hero-stats">
         <div><strong>30+</strong><span>Bike platforms</span></div>
@@ -139,7 +197,7 @@
           your ride deserves.</p>
         <div class="fitment-list"><span>✓ Expert consultation</span><span>✓ Precision installation</span><span>✓ Same
             day for most parts</span></div><a class="button primary"
-          href="https://wa.me/919999999999?text=Hello%20REVVX%2C%20I%20would%20like%20to%20book%20a%20fitment."
+          href="https://wa.me/916362777677?text=Hello%20REVVX%2C%20I%20would%20like%20to%20book%20a%20fitment."
           target="_blank">Book a fitment →</a>
       </div>
     </section>
@@ -148,9 +206,24 @@
         <p class="eyebrow">MADE WITH INTENT</p>
         <h2>THE PURSUIT<br>OF <i>BETTER.</i></h2>
       </div>
-      <p class="story-copy">At REVVX, every contour has a purpose. We blend obsessive engineering with the raw character
-        of motorcycling to create accessories that protect, perform and belong on your machine.<br><br><b>Designed,
-          Tested, Fitted and loved by riders.</b></p>
+      <div class="story-copy">
+        <p style="margin-bottom: 24px; color: #fff; font-size: 1.1em; line-height: 1.6;">At Revvx, we don't just manufacture motorcycle accessories - <b>we engineer confidence.</b></p>
+        <ul style="list-style-type: none; padding: 0; display: grid; gap: 16px; margin-bottom: 24px;">
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span> 
+            <span>We specialize in premium crash guards and performance-focused motorcycle accessories designed for riders who demand protection without compromising style.</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span> 
+            <span>Every product we build is crafted with precision, durability, and real-world riding conditions in mind.</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span> 
+            <span>It's our obsession with strength, fitment accuracy, and clean design.</span>
+          </li>
+        </ul>
+        <p style="color: #fff; font-weight: 600; font-size: 1.05em; border-left: 2px solid var(--red); padding-left: 12px;">Revvx is for riders who respect power, value and quality.</p>
+      </div>
     </section>
     <section class="gallery">
       <div class="gallery-kicker wrap">
@@ -184,16 +257,19 @@
       <div><a class="brand-logo footer-logo" href="#top"><img src="./static/images/1784811540903.png" alt="REVVX"></a>
         <p>Precision motorcycle accessories.<br>Made in Bangalore, India.</p>
       </div>
-      <div><b>EXPLORE</b><a href="#products">Products</a><a href="#fitment">Book Fitment</a><a href="#story">About
+      <div><b>EXPLORE</b><a href="#machine-selector">Products</a><a href="#fitment">Book Fitment</a><a href="#story">About
           REVVX</a></div>
       <div><b>VISIT THE WORKS</b>
-        <p>JP Nagar, Bangalore<br>Mon–Sat · 10am–7pm</p><a class="red-link" href="https://wa.me/919999999999"
+        <p>JP Nagar, Bangalore<br>Mon–Sat · 10am–7pm</p><a class="red-link" href="https://wa.me/916362777677"
           target="_blank">WhatsApp us →</a>
       </div>
     </div>
-    <div class="footer-bottom wrap"><span>© 2026 REVVX PERFORMANCE</span><span>RIDE FEARLESS</span></div>
+    <div class="footer-bottom wrap">
+      <span>© 2026 REVVX PERFORMANCE</span>
+      <span>Made with love from bikers to bikers</span>
+      <span>RIDE FEARLESS</span>
+    </div>
   </footer>
-  <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">WA <span>Chat with us</span></a>
   <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
     <aside class="drawer">
       <div class="drawer-title">
@@ -251,7 +327,7 @@
       
       const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
       
-      window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`, '_blank'); 
+      window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank'); 
     }
 
     function filterProducts() { 
@@ -284,14 +360,6 @@
     }
 
     renderBrands();
-    function toggleTheme(e) {
-      if (e) e.preventDefault();
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-    }
-    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-      document.body.classList.add('light');
-    }
 
     // Scroll Tracker Logic
     const scrollProgress = document.getElementById('scroll-progress');
@@ -332,6 +400,29 @@
         lastRawScrollTop = scrollTop;
       }
     });
+
+    // Mobile Menu Toggle & Auto-Close
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.navlinks');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+        }
+      });
+
+      window.addEventListener('scroll', () => {
+        if (navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+        }
+      });
+    }
   </script>
 </body>
 

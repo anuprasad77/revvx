@@ -9,6 +9,6 @@ pnpm install
 pnpm dev
 ```
 
-Before launch, replace `919999999999` in `app/page.tsx` with the REVVX WhatsApp Business number and replace the temporary Unsplash photography with licensed originals in `public/images/`.
+Before launch, replace `916362777677` in `app/page.tsx` with the REVVX WhatsApp Business number and replace the temporary Unsplash photography with licensed originals in `public/images/`.
 
 `supabase/schema.sql` defines the initial scalable schema for products, bike fitment compatibility, and WhatsApp inquiries. `vercel.json`, sitemap, robots, metadata, security headers, and responsive styling are included for deployment.

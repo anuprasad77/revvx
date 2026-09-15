@@ -12,20 +12,18 @@
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./static/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 
 <body>
   <nav class="nav">
     <div class="brand-container">
-      <a class="brand-logo" href="#top"><img src="./static/images/1784811540903.png" alt="REVVX Ride Fearless"></a>
+      <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"></a>
     </div>
     <div class="navlinks">
       <a href="#products">Products</a>
       <a href="#fitment">Fitment</a>
       <a href="#story">Our Story</a>
       <a href="#contact">Contact</a>
-      <a href="#" onclick="toggleTheme(event)">◐ Theme</a>
     </div>
     <button class="cart-button" onclick="openCart()">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -75,7 +73,7 @@
       }
 
       :root {
-        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 1 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 1 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 1 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 1 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
       }
 
       .stage-rig {
@@ -413,7 +411,7 @@
       <div class="stage-rig">
 
         <!-- Master Background SVG: Shadow, Beam Base & Cone Mask -->
-        <svg class="stage-svg-fx stage-svg-bg" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="stage-svg-fx stage-svg-bg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <filter id="cone-edge-soften" x="-10%" y="-10%" width="120%" height="120%">
               <feGaussianBlur stdDeviation="7" />
@@ -496,7 +494,7 @@
         </div>
 
         <!-- Master Foreground SVG: Front Bezel, Halos & Prominent REVVX Badge -->
-        <svg class="stage-svg-fx stage-svg-fg" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="stage-svg-fx stage-svg-fg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <!-- High-End Multi-Layer Glow -->
             <filter id="fg-halo-glow" x="-30%" y="-40%" width="160%" height="200%">
@@ -593,7 +591,7 @@
       </div>
     </section>
 
-    <section class="products wrap" style="padding-top: 20px; padding-bottom: 150px;">
+    <section id="products" class="products wrap" style="padding-top: 20px; padding-bottom: 150px;">
       <div class="search" style="margin-bottom: 30px; max-width: 250px; margin-left: auto; margin-right: auto;">
         ⌕ <input id="search" placeholder="Search accessories">
       </div>
@@ -618,16 +616,15 @@
       <div>
         <b>VISIT THE WORKS</b>
         <p>JP Nagar, Bangalore<br>Mon–Sat · 10am–7pm</p>
-        <a class="red-link" href="https://wa.me/919999999999" target="_blank">WhatsApp us →</a>
+        <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
       </div>
     </div>
     <div class="footer-bottom wrap">
       <span>© 2026 REVVX PERFORMANCE</span>
+      <span>Made with love from bikers to bikers</span>
       <span>RIDE FEARLESS</span>
     </div>
   </footer>
-
-  <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">WA <span>Chat with us</span></a>
 
   <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
     <aside class="drawer">
@@ -787,14 +784,24 @@
 
       grid.innerHTML = bikeProducts.map(product => {
         const inCart = cart[product.id];
+        
+        let fallbackImage = './images/IMG_0499.JPG';
+        if (typeof BIKES_DATA !== 'undefined') {
+          const allBikes = Object.values(BIKES_DATA).flat();
+          const matchedBike = allBikes.find(b => product.bike.toLowerCase().includes(b.categorySearch.toLowerCase()) || b.categorySearch.toLowerCase().includes(product.bike.toLowerCase()));
+          if (matchedBike && matchedBike.image) {
+            fallbackImage = matchedBike.image;
+          }
+        }
+
         return `
         <article class="product" data-category="${product.category}" data-search="${product.name} ${product.bike}">
-          <div class="product-photo">
-            <img src="${product.image}" alt="${product.name}">
+          <div class="product-photo" style="cursor: pointer;" onclick="window.location.href='product.html?id=${product.id}'">
+            <img src="${product.image || fallbackImage}" alt="${product.name}" style="object-fit: contain; background: rgba(0,0,0,0.2);">
             ${product.tag ? `<span class="tag">${product.tag}</span>` : ''}
-            ${!inCart ? `<button class="quick" onclick="addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Quick Add +</button>` : ''}
+            ${!inCart ? `<button class="quick" onclick="event.stopPropagation(); addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Quick Add +</button>` : ''}
           </div>
-          <h3 style="margin-top: 16px;">${product.name}</h3>
+          <h3 style="margin-top: 16px; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='white'" onclick="window.location.href='product.html?id=${product.id}'">${product.name}</h3>
           <div class="product-bottom" style="display: flex; flex-direction: column; align-items: stretch; gap: 14px; margin-top: auto; padding-top: 12px;">
             <div style="display: flex; flex-direction: column; line-height: 1.4;">
               ${product.mrp && product.mrp > product.price ? `<span style="text-decoration: line-through; color: #888; font-size: 0.85em;">MRP ${money(product.mrp)}</span>` : ''}
@@ -812,8 +819,8 @@
               : `<button style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: white; cursor: pointer; transition: 0.2s; text-transform: uppercase; font-size: 0.85em; font-weight: 600; letter-spacing: 1px; text-align: center; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.background='white'; this.style.color='black'" onmouseout="this.style.background='transparent'; this.style.color='white'" onclick="addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Add to Cart</button>`
             }
           </div>
-        </article>
-      `}).join('');
+        </article>`;
+      }).join('');
     }
     function saveCart() { localStorage.setItem('revvx_cart', JSON.stringify(cart)); }
 
@@ -850,7 +857,7 @@
       
       const message = `Hello REVVX,\n\nI would like to order the following accessories for my ${bikeName}:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
       
-      window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`, '_blank');
+      window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank');
     }
 
     renderProductsList();
@@ -864,15 +871,6 @@
     }
     renderCart();
     renderBrands();
-
-    function toggleTheme(e) {
-      if (e) e.preventDefault();
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-    }
-    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-      document.body.classList.add('light');
-    }
 
     // Scroll Progress Indicator Logic
     const scrollProgress = document.getElementById('scroll-progress');
@@ -904,6 +902,29 @@
         lastRawScrollTop = scrollTop;
       }
     });
+
+    // Mobile Menu Toggle & Auto-Close
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.navlinks');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+        }
+      });
+
+      window.addEventListener('scroll', () => {
+        if (navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+        }
+      });
+    }
   </script>
 </body>
 
