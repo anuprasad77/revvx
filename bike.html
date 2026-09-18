@@ -73,8 +73,9 @@
       }
 
       :root {
-        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 1 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 1 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 0 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
       }
+      .desktop-only { display: none; }
 
       .stage-rig {
         position: relative;
@@ -134,11 +135,11 @@
         object-fit: contain;
         object-position: center bottom;
         display: block;
-        opacity: 0.72;
-        mix-blend-mode: multiply;
-        filter: contrast(1.25) brightness(0.82);
-        mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 95%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 95%, transparent 100%);
+        opacity: 1;
+        mix-blend-mode: normal;
+        filter: contrast(1.1) brightness(1.05);
+        mask-image: linear-gradient(to bottom, black 0%, black 95%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, black 95%, transparent 100%);
       }
 
       #bike-360-viewer {
@@ -405,6 +406,14 @@
           max-width: 98vw;
         }
       }
+
+      @media (min-width: 651px) {
+        .showroom-stage {
+          --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 180 105 A 180 27 0 0 0 540 105 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 196 105 A 164 24 0 0 0 524 105 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+        }
+        .mobile-only { display: none; }
+        .desktop-only { display: initial; }
+      }
     </style>
 
     <section class="showroom-stage" id="bike-header">
@@ -426,16 +435,28 @@
             <!-- 3D Conical Frustum Mask -->
             <mask id="studioConeMask" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="520">
               <g filter="url(#cone-edge-soften)">
-                <path d="
+                <path class="mobile-only" d="
                   M 200 45 
-                  A 160 25 0 0 1 520 45 
+                  A 160 25 0 0 0 520 45 
+                  L 650 445 
+                  A 290 40 0 0 1 70 445 
+                  Z" fill="#ffffff" />
+                <path class="desktop-only" d="
+                  M 180 105 
+                  A 180 27 0 0 0 540 105 
                   L 650 445 
                   A 290 40 0 0 1 70 445 
                   Z" fill="#ffffff" />
               </g>
-              <path d="
+              <path class="mobile-only" d="
                 M 215 45 
-                A 145 22 0 0 1 505 45 
+                A 145 22 0 0 0 505 45 
+                L 630 445 
+                A 270 36 0 0 1 90 445 
+                Z" fill="#ffffff" />
+              <path class="desktop-only" d="
+                M 196 105 
+                A 164 24 0 0 0 524 105 
                 L 630 445 
                 A 270 36 0 0 1 90 445 
                 Z" fill="#ffffff" />
@@ -443,13 +464,18 @@
           </defs>
 
           <!-- Suspension Wires -->
-          <line x1="260" y1="0" x2="260" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
+          <line class="mobile-only" x1="260" y1="0" x2="260" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
             opacity="0.6" />
-          <line x1="460" y1="0" x2="460" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
+          <line class="mobile-only" x1="460" y1="0" x2="460" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
+            opacity="0.6" />
+          <line class="desktop-only" x1="260" y1="0" x2="260" y2="100" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
+            opacity="0.6" />
+          <line class="desktop-only" x1="460" y1="0" x2="460" y2="100" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
             opacity="0.6" />
 
           <!-- Volumetric Beam Ambient Sheen -->
-          <path d="M 200 45 L 520 45 L 650 445 L 70 445 Z" fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
+          <path class="mobile-only" d="M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z" fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
+          <path class="desktop-only" d="M 180 105 A 180 27 0 0 0 540 105 L 650 445 A 290 40 0 0 1 70 445 Z" fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
 
           <!-- Deep Contact Floor Shadow -->
           <ellipse cx="360" cy="465" rx="300" ry="34" fill="#000000" opacity="0.95" filter="blur(16px)" />
@@ -464,11 +490,13 @@
         <div class="image-darkening-layer"></div>
 
         <!-- Dynamic Bike Viewer (Elevated into the Spotlight Beam) -->
-        <div class="viewer-wrap">
+        <div class="viewer-wrap" style="position: relative;">
+          
           <img id="bike-image" src="" alt="Selected motorcycle">
           <div id="bike-360-viewer">
             <img class="frame-img" id="frame-img" src="" alt="Rotate motorcycle view">
           </div>
+
         </div>
 
         <!-- Floating Cinematic Particles -->
@@ -570,14 +598,24 @@
           </g>
 
           <!-- 4. Top Overhead Halo Fixture -->
-          <g transform="translate(0, 0)">
+          <g class="mobile-only" transform="translate(0, 0)">
             <ellipse cx="360" cy="45" rx="164" ry="27" stroke="#151b24" stroke-width="8" />
             <ellipse cx="360" cy="45" rx="160" ry="25" stroke="#ffffff" stroke-width="5.5"
               filter="url(#fg-halo-glow)" />
             <ellipse cx="360" cy="45" rx="159" ry="24" stroke="#ffffff" stroke-width="2" />
           </g>
+          <g class="desktop-only" transform="translate(0, 0)">
+            <ellipse cx="360" cy="105" rx="184" ry="29" stroke="#151b24" stroke-width="8" />
+            <ellipse cx="360" cy="105" rx="180" ry="27" stroke="#ffffff" stroke-width="5.5"
+              filter="url(#fg-halo-glow)" />
+            <ellipse cx="360" cy="105" rx="179" ry="26" stroke="#ffffff" stroke-width="2" />
+          </g>
         </svg>
 
+        <!-- Arrows for sub-model switching -->
+        <button id="prev-submodel" class="submodel-nav-btn" style="display: none; position: absolute; left: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;" onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'" onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'" onclick="switchSubModel(-1)">&#10094;</button>
+
+        <button id="next-submodel" class="submodel-nav-btn" style="display: none; position: absolute; right: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;" onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'" onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'" onclick="switchSubModel(1)">&#10095;</button>
       </div>
 
       <div class="drag-hint-pill" id="drag-hint" style="display:none;">
@@ -615,8 +653,12 @@
       </div>
       <div>
         <b>VISIT THE WORKS</b>
-        <p>JP Nagar, Bangalore<br>Mon–Sat · 10am–7pm</p>
-        <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
+        <p>Peenya, Bangalore<br>Mon–Sat · 9:00am–6:30pm</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+          <a href="mailto:revvx.automotive@gmail.com">revvx.automotive@gmail.com</a>
+          <a href="https://instagram.com/revvx.in" target="_blank">IG: @revvx.in</a>
+          <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom wrap">
@@ -657,13 +699,53 @@
     const urlParams = new URLSearchParams(window.location.search);
     const selectedBikeSearch = urlParams.get('bike');
 
+    let currentSubModelIndex = 0;
+    let matchedBikeData = null;
+
+    window.switchSubModel = function(dir) {
+      if (!matchedBikeData || !matchedBikeData.subModels) return;
+      currentSubModelIndex += dir;
+      if (currentSubModelIndex < 0) currentSubModelIndex = matchedBikeData.subModels.length - 1;
+      if (currentSubModelIndex >= matchedBikeData.subModels.length) currentSubModelIndex = 0;
+      
+      const subModel = matchedBikeData.subModels[currentSubModelIndex];
+      activeSubModel = subModel.name;
+      loadBikeDetails();
+      renderProductsList();
+    };
+
     function loadBikeDetails() {
       if (typeof BIKES_DATA === 'undefined') return;
       const allBikes = Object.values(BIKES_DATA).flat();
-      const bike = allBikes.find(b => b.categorySearch === selectedBikeSearch) || allBikes[0];
+      matchedBikeData = allBikes.find(b => b.categorySearch === selectedBikeSearch) || allBikes[0];
 
-      if (bike) {
-        document.getElementById('bike-name').innerHTML = `<i>${bike.name}</i>`;
+      if (matchedBikeData) {
+        let displayBike = matchedBikeData;
+        let displayName = matchedBikeData.name;
+        
+        const prevBtn = document.getElementById('prev-submodel');
+        const nextBtn = document.getElementById('next-submodel');
+        
+        if (matchedBikeData.subModels && matchedBikeData.subModels.length > 0) {
+          // Sync activeSubModel if not set
+          if (!activeSubModel || activeSubModel === 'ALL') {
+             activeSubModel = matchedBikeData.subModels[currentSubModelIndex].name;
+          } else {
+             // Find index based on activeSubModel
+             const idx = matchedBikeData.subModels.findIndex(sm => sm.name === activeSubModel);
+             if (idx !== -1) currentSubModelIndex = idx;
+          }
+          displayBike = matchedBikeData.subModels[currentSubModelIndex];
+          displayName = displayBike.name;
+          
+          if (prevBtn) prevBtn.style.display = 'flex';
+          if (nextBtn) nextBtn.style.display = 'flex';
+        } else {
+          if (prevBtn) prevBtn.style.display = 'none';
+          if (nextBtn) nextBtn.style.display = 'none';
+        }
+
+        document.getElementById('bike-name').innerHTML = `<i>${displayName}</i>`;
         const imgEl = document.getElementById('bike-image');
         const viewer360El = document.getElementById('bike-360-viewer');
         const hint = document.getElementById('drag-hint');
@@ -672,16 +754,16 @@
         if (imgEl) imgEl.style.display = 'none';
         if (hint) hint.style.display = 'none';
 
-        if (bike.imageSequence) {
+        if (displayBike.imageSequence) {
           viewer360El.style.display = 'block';
           if (hint) hint.style.display = 'inline-flex';
-          init360Viewer(bike.imageSequence.urlPattern, bike.imageSequence.frames, viewer360El);
-        } else if (bike.image) {
-          imgEl.src = bike.image;
+          init360Viewer(displayBike.imageSequence.urlPattern, displayBike.imageSequence.frames, viewer360El);
+        } else if (displayBike.image || matchedBikeData.image) {
+          imgEl.src = displayBike.image || matchedBikeData.image;
           imgEl.style.display = 'block';
         }
 
-        document.title = `${bike.name} Accessories | REVVX`;
+        document.title = `${displayName} Accessories | REVVX`;
       }
     }
 
@@ -764,17 +846,41 @@
       }
     }
 
+    // Note: selectSubModel is now handled by arrows, but keeping var for state
+    let activeSubModel = 'ALL';
+
     function renderProductsList() {
       loadBikeDetails();
 
       const grid = document.getElementById('product-grid');
+      const switcher = document.getElementById('sub-model-switcher');
       if (typeof PRODUCTS === 'undefined') return;
 
+      let matchedBike = null;
+      if (typeof BIKES_DATA !== 'undefined') {
+        const allBikes = Object.values(BIKES_DATA).flat();
+        matchedBike = allBikes.find(b => b.categorySearch && selectedBikeSearch && b.categorySearch.toLowerCase() === selectedBikeSearch.toLowerCase());
+      }
+
       const bikeProducts = PRODUCTS.filter(p => {
-        return selectedBikeSearch && (
+        const matchesPlatform = selectedBikeSearch && (
           p.bike.toLowerCase().includes(selectedBikeSearch.toLowerCase()) ||
           selectedBikeSearch.toLowerCase().includes(p.bike.toLowerCase())
         );
+        
+        if (!matchesPlatform) return false;
+        if (activeSubModel === 'ALL') return true;
+
+        if (matchedBike && matchedBike.subModels) {
+           const otherSubModels = matchedBike.subModels.filter(sm => sm.name !== activeSubModel);
+           for (let osm of otherSubModels) {
+               if (p.name.toLowerCase().includes(osm.name.toLowerCase())) {
+                   return false; 
+               }
+           }
+        }
+        
+        return true;
       });
 
       if (bikeProducts.length === 0) {
@@ -796,9 +902,10 @@
 
         return `
         <article class="product" data-category="${product.category}" data-search="${product.name} ${product.bike}">
-          <div class="product-photo" style="cursor: pointer;" onclick="window.location.href='product.html?id=${product.id}'">
-            <img src="${product.image || fallbackImage}" alt="${product.name}" style="object-fit: contain; background: rgba(0,0,0,0.2);">
-            ${product.tag ? `<span class="tag">${product.tag}</span>` : ''}
+          <div class="product-photo" style="position: relative; cursor: pointer; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s; margin-bottom: 10px; background: #ffffff; border: 1px solid rgba(255,255,255,0.03);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" onclick="window.location.href='product.html?id=${product.id}'">
+            <!-- Foreground full image -->
+            <img src="${product.image || fallbackImage}" alt="${product.name}" style="position: relative; z-index: 2; width: 100%; aspect-ratio: 4/3; object-fit: contain; display: block; padding: 0; mix-blend-mode: multiply;">
+            ${product.tag ? `<span class="tag" style="position: absolute; top: 12px; left: 12px; z-index: 3;">${product.tag}</span>` : ''}
             ${!inCart ? `<button class="quick" onclick="event.stopPropagation(); addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Quick Add +</button>` : ''}
           </div>
           <h3 style="margin-top: 16px; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='white'" onclick="window.location.href='product.html?id=${product.id}'">${product.name}</h3>

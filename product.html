@@ -73,7 +73,7 @@
       }
 
       :root {
-        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 1 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 1 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+        --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 0 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
       }
 
       .stage-rig {
@@ -134,9 +134,9 @@
         object-fit: contain;
         object-position: center bottom;
         display: block;
-        opacity: 0.72;
-        mix-blend-mode: multiply;
-        filter: contrast(1.25) brightness(0.82);
+        opacity: 1;
+        mix-blend-mode: normal;
+        filter: contrast(1.1) brightness(1.05);
         mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 95%, transparent 100%);
         -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 95%, transparent 100%);
       }
@@ -409,29 +409,62 @@
       .product-detail-layout {
         padding-top: 120px;
         padding-bottom: 100px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
       }
-      
+
       .product-images {
-        background: rgba(255,255,255,0.02);
+        background: rgba(255, 255, 255, 0.02);
         padding: 40px;
         border-radius: 12px;
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
+      .product-thumbnails {
+        display: flex;
+        gap: 12px;
+        margin-top: 15px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--red) transparent;
+      }
+
+      .product-thumbnails img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: 0.2s;
+        background: #ffffff;
+        opacity: 0.6;
+        flex-shrink: 0;
+        padding: 5px;
+      }
+
+      .product-thumbnails img:hover {
+        opacity: 1;
+      }
+
+      .product-thumbnails img.thumbnail-active {
+        border-color: var(--red);
+        opacity: 1;
+      }
+
       @media (max-width: 800px) {
         .product-detail-layout {
-          grid-template-columns: 1fr;
           padding-top: 80px;
           gap: 30px;
         }
-        
+
         .product-images {
           padding: 20px;
         }
@@ -439,22 +472,51 @@
     </style>
 
     <section id="product-detail" class="wrap product-detail-layout">
-      <div class="product-images">
-        <img id="pd-image" src="" alt="Product Image" style="width: 100%; max-height: 500px; object-fit: contain; border-radius: 8px;">
+      <!-- BREADCRUMBS -->
+      <div class="product-top" style="text-align: center; margin-bottom: 10px;">
+        <nav class="product-breadcrumb" style="justify-content: center; margin-bottom: 10px;" aria-label="Breadcrumb"><a href="index.html">HOME</a><span>/</span><a id="pd-bike-link" href="bike.html">MOTORCYCLES</a><span>/</span><span id="pd-crumb-name">ACCESSORY</span></nav>
+        <span id="pd-bike" style="display: block; color: var(--red); font: 600 14px 'DM Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase;"></span>
       </div>
-      <div class="product-info" style="display: flex; flex-direction: column; justify-content: center;">
-        <span id="pd-bike" style="color: var(--red); font: 600 14px 'DM Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px;"></span>
-        <h1 id="pd-name" style="font: 800 42px/1.1 'Barlow Condensed', sans-serif; margin: 0 0 20px 0; letter-spacing: 1px;"></h1>
-        <div class="pricing" style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 30px;">
+
+      <!-- IMAGES -->
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div class="product-images"
+          style="position: relative; aspect-ratio: 4/3; max-height: 550px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #ffffff; border: 1px solid rgba(255,255,255,0.05); cursor: zoom-in;" onclick="openLightbox()">
+          <!-- Foreground full image -->
+          <img id="pd-image" src="" alt="Product Image" style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; padding: 0; transition: transform 0.3s; mix-blend-mode: multiply;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div id="pd-thumbnails" class="product-thumbnails"></div>
+      </div>
+
+      <!-- TITLE & PRICE -->
+      <div class="product-header" style="text-align: center; margin-top: 15px;">
+        <h1 id="pd-name" style="font: 800 42px/1.1 'Barlow Condensed', sans-serif; margin: 0 0 10px 0; letter-spacing: 1px;"></h1>
+        <div class="pricing" style="display: flex; justify-content: center; align-items: baseline; gap: 15px;">
           <b id="pd-price" style="font-size: 32px; color: #fff;"></b>
           <span id="pd-mrp" style="text-decoration: line-through; color: #64748b; font-size: 18px;"></span>
         </div>
-        <div id="pd-description">
-          <!-- Description placeholder for future data -->
-          <p>Product information and specifications will be available here.</p>
-        </div>
-        <div id="pd-cart-controls">
+      </div>
+
+      <!-- ACTION / BUY -->
+      <div class="product-buy" style="display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 20px;">
+        <div id="pd-cart-controls" style="width: 100%; max-width: 350px; display: flex; justify-content: center;">
           <!-- Rendered by JS -->
+        </div>
+        <div class="purchase-assurance" aria-label="Order information" style="width: 100%; max-width: 700px; margin: 0;">
+          <div style="text-align: center;"><span>FITMENT</span><b>CONFIRM BEFORE ORDER</b></div>
+          <div style="text-align: center;"><span>SUPPORT</span><b>WHATSAPP THE TEAM</b></div>
+          <div style="text-align: center;"><span>INSTALL</span><b>WORKSHOP ASSISTANCE</b></div>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div id="pd-description-container"
+        style="margin-top: 40px; padding-top: 50px; border-top: 1px solid var(--border);">
+        <h3
+          style="font: 700 24px/1.2 'Barlow Condensed', sans-serif; letter-spacing: 1px; color: #fff; margin-bottom: 25px; text-align: center;">
+          PRODUCT DETAILS</h3>
+        <div id="pd-description" style="color: #c7cbd1; font-size: 15px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+          <!-- Description placeholder for future data -->
         </div>
       </div>
     </section>
@@ -474,8 +536,12 @@
       </div>
       <div>
         <b>VISIT THE WORKS</b>
-        <p>JP Nagar, Bangalore<br>Mon–Sat · 10am–7pm</p>
-        <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
+        <p>Peenya, Bangalore<br>Mon–Sat · 9:00am–6:30pm</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+          <a href="mailto:revvx.automotive@gmail.com">revvx.automotive@gmail.com</a>
+          <a href="https://instagram.com/revvx.in" target="_blank">IG: @revvx.in</a>
+          <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom wrap">
@@ -509,6 +575,12 @@
     <img src="./static/images/klx_transparent.png" class="scroll-bike" id="scroll-bike" alt="">
   </div>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out;" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" style="max-width: 95vw; max-height: 95vh; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    <button style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&times;</button>
+  </div>
+
   <script src="./static/products.js"></script>
   <script>
     let cart = JSON.parse(localStorage.getItem('revvx_cart')) || {};
@@ -517,9 +589,18 @@
     const productId = urlParams.get('id');
     let currentProduct = null;
 
+    function openLightbox() {
+       document.getElementById('lightbox-img').src = document.getElementById('pd-image').src;
+       document.getElementById('lightbox').style.display = 'flex';
+    }
+    
+    function closeLightbox() {
+       document.getElementById('lightbox').style.display = 'none';
+    }
+
     function renderProductDetails() {
       if (typeof PRODUCTS === 'undefined') return;
-      
+
       currentProduct = PRODUCTS.find(p => p.id === productId);
       if (!currentProduct) {
         document.getElementById('product-detail').innerHTML = `<h2 style="grid-column: 1/-1; text-align: center; margin-top: 50px;">Product not found</h2>`;
@@ -527,7 +608,7 @@
       }
 
       document.title = `${currentProduct.name} | REVVX`;
-      
+
       // Find fallback bike image
       let fallbackImage = './images/IMG_0499.JPG';
       if (typeof BIKES_DATA !== 'undefined') {
@@ -537,12 +618,39 @@
           fallbackImage = matchedBike.image;
         }
       }
-      
-      document.getElementById('pd-image').src = currentProduct.image || fallbackImage;
+
+      const imgToLoad = currentProduct.image || fallbackImage;
+      document.getElementById('pd-image').src = imgToLoad;
+
+      // Render Thumbnail Gallery
+      const thumbContainer = document.getElementById('pd-thumbnails');
+      if (currentProduct.gallery && currentProduct.gallery.length > 0) {
+        thumbContainer.style.display = 'flex';
+        thumbContainer.innerHTML = '';
+        currentProduct.gallery.forEach((imgSrc, idx) => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          if (imgSrc === (currentProduct.image || fallbackImage)) img.className = 'thumbnail-active';
+          img.onclick = () => {
+            const mainImg = document.getElementById('pd-image');
+            mainImg.src = imgSrc;
+            thumbContainer.querySelectorAll('img').forEach(t => t.classList.remove('thumbnail-active'));
+            img.classList.add('thumbnail-active');
+          };
+          thumbContainer.appendChild(img);
+        });
+      } else {
+        thumbContainer.style.display = 'none';
+        thumbContainer.innerHTML = '';
+      }
+
       document.getElementById('pd-bike').textContent = `FITMENT: ${currentProduct.bike}`;
       document.getElementById('pd-name').textContent = currentProduct.name;
+      document.getElementById('pd-crumb-name').textContent = currentProduct.name.toUpperCase();
+      document.getElementById('pd-bike-link').textContent = currentProduct.bike;
+      document.getElementById('pd-bike-link').href = `bike.html?bike=${encodeURIComponent(currentProduct.bike)}`;
       document.getElementById('pd-price').textContent = money(currentProduct.price);
-      
+
       if (currentProduct.mrp && currentProduct.mrp > currentProduct.price) {
         document.getElementById('pd-mrp').textContent = `MRP ${money(currentProduct.mrp)}`;
       } else {
@@ -560,7 +668,7 @@
       if (!currentProduct) return;
       const inCart = cart[currentProduct.id];
       const container = document.getElementById('pd-cart-controls');
-      
+
       if (inCart) {
         container.innerHTML = `
           <div style="display:flex; justify-content: space-between; align-items:center; background:rgba(255,255,255,0.05); border-radius:6px; padding: 6px; border: 1px solid rgba(255,255,255,0.08); max-width: 200px;">
@@ -578,21 +686,21 @@
 
     function saveCart() { localStorage.setItem('revvx_cart', JSON.stringify(cart)); }
 
-    function addProduct(product) { 
-      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 }; 
+    function addProduct(product) {
+      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 };
       saveCart();
-      renderCart(); 
+      renderCart();
       renderCartControls();
     }
-    
-    function updateQty(id, amount) { 
-      cart[id].qty += amount; 
-      if (cart[id].qty < 1) delete cart[id]; 
+
+    function updateQty(id, amount) {
+      cart[id].qty += amount;
+      if (cart[id].qty < 1) delete cart[id];
       saveCart();
-      renderCart(); 
+      renderCart();
       renderCartControls();
     }
-    
+
     function renderCart() {
       const items = Object.values(cart), count = items.reduce((a, p) => a + p.qty, 0), total = items.reduce((a, p) => a + p.qty * p.price, 0);
       document.getElementById('cart-count').textContent = count;
@@ -607,14 +715,14 @@
     function whatsAppOrder() {
       const items = Object.values(cart).map(p => `• ${p.name} x${p.qty} - ${money(p.price)}`).join('\n');
       const totalAmount = Object.values(cart).reduce((sum, p) => sum + (p.price * p.qty), 0);
-      
+
       const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
-      
+
       window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank');
     }
 
     renderCart();
-    
+
     setTimeout(renderProductDetails, 100);
     // So that products.js can trigger it if it loads late
     window.renderProductsList = renderProductDetails;

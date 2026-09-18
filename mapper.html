@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVVX Image Mapper Tool</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --surface: #181b22;
+            --text: #e0e4eb;
+            --border: #2a2f38;
+            --red: #ec1b2e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 { margin: 0; }
+        button {
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background: #d01525; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #000;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .filename {
+            font-size: 12px;
+            color: #858c97;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            outline: none;
+        }
+        select:focus { border-color: var(--red); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>REVVX Image Mapper Tool</h1>
+            <p>Select the correct product for each image. Ignore images you don't need.</p>
+        </div>
+        <button onclick="exportMapping()">Download JSON Mapping</button>
+    </header>
+
+    <div class="grid" id="grid">
+        <!-- Cards injected via JS -->
+    </div>
+
+    <script>
+        const imageFiles = [
+            "IMG_0172.JPG.jpeg", "IMG_0173.JPG.jpeg", "IMG_0174.JPG.jpeg", "IMG_0762.JPG.jpeg",
+            "IMG_0763.JPG.jpeg", "IMG_0764.JPG.jpeg", "IMG_0765.JPG.jpeg", "IMG_0766.JPG.jpeg",
+            "IMG_0767.JPG.jpeg", "IMG_0768.JPG.jpeg", "IMG_0769.JPG.jpeg", "IMG_0770.JPG.jpeg",
+            "IMG_0771.JPG.jpeg", "IMG_0772.JPG.jpeg", "IMG_0773.JPG.jpeg", "IMG_0774.JPG.jpeg",
+            "IMG_0775.JPG.jpeg", "IMG_0776.JPG.jpeg", "IMG_0777.JPG.jpeg", "IMG_0778.JPG.jpeg",
+            "IMG_0779.JPG.jpeg", "IMG_0781.JPG.jpeg", "IMG_0792.JPG.jpeg", "IMG_0793.JPG.jpeg",
+            "IMG_0794.JPG.jpeg", "IMG_0795.JPG.jpeg", "IMG_0796.JPG.jpeg", "IMG_0797.JPG.jpeg",
+            "IMG_0798.JPG.jpeg", "IMG_0799.JPG.jpeg", "IMG_0800.JPG.jpeg", "IMG_0801.JPG.jpeg",
+            "IMG_0802.JPG.jpeg", "IMG_0812.PNG", "IMG_0823.JPG.jpeg", "IMG_0824.JPG.jpeg",
+            "IMG_0839.PNG", "IMG_0840.PNG", "IMG_0841.PNG", "IMG_0842.JPG.jpeg",
+            "IMG_0843.JPG.jpeg", "IMG_0844.JPG.jpeg", "IMG_0845.JPG.jpeg", "IMG_0846.JPG.jpeg",
+            "IMG_0847.JPG.jpeg", "IMG_0848.JPG.jpeg", "IMG_0849.JPG.jpeg", "IMG_0850.JPG.jpeg",
+            "IMG_0851.JPG.jpeg", "IMG_0852.JPG.jpeg", "IMG_0853.JPG.jpeg", "IMG_0866.JPG.jpeg",
+            "IMG_0867.JPG.jpeg", "IMG_0868.JPG.jpeg", "IMG_0869.JPG.jpeg", "IMG_0870.JPG.jpeg",
+            "IMG_0871.JPG.jpeg", "IMG_0872.JPG.jpeg", "IMG_0873.JPG.jpeg", "IMG_0874.JPG.jpeg",
+            "IMG_0875.JPG.jpeg", "IMG_0876.JPG.jpeg", "IMG_0877.JPG.jpeg", "IMG_0878.JPG.jpeg",
+            "IMG_0879.JPG.jpeg", "IMG_0880.JPG (1).jpeg", "IMG_0880.JPG (2).jpeg", "IMG_0880.JPG.jpeg",
+            "IMG_0881.JPG.jpeg", "IMG_0882.JPG.jpeg", "IMG_0883.JPG.jpeg", "IMG_0888.JPG.jpeg",
+            "IMG_0903.JPG.jpeg", "IMG_0904.JPG.jpeg", "IMG_0925.JPG.jpeg", "IMG_0926.JPG.jpeg",
+            "IMG_0927.JPG.jpeg", "IMG_0928.JPG.jpeg", "IMG_0929.JPG.jpeg", "IMG_0930.JPG.jpeg",
+            "IMG_0931.PNG", "IMG_0932.JPG.jpeg", "IMG_0933.JPG.jpeg", "IMG_0934.JPG.jpeg",
+            "IMG_0935.JPG.jpeg", "IMG_0936.JPG.jpeg", "IMG_0937.JPG.jpeg", "IMG_0938.JPG.jpeg",
+            "IMG_0939.JPG.jpeg", "IMG_0940.JPG.jpeg", "IMG_0963.JPG.jpeg", "IMG_0964.JPG.jpeg",
+            "IMG_0965.JPG.jpeg", "IMG_0966.JPG.jpeg", "IMG_0967.JPG.jpeg", "IMG_0968.JPG.jpeg",
+            "IMG_0969.JPG.jpeg", "IMG_0970.JPG.jpeg", "IMG_0971.JPG.jpeg", "IMG_0972.JPG.jpeg",
+            "IMG_0973.JPG.jpeg", "IMG_0974.JPG.jpeg", "IMG_0975.JPG.jpeg", "IMG_0976.JPG.jpeg",
+            "IMG_0977.JPG.jpeg", "IMG_0978.JPG.jpeg", "IMG_0982.PNG", "IMG_0983.PNG", "IMG_0995.PNG"
+        ];
+
+        let products = [];
+
+        const csvData = `BIKE NAME,Accessory Name,MRP,Price,Image 1
+"APRILIA RS 457","Spools M6",1000,849,""
+"APRILIA TUONO 457","Spools M6",1000,849,""
+"APRILIA RS 457","Swing arm sliders rear",1500,1269,""
+"APRILIA TUONO 457","Swing arm sliders rear",1500,1269,""
+"APRILIA RS 457","Fork sliders Front",1500,1269,""
+"APRILIA TUONO 457","Fork sliders Front",1500,1269,""
+"APRILIA RS 457","Frame Sliders",6000,5099,""
+"APRILIA TUONO 457","Frame Sliders",6000,5099,""
+"APRILIA RS 457","Rear Master Cylinder Gaurd",800,679,""
+"APRILIA TUONO 457","Rear Master Cylinder Gaurd",800,679,""
+"APRILIA RS 457","ALU Radiator Gaurd",4000,3399,""
+"APRILIA TUONO 457","ALU Radiator Gaurd",4000,3399,""
+"APRILIA RS 457","Tail Tidy",1200,1049,""
+"APRILIA TUONO 457","Tail Tidy",1200,1049,""
+"KTM ADVENTURE 390","Spools M10",1000,849,""
+"KTM ADVENTURE 250","Spools M10",1000,849,""
+"KTM ENDURO","Spools M10",1000,849,""
+"KTM ADVENTURE 390","Swing arm sliders rear",1100,929,""
+"KTM ADVENTURE 250","Swing arm sliders rear",1100,929,""
+"KTM ENDURO","Swing arm sliders rear",1100,929,""
+"KTM ADVENTURE 390","Fork sliders Front",1100,929,""
+"KTM ADVENTURE 250","Fork sliders Front",1100,929,""
+"KTM ENDURO","Fork sliders Front",1100,929,""
+"KTM ADVENTURE 390","Frame Sliders",2500,2129,""
+"KTM ADVENTURE 250","Frame Sliders",2500,2129,""
+"KTM ENDURO","Frame Sliders",2500,2129,""
+"KTM ADVENTURE 390","ALU Radiator Guard",3500,2999,""
+"KTM ADVENTURE 250","ALU Radiator Guard",3500,2999,""
+"KTM ENDURO","ALU Radiator Guard",3500,2999,""
+"KTM ADVENTURE 390","Mobile Holder",1000,849,""
+"KTM ADVENTURE 250","Mobile Holder",1000,849,""
+"KTM ENDURO","Mobile Holder",1000,849,""
+"KTM ADVENTURE 390","Side stand extender",700,700,""
+"KTM ADVENTURE 250","Side stand extender",700,700,""
+"KTM ENDURO","Side stand extender",700,700,""
+"KTM ADVENTURE 390","Fog lamp clamp",1100,929,""
+"KTM ADVENTURE 250","Fog lamp clamp",1100,929,""
+"KTM ENDURO","Fog lamp clamp",1100,929,""
+"KTM ADVENTURE 390","Tail Tidy",1100,929,""
+"KTM ADVENTURE 250","Tail Tidy",1100,929,""
+"KTM ENDURO","Tail Tidy",1100,929,""
+"KTM ADVENTURE 390","Tail Tidy (with light slot)",1100,929,""
+"KTM ADVENTURE 250","Tail Tidy (with light slot)",1100,929,""
+"KTM ENDURO","Tail Tidy (with light slot)",1100,929,""
+"KTM DUKE GEN 3 390","Spools M10",1000,849,""
+"KTM DUKE GEN 3 250","Spools M10",1000,849,""
+"KTM DUKE GEN 3 390R","Spools M10",1000,849,""
+"KTM DUKE GEN 2 390","Spools M10",1000,849,""
+"KTM DUKE GEN 2 250","Spools M10",1000,849,""
+"KTM DUKE GEN 2 200","Spools M10",1000,849,""
+"KTM DUKE GEN 2 125","Spools M10",1000,849,""
+"KTM DUKE GEN 3 390","Tail Tidy",1100,929,""
+"KTM DUKE GEN 3 250","Tail Tidy",1100,929,""
+"KTM DUKE GEN 3 390R","Tail Tidy",1100,929,""
+"KTM DUKE GEN 2 390","Tail Tidy",1100,929,""
+"KTM DUKE GEN 2 250","Tail Tidy",1100,929,""
+"KTM DUKE GEN 2 200","Tail Tidy",1100,929,""
+"KTM DUKE GEN 2 125","Tail Tidy",1100,929,""
+"KTM DUKE GEN 3 390","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 3 250","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 3 390R","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 2 390","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 2 250","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 2 200","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 2 125","ALU Radiator Guard",3500,2999,""
+"KTM DUKE GEN 3 390","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 3 250","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 3 390R","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 2 390","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 2 250","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 2 200","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 2 125","Fork sliders Front",1100,929,""
+"KTM DUKE GEN 3 390","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 3 250","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 3 390R","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 2 390","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 2 250","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 2 200","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 2 125","Swing arm sliders rear",1100,929,""
+"KTM DUKE GEN 2 390","Tailtidy (Gen 2)",920,799,""
+"KTM DUKE GEN 2 250","Tailtidy (Gen 2)",920,799,""
+"KTM DUKE GEN 2 200","Tailtidy (Gen 2)",920,799,""
+"KTM DUKE GEN 2 125","Tailtidy (Gen 2)",920,799,""
+"TVS APACHE RTX","Spools M8",1000,849,""
+"TVS APACHE RTX","Fork sliders",1100,929,""
+"TVS APACHE RTX","Swing arm sliders",1100,929,""
+"TVS APACHE RTX","Radiator Guard",1600,1359,""
+"TVS APACHE RTX","GPS Mount",1000,849,""
+"RE HIMALAYAN 450","Radiator Guard",1600,1359,""
+"RE HIMALAYAN 450","Fork sliders",1100,929,""
+"RE HIMALAYAN 450","GPS Mount",1000,849,""
+"RE HIMALAYAN 450","Rear Master Cylinder Gaurd",800,679,""
+"RE HIMALAYAN 450","Top rack",1500,1500,""
+"KAWASAKI KLX 230 CKD","Tailtidy",1099,929,""
+"KAWASAKI KLX 230 CBU","Tailtidy",1099,929,""
+"KAWASAKI KLX 230 CKD","Skidplate MS CKD",3499,2975,""
+"KAWASAKI KLX 230 CBU","Skidplate MS CBU",3499,2975,""
+"KAWASAKI KLX 230 CBU","Skidplate ALU CBU",4499,3829,""`;
+
+        function init() {
+            try {
+                const lines = csvData.split('\n').filter(l => l.trim() !== '');
+                
+                for (let i = 1; i < lines.length; i++) {
+                    const row = lines[i];
+                    const cols = row.split(',');
+                    if (cols.length >= 2) {
+                        const bikeName = cols[0].replace(/"/g, '').trim();
+                        const accName = cols[1].replace(/"/g, '').trim();
+                        if (bikeName && accName && bikeName !== 'BIKE NAME') {
+                            products.push(`${bikeName} - ${accName}`);
+                        }
+                    }
+                }
+                
+                renderGrid();
+            } catch (err) {
+                console.error("Error loading accessories:", err);
+                alert("An error occurred generating the products list.");
+            }
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('grid');
+            let optionsHTML = `<option value="">-- Ignore Image (Do not map) --</option>`;
+            
+            // Create options
+            products.forEach(p => {
+                optionsHTML += `<option value="${p}">${p}</option>`;
+            });
+
+            // Create cards
+            imageFiles.forEach((file, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <a href="images/parts/${file}" target="_blank">
+                        <img src="images/parts/${file}" alt="${file}" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <div class="filename">${file}</div>
+                        <select id="sel_${index}">
+                            ${optionsHTML}
+                        </select>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function exportMapping() {
+            const mapping = {};
+            imageFiles.forEach((file, index) => {
+                const select = document.getElementById(`sel_${index}`);
+                if (select.value) {
+                    mapping[file] = select.value;
+                }
+            });
+
+            if (Object.keys(mapping).length === 0) {
+                alert("You haven't mapped any images yet!");
+                return;
+            }
+
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(mapping, null, 2));
+            const dlAnchorElem = document.createElement('a');
+            dlAnchorElem.setAttribute("href", dataStr);
+            dlAnchorElem.setAttribute("download", "mapped_images.json");
+            dlAnchorElem.click();
+            
+            alert("Downloaded mapped_images.json! Provide this file to the AI to update your website.");
+        }
+
+        // Run
+        init();
+    </script>
+</body>
+</html>

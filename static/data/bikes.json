@@ -1,42 +1,47 @@
 {
     "Aprilia": [
         {
-            "id": "Aprilia_RS_457",
-            "name": "APRILIA RS 457",
+            "id": "Aprilia_457",
+            "name": "APRILIA RS & TUONO 457",
             "image": "./static/images/bikes/Aprilia_RS_457.webp",
-            "categorySearch": "APRILIA RS 457",
-            "imageSequence": {
-                "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3643/closed-door/{N}.jpg",
-                "frames": 72
-            }
-        },
-        {
-            "id": "Aprilia_Tuono_457",
-            "name": "APRILIA TUONO 457",
-            "image": "./static/images/bikes/Aprilia_Tuono_457.jpg",
-            "categorySearch": "APRILIA TUONO 457",
-            "imageSequence": {
-                "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3073/closed-door/{N}.jpg",
-                "frames": 72
-            }
+            "categorySearch": "APRILIA",
+            "subModels": [
+                {
+                    "name": "RS 457",
+                    "imageSequence": {
+                        "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3643/closed-door/{N}.jpg",
+                        "frames": 72
+                    }
+                },
+                {
+                    "name": "TUONO 457",
+                    "imageSequence": {
+                        "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3073/closed-door/{N}.jpg",
+                        "frames": 72
+                    }
+                }
+            ]
         }
     ],
     "KTM": [
         {
-            "id": "KTM_ADVENTURE_390",
-            "name": "KTM ADVENTURE 390",
+            "id": "KTM_ADVENTURE",
+            "name": "KTM ADVENTURE 390 / 250",
             "image": "./static/images/bikes/KTM_ADVENTURE_390.png",
-            "categorySearch": "KTM ADVENTURE 390",
-            "imageSequence": {
-                "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3728/closed-door/{N}.jpg",
-                "frames": 72
-            }
-        },
-        {
-            "id": "KTM_ADVENTURE_250",
-            "name": "KTM ADVENTURE 250",
-            "image": "./static/images/bikes/KTM_ADVENTURE_250.png",
-            "categorySearch": "KTM ADVENTURE 250"
+            "categorySearch": "KTM ADVENTURE",
+            "subModels": [
+                {
+                    "name": "390",
+                    "imageSequence": {
+                        "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3728/closed-door/{N}.jpg",
+                        "frames": 72
+                    }
+                },
+                {
+                    "name": "250",
+                    "image": "./static/images/bikes/KTM_ADVENTURE_250.png"
+                }
+            ]
         },
         {
             "id": "KTM_ENDURO",
@@ -49,20 +54,22 @@
             }
         },
         {
-            "id": "KTM_DUKE_GEN3",
+            "id": "KTM_DUKE",
             "name": "KTM DUKE (GEN 3)",
             "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-            "categorySearch": "KTM DUKE GEN 3",
-            "imageSequence": {
-                "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3724/closed-door/{N}.jpg",
-                "frames": 72
-            }
-        },
-        {
-            "id": "KTM_DUKE_GEN2",
-            "name": "KTM DUKE (GEN 2)",
-            "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-            "categorySearch": "KTM DUKE GEN 2"
+            "categorySearch": "KTM DUKE (GEN 3)",
+            "variants": [
+                {
+                    "name": "KTM DUKE (GEN 3)",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
+                    "categorySearch": "KTM DUKE (GEN 3)"
+                },
+                {
+                    "name": "KTM DUKE (GEN 2)",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
+                    "categorySearch": "KTM DUKE (GEN 2)"
+                }
+            ]
         }
     ],
     "Kawasaki": [
