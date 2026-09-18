@@ -718,7 +718,8 @@
     function loadBikeDetails() {
       if (typeof BIKES_DATA === 'undefined') return;
       const allBikes = Object.values(BIKES_DATA).flat();
-      matchedBikeData = allBikes.find(b => b.categorySearch === selectedBikeSearch) || allBikes[0];
+      const normalizeStr = str => (str || '').replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+      matchedBikeData = allBikes.find(b => normalizeStr(b.categorySearch) === normalizeStr(selectedBikeSearch)) || allBikes[0];
 
       if (matchedBikeData) {
         let displayBike = matchedBikeData;
@@ -858,9 +859,10 @@
       if (typeof PRODUCTS === 'undefined') return;
 
       let matchedBike = null;
+      const normalizeStr = str => (str || '').replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
       if (typeof BIKES_DATA !== 'undefined') {
         const allBikes = Object.values(BIKES_DATA).flat();
-        matchedBike = allBikes.find(b => b.categorySearch && selectedBikeSearch && b.categorySearch.toLowerCase() === selectedBikeSearch.toLowerCase());
+        matchedBike = allBikes.find(b => normalizeStr(b.categorySearch) === normalizeStr(selectedBikeSearch));
       }
 
       const bikeProducts = PRODUCTS.filter(p => {

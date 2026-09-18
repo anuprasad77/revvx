@@ -510,7 +510,7 @@ let PRODUCTS = [
     {
         "id": "hardcoded_6",
         "name": "Frame Sliders (RS 457)",
-        "bike": "APRILIA RS 457 & TUONO 457",
+        "bike": "APRILIA RS 457",
         "category": "Accessories",
         "price": 5099,
         "mrp": 6000,
@@ -698,17 +698,6 @@ let PRODUCTS = [
         "tag": "",
         "image": "",
         "description": "<p><strong>REVVX Rear Master Cylinder Gaurd</strong></p><p>Compatible with RE HIMALAYAN 450</p><p>Enhance your riding experience with the REVVX Rear Master Cylinder Gaurd. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>"
-    },
-    {
-        "id": "hardcoded_92",
-        "name": "Top rack",
-        "bike": "RE HIMALAYAN 450",
-        "category": "Accessories",
-        "price": 0,
-        "mrp": 0,
-        "tag": "",
-        "image": "",
-        "description": "<p><strong>REVVX Top rack</strong></p><p>Compatible with RE HIMALAYAN 450</p><p>Enhance your riding experience with the REVVX Top rack. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>"
     }
 ];
 
