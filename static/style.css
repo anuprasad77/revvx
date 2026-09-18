@@ -2112,6 +2112,10 @@ body.light .mrp-price {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+  .advantage-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
   .advantage-card {
     padding: 25px;
   }
