@@ -103,7 +103,10 @@
                 },
                 {
                     "name": "CBU",
-                    "image": "./static/images/klx_transparent.png"
+                    "imageSequence": {
+                        "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/kawasaki/3015/closed-door/{N}.jpg",
+                        "frames": 72
+                    }
                 }
             ]
         }

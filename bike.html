@@ -496,6 +496,7 @@
           <img id="bike-image" src="" alt="Selected motorcycle">
           <div id="bike-360-viewer">
             <img class="frame-img" id="frame-img" src="" alt="Rotate motorcycle view">
+            <div id="nameplate-cover" style="display:none; position:absolute; background-color:#e6e6e6; border-radius:2px; z-index:10; transform-origin: center center;"></div>
           </div>
 
         </div>
@@ -845,6 +846,41 @@
       const frameImg = document.getElementById('frame-img');
       if (frameImg && urlPattern360) {
         frameImg.src = urlPattern360.replace('{N}', currentFrame360);
+        
+        // Nameplate Masking Logic specifically for KLX CBU
+        const nameplateCover = document.getElementById('nameplate-cover');
+        if (nameplateCover) {
+            if (activeSubModel === 'CBU' && matchedBikeData && matchedBikeData.name && matchedBikeData.name.includes('KLX')) {
+                // Nameplate is visible when bike is roughly facing forward (frames 63-72 and 1-10)
+                if (currentFrame360 >= 63 || currentFrame360 <= 10) {
+                    nameplateCover.style.display = 'block';
+                    
+                    // Sine wave approximation for horizontal movement
+                    // Frame 1 is front (angle 0). Frame 19 is side (angle 90).
+                    const angle = (currentFrame360 - 1) * (Math.PI * 2 / 72);
+                    
+                    // 35% is roughly the horizontal radius of the nameplate's movement path
+                    const xOffsetPercent = Math.sin(angle) * 35; 
+                    
+                    // Base center is roughly 48.5% of the image width
+                    const leftPercent = 48.5 - xOffsetPercent;
+                    
+                    nameplateCover.style.left = leftPercent + '%';
+                    
+                    // Y position is relatively static when near the front, ~33.5% down
+                    nameplateCover.style.top = '33.5%';
+                    nameplateCover.style.height = '3.5%';
+                    
+                    // Perspective scaling: narrower as it turns away
+                    const currentWidth = 6 * Math.cos(angle);
+                    nameplateCover.style.width = Math.max(0, currentWidth) + '%';
+                } else {
+                    nameplateCover.style.display = 'none';
+                }
+            } else {
+                nameplateCover.style.display = 'none';
+            }
+        }
       }
     }
 
