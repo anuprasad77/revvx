@@ -54,22 +54,16 @@
             }
         },
         {
-            "id": "KTM_DUKE",
+            "id": "KTM_DUKE_GEN3",
             "name": "KTM DUKE (GEN 3)",
             "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-            "categorySearch": "KTM DUKE (GEN 3)",
-            "variants": [
-                {
-                    "name": "KTM DUKE (GEN 3)",
-                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-                    "categorySearch": "KTM DUKE (GEN 3)"
-                },
-                {
-                    "name": "KTM DUKE (GEN 2)",
-                    "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-                    "categorySearch": "KTM DUKE (GEN 2)"
-                }
-            ]
+            "categorySearch": "KTM DUKE (GEN 3)"
+        },
+        {
+            "id": "KTM_DUKE_GEN2",
+            "name": "KTM DUKE (GEN 2)",
+            "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
+            "categorySearch": "KTM DUKE (GEN 2)"
         }
     ],
     "Kawasaki": [
