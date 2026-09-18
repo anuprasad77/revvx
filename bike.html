@@ -12,7 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./static/style.css">
-<link rel="icon" type="image/png" href="./static/images/1784811540903.png">
+  <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
 <body>
@@ -76,7 +76,10 @@
       :root {
         --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 215 45 A 145 22 0 0 0 505 45 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
       }
-      .desktop-only { display: none; }
+
+      .desktop-only {
+        display: none;
+      }
 
       .stage-rig {
         position: relative;
@@ -412,8 +415,14 @@
         .showroom-stage {
           --cone-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' preserveAspectRatio='none' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cfilter id='f' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23f)'%3E%3Cpath d='M 180 105 A 180 27 0 0 0 540 105 L 650 445 A 290 40 0 0 1 70 445 Z' fill='%23ffffff'/%3E%3C/g%3E%3Cpath d='M 196 105 A 164 24 0 0 0 524 105 L 630 445 A 270 36 0 0 1 90 445 Z' fill='%23ffffff'/%3E%3C/svg%3E");
         }
-        .mobile-only { display: none; }
-        .desktop-only { display: initial; }
+
+        .mobile-only {
+          display: none;
+        }
+
+        .desktop-only {
+          display: initial;
+        }
       }
     </style>
 
@@ -421,7 +430,8 @@
       <div class="stage-rig">
 
         <!-- Master Background SVG: Shadow, Beam Base & Cone Mask -->
-        <svg class="stage-svg-fx stage-svg-bg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="stage-svg-fx stage-svg-bg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <defs>
             <filter id="cone-edge-soften" x="-10%" y="-10%" width="120%" height="120%">
               <feGaussianBlur stdDeviation="7" />
@@ -465,18 +475,20 @@
           </defs>
 
           <!-- Suspension Wires -->
-          <line class="mobile-only" x1="260" y1="0" x2="260" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
-            opacity="0.6" />
-          <line class="mobile-only" x1="460" y1="0" x2="460" y2="40" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
-            opacity="0.6" />
-          <line class="desktop-only" x1="260" y1="0" x2="260" y2="100" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
-            opacity="0.6" />
-          <line class="desktop-only" x1="460" y1="0" x2="460" y2="100" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 2"
-            opacity="0.6" />
+          <line class="mobile-only" x1="260" y1="0" x2="260" y2="40" stroke="#334155" stroke-width="1.5"
+            stroke-dasharray="2 2" opacity="0.6" />
+          <line class="mobile-only" x1="460" y1="0" x2="460" y2="40" stroke="#334155" stroke-width="1.5"
+            stroke-dasharray="2 2" opacity="0.6" />
+          <line class="desktop-only" x1="260" y1="0" x2="260" y2="100" stroke="#334155" stroke-width="1.5"
+            stroke-dasharray="2 2" opacity="0.6" />
+          <line class="desktop-only" x1="460" y1="0" x2="460" y2="100" stroke="#334155" stroke-width="1.5"
+            stroke-dasharray="2 2" opacity="0.6" />
 
           <!-- Volumetric Beam Ambient Sheen -->
-          <path class="mobile-only" d="M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z" fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
-          <path class="desktop-only" d="M 180 105 A 180 27 0 0 0 540 105 L 650 445 A 290 40 0 0 1 70 445 Z" fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
+          <path class="mobile-only" d="M 200 45 A 160 25 0 0 0 520 45 L 650 445 A 290 40 0 0 1 70 445 Z"
+            fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
+          <path class="desktop-only" d="M 180 105 A 180 27 0 0 0 540 105 L 650 445 A 290 40 0 0 1 70 445 Z"
+            fill="url(#stageFloor)" opacity="0.3" filter="blur(22px)" />
 
           <!-- Deep Contact Floor Shadow -->
           <ellipse cx="360" cy="465" rx="300" ry="34" fill="#000000" opacity="0.95" filter="blur(16px)" />
@@ -492,11 +504,13 @@
 
         <!-- Dynamic Bike Viewer (Elevated into the Spotlight Beam) -->
         <div class="viewer-wrap" style="position: relative;">
-          
+
           <img id="bike-image" src="" alt="Selected motorcycle">
           <div id="bike-360-viewer">
             <img class="frame-img" id="frame-img" src="" alt="Rotate motorcycle view">
-            <div id="nameplate-cover" style="display:none; position:absolute; background-color:#e6e6e6; border-radius:2px; z-index:10; transform-origin: center center;"></div>
+            <div id="nameplate-cover"
+              style="display:none; position:absolute; background-color:#e6e6e6; border-radius:2px; z-index:10; transform-origin: center center;">
+            </div>
           </div>
 
         </div>
@@ -524,7 +538,8 @@
         </div>
 
         <!-- Master Foreground SVG: Front Bezel, Halos & Prominent REVVX Badge -->
-        <svg class="stage-svg-fx stage-svg-fg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="stage-svg-fx stage-svg-fg" viewBox="0 0 720 520" preserveAspectRatio="none" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <defs>
             <!-- High-End Multi-Layer Glow -->
             <filter id="fg-halo-glow" x="-30%" y="-40%" width="160%" height="200%">
@@ -615,9 +630,17 @@
         </svg>
 
         <!-- Arrows for sub-model switching -->
-        <button id="prev-submodel" class="submodel-nav-btn" style="display: none; position: absolute; left: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;" onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'" onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'" onclick="switchSubModel(-1)">&#10094;</button>
+        <button id="prev-submodel" class="submodel-nav-btn"
+          style="display: none; position: absolute; left: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;"
+          onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'"
+          onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'"
+          onclick="switchSubModel(-1)">&#10094;</button>
 
-        <button id="next-submodel" class="submodel-nav-btn" style="display: none; position: absolute; right: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;" onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'" onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'" onclick="switchSubModel(1)">&#10095;</button>
+        <button id="next-submodel" class="submodel-nav-btn"
+          style="display: none; position: absolute; right: 10px; top: 40%; transform: translateY(-50%); z-index: 100; background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: 0.2s;"
+          onmouseover="this.style.background='rgba(255,56,85,0.8)'; this.style.borderColor='#ff3855'"
+          onmouseout="this.style.background='rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)'"
+          onclick="switchSubModel(1)">&#10095;</button>
       </div>
 
       <div class="drag-hint-pill" id="drag-hint" style="display:none;">
@@ -704,12 +727,12 @@
     let currentSubModelIndex = 0;
     let matchedBikeData = null;
 
-    window.switchSubModel = function(dir) {
+    window.switchSubModel = function (dir) {
       if (!matchedBikeData || !matchedBikeData.subModels) return;
       currentSubModelIndex += dir;
       if (currentSubModelIndex < 0) currentSubModelIndex = matchedBikeData.subModels.length - 1;
       if (currentSubModelIndex >= matchedBikeData.subModels.length) currentSubModelIndex = 0;
-      
+
       const subModel = matchedBikeData.subModels[currentSubModelIndex];
       activeSubModel = subModel.name;
       loadBikeDetails();
@@ -725,22 +748,22 @@
       if (matchedBikeData) {
         let displayBike = matchedBikeData;
         let displayName = matchedBikeData.name;
-        
+
         const prevBtn = document.getElementById('prev-submodel');
         const nextBtn = document.getElementById('next-submodel');
-        
+
         if (matchedBikeData.subModels && matchedBikeData.subModels.length > 0) {
           // Sync activeSubModel if not set
           if (!activeSubModel || activeSubModel === 'ALL') {
-             activeSubModel = matchedBikeData.subModels[currentSubModelIndex].name;
+            activeSubModel = matchedBikeData.subModels[currentSubModelIndex].name;
           } else {
-             // Find index based on activeSubModel
-             const idx = matchedBikeData.subModels.findIndex(sm => sm.name === activeSubModel);
-             if (idx !== -1) currentSubModelIndex = idx;
+            // Find index based on activeSubModel
+            const idx = matchedBikeData.subModels.findIndex(sm => sm.name === activeSubModel);
+            if (idx !== -1) currentSubModelIndex = idx;
           }
           displayBike = matchedBikeData.subModels[currentSubModelIndex];
-          displayName = displayBike.name;
-          
+          displayName = displayBike.displayName || displayBike.name;
+
           if (prevBtn) prevBtn.style.display = 'flex';
           if (nextBtn) nextBtn.style.display = 'flex';
         } else {
@@ -846,40 +869,40 @@
       const frameImg = document.getElementById('frame-img');
       if (frameImg && urlPattern360) {
         frameImg.src = urlPattern360.replace('{N}', currentFrame360);
-        
+
         // Nameplate Masking Logic specifically for KLX CBU
         const nameplateCover = document.getElementById('nameplate-cover');
         if (nameplateCover) {
-            if (activeSubModel === 'CBU' && matchedBikeData && matchedBikeData.name && matchedBikeData.name.includes('KLX')) {
-                // Nameplate is visible when bike is roughly facing forward (frames 63-72 and 1-10)
-                if (currentFrame360 >= 63 || currentFrame360 <= 10) {
-                    nameplateCover.style.display = 'block';
-                    
-                    // Sine wave approximation for horizontal movement
-                    // Frame 1 is front (angle 0). Frame 19 is side (angle 90).
-                    const angle = (currentFrame360 - 1) * (Math.PI * 2 / 72);
-                    
-                    // 35% is roughly the horizontal radius of the nameplate's movement path
-                    const xOffsetPercent = Math.sin(angle) * 35; 
-                    
-                    // Base center is roughly 48.5% of the image width
-                    const leftPercent = 48.5 - xOffsetPercent;
-                    
-                    nameplateCover.style.left = leftPercent + '%';
-                    
-                    // Y position is relatively static when near the front, ~33.5% down
-                    nameplateCover.style.top = '33.5%';
-                    nameplateCover.style.height = '3.5%';
-                    
-                    // Perspective scaling: narrower as it turns away
-                    const currentWidth = 6 * Math.cos(angle);
-                    nameplateCover.style.width = Math.max(0, currentWidth) + '%';
-                } else {
-                    nameplateCover.style.display = 'none';
-                }
+          if (activeSubModel === 'CBU' && matchedBikeData && matchedBikeData.name && matchedBikeData.name.includes('KLX')) {
+            // Nameplate is visible when bike is roughly facing forward (frames 63-72 and 1-10)
+            if (currentFrame360 >= 63 || currentFrame360 <= 10) {
+              nameplateCover.style.display = 'block';
+
+              // Sine wave approximation for horizontal movement
+              // Frame 1 is front (angle 0). Frame 19 is side (angle 90).
+              const angle = (currentFrame360 - 1) * (Math.PI * 2 / 72);
+
+              // 35% is roughly the horizontal radius of the nameplate's movement path
+              const xOffsetPercent = Math.sin(angle) * 35;
+
+              // Base center is roughly 48.5% of the image width
+              const leftPercent = 48.5 - xOffsetPercent;
+
+              nameplateCover.style.left = leftPercent + '%';
+
+              // Y position is relatively static when near the front, ~33.5% down
+              nameplateCover.style.top = '33.5%';
+              nameplateCover.style.height = '3.5%';
+
+              // Perspective scaling: narrower as it turns away
+              const currentWidth = 6 * Math.cos(angle);
+              nameplateCover.style.width = Math.max(0, currentWidth) + '%';
             } else {
-                nameplateCover.style.display = 'none';
+              nameplateCover.style.display = 'none';
             }
+          } else {
+            nameplateCover.style.display = 'none';
+          }
         }
       }
     }
@@ -910,27 +933,27 @@
           normBike.includes(normSelected) ||
           normSelected.includes(normBike)
         );
-        
+
         if (!matchesPlatform) return false;
         if (activeSubModel === 'ALL') return true;
 
         if (matchedBike && matchedBike.subModels) {
-           const mentionsActive = p.name.toLowerCase().includes(activeSubModel.toLowerCase()) || p.bike.toLowerCase().includes(activeSubModel.toLowerCase());
-           
-           const otherSubModels = matchedBike.subModels.filter(sm => sm.name !== activeSubModel);
-           let mentionsOther = false;
-           for (let osm of otherSubModels) {
-               if (p.name.toLowerCase().includes(osm.name.toLowerCase()) || p.bike.toLowerCase().includes(osm.name.toLowerCase())) {
-                   mentionsOther = true;
-                   break;
-               }
-           }
+          const mentionsActive = p.name.toLowerCase().includes(activeSubModel.toLowerCase()) || p.bike.toLowerCase().includes(activeSubModel.toLowerCase());
 
-           if (mentionsOther && !mentionsActive) {
-               return false; 
-           }
+          const otherSubModels = matchedBike.subModels.filter(sm => sm.name !== activeSubModel);
+          let mentionsOther = false;
+          for (let osm of otherSubModels) {
+            if (p.name.toLowerCase().includes(osm.name.toLowerCase()) || p.bike.toLowerCase().includes(osm.name.toLowerCase())) {
+              mentionsOther = true;
+              break;
+            }
+          }
+
+          if (mentionsOther && !mentionsActive) {
+            return false;
+          }
         }
-        
+
         return true;
       });
 
@@ -941,7 +964,7 @@
 
       grid.innerHTML = bikeProducts.map(product => {
         const inCart = cart[product.id];
-        
+
         let fallbackImage = './images/IMG_0499.JPG';
         if (typeof BIKES_DATA !== 'undefined') {
           const allBikes = Object.values(BIKES_DATA).flat();
@@ -968,35 +991,35 @@
                 <span style="font-size: 1.1em;">${money(product.price)}</span>
               </b>
             </div>
-            ${inCart 
-              ? `<div style="display:flex; justify-content: space-between; align-items:center; background:rgba(255,255,255,0.05); border-radius:6px; padding: 4px; border: 1px solid rgba(255,255,255,0.08);">
+            ${inCart
+            ? `<div style="display:flex; justify-content: space-between; align-items:center; background:rgba(255,255,255,0.05); border-radius:6px; padding: 4px; border: 1px solid rgba(255,255,255,0.08);">
                   <button style="background:rgba(255,255,255,0.1); color:white; border:none; width:36px; height:36px; border-radius: 4px; cursor:pointer; font-size: 1.1em; transition: 0.2s; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" onclick="updateQty('${product.id}',-1)">−</button>
                   <span style="text-align:center; font-weight:600; font-size:1.1em; flex: 1; display: flex; align-items: center; justify-content: center;">${inCart.qty}</span>
                   <button style="background:rgba(255,255,255,0.1); color:white; border:none; width:36px; height:36px; border-radius: 4px; cursor:pointer; font-size: 1.1em; transition: 0.2s; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" onclick="updateQty('${product.id}',1)">+</button>
                  </div>`
-              : `<button style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: white; cursor: pointer; transition: 0.2s; text-transform: uppercase; font-size: 0.85em; font-weight: 600; letter-spacing: 1px; text-align: center; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.background='white'; this.style.color='black'" onmouseout="this.style.background='transparent'; this.style.color='white'" onclick="addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Add to Cart</button>`
-            }
+            : `<button style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: white; cursor: pointer; transition: 0.2s; text-transform: uppercase; font-size: 0.85em; font-weight: 600; letter-spacing: 1px; text-align: center; display: flex; align-items: center; justify-content: center;" onmouseover="this.style.background='white'; this.style.color='black'" onmouseout="this.style.background='transparent'; this.style.color='white'" onclick="addProduct(${JSON.stringify(product).replace(/"/g, '&quot;')})">Add to Cart</button>`
+          }
           </div>
         </article>`;
       }).join('');
     }
     function saveCart() { localStorage.setItem('revvx_cart', JSON.stringify(cart)); }
 
-    function addProduct(product) { 
-      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 }; 
+    function addProduct(product) {
+      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 };
       saveCart();
-      renderCart(); 
+      renderCart();
       renderProductsList();
     }
-    
-    function updateQty(id, amount) { 
-      cart[id].qty += amount; 
-      if (cart[id].qty < 1) delete cart[id]; 
+
+    function updateQty(id, amount) {
+      cart[id].qty += amount;
+      if (cart[id].qty < 1) delete cart[id];
       saveCart();
-      renderCart(); 
+      renderCart();
       renderProductsList();
     }
-    
+
     function renderCart() {
       const items = Object.values(cart), count = items.reduce((a, p) => a + p.qty, 0), total = items.reduce((a, p) => a + p.qty * p.price, 0);
       document.getElementById('cart-count').textContent = count;
@@ -1012,9 +1035,9 @@
       const bikeName = selectedBikeSearch ? selectedBikeSearch : 'my motorcycle';
       const items = Object.values(cart).map(p => `• ${p.name} x${p.qty} - ${money(p.price)}`).join('\n');
       const totalAmount = Object.values(cart).reduce((sum, p) => sum + (p.price * p.qty), 0);
-      
+
       const message = `Hello REVVX,\n\nI would like to order the following accessories for my ${bikeName}:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
-      
+
       window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank');
     }
 
