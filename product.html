@@ -660,6 +660,48 @@
 
       if (currentProduct.description) {
         document.getElementById('pd-description').innerHTML = currentProduct.description;
+        
+        // Transform Key Features into cards
+        const descDiv = document.getElementById('pd-description');
+        const h4s = descDiv.querySelectorAll('h4');
+        h4s.forEach(h4 => {
+          if (h4.textContent.toLowerCase().includes('key features') || h4.textContent.toLowerCase().includes('features')) {
+            const ul = h4.nextElementSibling;
+            if (ul && ul.tagName === 'UL') {
+              h4.style.fontSize = '1.5em';
+              h4.style.color = '#fff';
+              h4.style.marginTop = '40px';
+              
+              const grid = document.createElement('div');
+              grid.className = 'feature-cards';
+              
+              const lis = ul.querySelectorAll('li');
+              lis.forEach(li => {
+                const card = document.createElement('div');
+                card.className = 'feature-card';
+                
+                const strong = li.querySelector('strong');
+                if (strong) {
+                  const title = document.createElement('b');
+                  title.textContent = strong.textContent.replace(':', '');
+                  card.appendChild(title);
+                  
+                  const p = document.createElement('p');
+                  let text = li.innerHTML.replace(strong.outerHTML, '').trim();
+                  if (text.startsWith(':')) text = text.substring(1).trim();
+                  p.innerHTML = text;
+                  card.appendChild(p);
+                } else {
+                  card.innerHTML = `<p>${li.innerHTML}</p>`;
+                }
+                
+                grid.appendChild(card);
+              });
+              
+              ul.parentNode.replaceChild(grid, ul);
+            }
+          }
+        });
       }
 
       renderCartControls();
