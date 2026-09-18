@@ -468,7 +468,7 @@ let PRODUCTS = [
     {
         "id": "hardcoded_0",
         "name": "Spools M6",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
         "price": 849,
         "mrp": 1000,
@@ -483,7 +483,7 @@ let PRODUCTS = [
     {
         "id": "apriliarstuono457-swing-arm-sliders-rear",
         "name": "Swing arm sliders rear",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Protection",
         "mrp": 1500,
         "price": 1269,
@@ -496,7 +496,7 @@ let PRODUCTS = [
     {
         "id": "aprilia_fork_sliders",
         "name": "Fork sliders Front",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
         "price": 1269,
         "mrp": 1500,
@@ -510,7 +510,7 @@ let PRODUCTS = [
     {
         "id": "hardcoded_6",
         "name": "Frame Sliders (RS 457)",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
         "price": 5099,
         "mrp": 6000,
@@ -528,7 +528,7 @@ let PRODUCTS = [
     {
         "id": "apriliarstuono457-rear-master-cylinder-gaurd",
         "name": "Rear Master Cylinder Gaurd",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Protection",
         "mrp": 800,
         "price": 679,
@@ -542,7 +542,7 @@ let PRODUCTS = [
     {
         "id": "aprilia_aluminium_radiator_guard",
         "name": "ALU Radiator Gaurd",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
         "price": 3399,
         "mrp": 4000,
@@ -558,7 +558,7 @@ let PRODUCTS = [
     {
         "id": "aprilia_tailtidy",
         "name": "Tail Tidy",
-        "bike": "APRILIA RS & TUONO 457",
+        "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
         "price": 1049,
         "mrp": 1200,
