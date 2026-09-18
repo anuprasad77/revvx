@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-body {
+body { padding-top: 76px;
   margin: 0;
   background: #0a0a0a;
   color: #fff;
@@ -36,10 +36,14 @@ button {
   align-items: center;
   gap: 38px;
   padding: 0 4vw;
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .brand {
   font: 900 48px/1 "Barlow Condensed";
@@ -224,8 +228,8 @@ h2 i {
   color: var(--red);
 }
 .selector {
-  padding-top: 100px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .section-kicker {
   color: var(--red);
@@ -291,7 +295,7 @@ h2 i {
 }
 .products {
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 .heading-row a {
   font: 500 11px "DM Mono";
@@ -452,8 +456,8 @@ h2 i {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .story h2 {
   margin-top: 18px;
@@ -469,7 +473,7 @@ h2 i {
   color: #fff;
 }
 .gallery {
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 .gallery-kicker {
   padding-top: 90px;
@@ -2294,3 +2298,5 @@ body.light .selector-controls {
   margin: 0;
   line-height: 1.5;
 }
+@ m e d i a   ( m a x - w i d t h :   7 0 0 p x )   {   b o d y   {   p a d d i n g - t o p :   6 4 p x ;   }   }  
+ 
