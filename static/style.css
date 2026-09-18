@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --red: #d40000;
   --black: #090909;
 }
@@ -788,7 +788,7 @@ footer {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-@media (max-width: 700px) {
+
   .hero-spec-card {
     display: none;
   }
@@ -1392,7 +1392,7 @@ body.light .bike-card h3 {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-@media (max-width: 700px) {
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -1546,7 +1546,7 @@ body.light .marquee span:nth-child(even) {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-@media (max-width: 700px) {
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -1685,7 +1685,7 @@ body.light .mrp-price {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-@media (max-width: 700px) {
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -1899,7 +1899,7 @@ body.light .mrp-price {
 }
 
 /* Advantage Cards & Process Section (Premium Unique Styles) */
-@media (min-width: 801px) {
+
   .advantage-grid {
     grid-template-columns: repeat(4, 1fr) !important;
   }
@@ -2107,7 +2107,7 @@ body.light .mrp-price {
   z-index: 2;
 }
 
-@media (max-width: 800px) {
+
   .process-steps {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -2205,7 +2205,7 @@ body.light .selector-controls {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-@media (max-width: 700px) {
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -2298,5 +2298,8 @@ body.light .selector-controls {
   margin: 0;
   line-height: 1.5;
 }
-@ m e d i a   ( m a x - w i d t h :   7 0 0 p x )   {   b o d y   {   p a d d i n g - t o p :   6 4 p x ;   }   }  
+@ m e d i a   ( m a x - w i d t h :   7 0 0 p x )   {   b o d y   {   p a d d i n g - t o p :   6 4 p x ;   }   } 
  
+ 
+
+@media (max-width: 700px) { body { padding-top: 64px; } }
