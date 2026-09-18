@@ -864,9 +864,13 @@
       }
 
       const bikeProducts = PRODUCTS.filter(p => {
+        const normalizeStr = str => (str || '').replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+        const normSelected = normalizeStr(selectedBikeSearch);
+        const normBike = normalizeStr(p.bike);
+
         const matchesPlatform = selectedBikeSearch && (
-          p.bike.toLowerCase().includes(selectedBikeSearch.toLowerCase()) ||
-          selectedBikeSearch.toLowerCase().includes(p.bike.toLowerCase())
+          normBike.includes(normSelected) ||
+          normSelected.includes(normBike)
         );
         
         if (!matchesPlatform) return false;
