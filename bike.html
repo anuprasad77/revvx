@@ -873,11 +873,19 @@
         if (activeSubModel === 'ALL') return true;
 
         if (matchedBike && matchedBike.subModels) {
+           const mentionsActive = p.name.toLowerCase().includes(activeSubModel.toLowerCase()) || p.bike.toLowerCase().includes(activeSubModel.toLowerCase());
+           
            const otherSubModels = matchedBike.subModels.filter(sm => sm.name !== activeSubModel);
+           let mentionsOther = false;
            for (let osm of otherSubModels) {
                if (p.name.toLowerCase().includes(osm.name.toLowerCase()) || p.bike.toLowerCase().includes(osm.name.toLowerCase())) {
-                   return false; 
+                   mentionsOther = true;
+                   break;
                }
+           }
+
+           if (mentionsOther && !mentionsActive) {
+               return false; 
            }
         }
         
