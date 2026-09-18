@@ -1416,7 +1416,7 @@ body.light .bike-card h3 {
   .view-parts {
     font-size: 10px;
   }
-}
+
 
 /* Spectrum Section */
 .spectrum {
@@ -1566,7 +1566,7 @@ body.light .marquee span:nth-child(even) {
   .marquee span {
     font-size: 32px;
   }
-}
+
 
 /* Scroll Tracker */
 .scroll-tracker {
@@ -1741,7 +1741,7 @@ body.light .mrp-price {
     100% {
       opacity: 1;
       transform: translateY(0) scaleY(1);
-    }
+
   }
 }
 
@@ -1904,7 +1904,7 @@ body.light .mrp-price {
   .advantage-grid {
     grid-template-columns: repeat(4, 1fr) !important;
   }
-}
+
 
 /* ==== "MOTORCYCLE RACING / CNC BILLET" DESIGN ==== */
 
@@ -2119,7 +2119,7 @@ body.light .mrp-price {
   .process-steps article {
     padding: 30px;
   }
-}
+
 
 /* Spacing fix between Spectrum Marquee and Machine Selector */
 .spectrum {
@@ -2232,7 +2232,7 @@ body.light .selector-controls {
   .selector-controls .search input {
     width: 100%;
   }
-}
+
 .variant-arrows {
   position: absolute;
   top: 50%;
