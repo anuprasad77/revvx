@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --red: #d40000;
   --black: #090909;
 }
@@ -2302,5 +2302,7 @@ body.light .selector-controls {
 @ m e d i a   ( m a x - w i d t h :   7 0 0 p x )   {   b o d y   {   p a d d i n g - t o p :   6 4 p x ;   }   } 
  
  
+
+@media (max-width: 700px) { body { padding-top: 64px; } }
 
 @media (max-width: 700px) { body { padding-top: 64px; } }
