@@ -1,6 +1,6 @@
 let PRODUCTS = [
     {
-        "id": "hardcoded_44",
+        "id": "ktm-duke-gen-3-spools-m10",
         "name": "Spools M10",
         "bike": "KTM DUKE (GEN 3)",
         "category": "Accessories",
@@ -72,7 +72,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_47",
+        "id": "ktm-duke-gen-2-spools-m10",
         "name": "Spools M10",
         "bike": "KTM DUKE (GEN 2)",
         "category": "Accessories",
@@ -126,7 +126,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_14",
+        "id": "ktm-adventure-390-250-spools-m10",
         "name": "Spools M10",
         "bike": "KTM ADVENTURE 390 / 250",
         "category": "Accessories",
@@ -168,7 +168,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_23",
+        "id": "ktm-adventure-390-250-frame-sliders",
         "name": "Frame Sliders",
         "bike": "KTM ADVENTURE 390 / 250",
         "category": "Accessories",
@@ -191,7 +191,7 @@ let PRODUCTS = [
         "mrp": 3500,
         "tag": "",
         "image": "./images/adv/radiator guard (2).jpeg",
-        "description": "<p>REVVX Aluminium Radiator Guard – For KTM Adventure 390/250 (Gen 2)/ Enduro R, Duke 250/390 Gen 3</p><p>Protect your motorcycle's radiator from debris and road hazards with the REVVX Aluminium Radiator Guard, designed specifically for KTM Adventure 390, 250 Gen 2 models and Enduro R. Precision-cut from high-quality aluminium, this guard provides strong protection against stones, mud, and debris while maintaining optimal airflow to keep the engine cooling system performing efficiently.</p><p>The honeycomb mesh design offers maximum protection without restricting airflow, while the durable black powder-coated finish adds a clean and premium look that complements the bike's design. Engineered for a perfect fit using stock mounting points, installation is quick and hassle-free.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with KTM Adventure 390, 250 Gen 2 and Enduro R</li><li><strong>Strong Aluminium Construction:</strong> Lightweight yet highly durable</li><li><strong>Maximum Protection:</strong> Shields the radiator from stones, debris, and road hazards</li><li><strong>Optimized Airflow:</strong> Honeycomb mesh design maintains efficient cooling performance</li><li><strong>Premium Finish:</strong> Corrosion-resistant powder coating with REVVX branding</li><li><strong>Easy Installation:</strong> Direct bolt-on fit using existing mounting points</li></ul>",
+        "description": "<p>REVVX Aluminium Radiator Guard \u2013 For KTM Adventure 390/250 (Gen 2)/ Enduro R, Duke 250/390 Gen 3</p><p>Protect your motorcycle's radiator from debris and road hazards with the REVVX Aluminium Radiator Guard, designed specifically for KTM Adventure 390, 250 Gen 2 models and Enduro R. Precision-cut from high-quality aluminium, this guard provides strong protection against stones, mud, and debris while maintaining optimal airflow to keep the engine cooling system performing efficiently.</p><p>The honeycomb mesh design offers maximum protection without restricting airflow, while the durable black powder-coated finish adds a clean and premium look that complements the bike's design. Engineered for a perfect fit using stock mounting points, installation is quick and hassle-free.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with KTM Adventure 390, 250 Gen 2 and Enduro R</li><li><strong>Strong Aluminium Construction:</strong> Lightweight yet highly durable</li><li><strong>Maximum Protection:</strong> Shields the radiator from stones, debris, and road hazards</li><li><strong>Optimized Airflow:</strong> Honeycomb mesh design maintains efficient cooling performance</li><li><strong>Premium Finish:</strong> Corrosion-resistant powder coating with REVVX branding</li><li><strong>Easy Installation:</strong> Direct bolt-on fit using existing mounting points</li></ul>",
         "gallery": [
             "./images/adv/radiator guard (2).jpeg",
             "./images/adv/radiator guard.jpeg",
@@ -199,7 +199,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_29",
+        "id": "ktm-adventure-390-250-mobile-holder",
         "name": "Mobile Holder",
         "bike": "KTM ADVENTURE 390 / 250",
         "category": "Accessories",
@@ -222,7 +222,7 @@ let PRODUCTS = [
         "mrp": 1100,
         "tag": "",
         "image": "./images/adv/foglamp clamps 2.jpeg",
-        "description": "<p>REVVX Fog Lamp Clamps – For KTM Adventure 390 / 250 (Gen 2) / Enduro R</p><p>Upgrade your visibility with REVVX Fog Lamp Clamps, specially designed for KTM Adventure 390, 250 Gen 2 and Enduro R motorcycles. These precision-engineered clamps mount directly to the front suspension setup, providing a strong and stable base for installing auxiliary fog lamps.</p><p>Built from high-quality metal with a durable black finish, the clamps are designed to withstand vibrations, rough terrain, and harsh weather conditions, making them perfect for touring and adventure riding. The compact and clean design ensures a factory-like fit without interfering with the bike's aesthetics or suspension movement.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with KTM Adventure 390, 250 Gen 2 and Enduro R</li><li><strong>Suspension Mount Design:</strong> Attaches securely to the front suspension setup</li><li><strong>Strong & Durable:</strong> High-quality metal construction with powder-coated finish</li><li><strong>Stable Light Mounting:</strong> Minimizes vibration for better lighting stability</li><li><strong>Clean & Functional Design:</strong> Compact design</li><li><strong>Easy Installation:</strong> Direct fit for quick and hassle-free mounting</li></ul>",
+        "description": "<p>REVVX Fog Lamp Clamps \u2013 For KTM Adventure 390 / 250 (Gen 2) / Enduro R</p><p>Upgrade your visibility with REVVX Fog Lamp Clamps, specially designed for KTM Adventure 390, 250 Gen 2 and Enduro R motorcycles. These precision-engineered clamps mount directly to the front suspension setup, providing a strong and stable base for installing auxiliary fog lamps.</p><p>Built from high-quality metal with a durable black finish, the clamps are designed to withstand vibrations, rough terrain, and harsh weather conditions, making them perfect for touring and adventure riding. The compact and clean design ensures a factory-like fit without interfering with the bike's aesthetics or suspension movement.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with KTM Adventure 390, 250 Gen 2 and Enduro R</li><li><strong>Suspension Mount Design:</strong> Attaches securely to the front suspension setup</li><li><strong>Strong & Durable:</strong> High-quality metal construction with powder-coated finish</li><li><strong>Stable Light Mounting:</strong> Minimizes vibration for better lighting stability</li><li><strong>Clean & Functional Design:</strong> Compact design</li><li><strong>Easy Installation:</strong> Direct fit for quick and hassle-free mounting</li></ul>",
         "gallery": [
             "./images/adv/foglamp clamps 2.jpeg",
             "./images/adv/IMG_0926.JPG.jpeg",
@@ -264,7 +264,7 @@ let PRODUCTS = [
         "matched": true
     },
     {
-        "id": "hardcoded_16",
+        "id": "ktm-enduro-spools-m10",
         "name": "Spools M10",
         "bike": "KTM ENDURO",
         "category": "Accessories",
@@ -304,7 +304,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_25",
+        "id": "ktm-enduro-frame-sliders",
         "name": "Frame Sliders",
         "bike": "KTM ENDURO",
         "category": "Accessories",
@@ -333,7 +333,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_31",
+        "id": "ktm-enduro-mobile-holder",
         "name": "Mobile Holder",
         "bike": "KTM ENDURO",
         "category": "Accessories",
@@ -391,7 +391,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_93",
+        "id": "kawasaki-klx-230-ckd-tailtidy",
         "name": "Tailtidy",
         "bike": "KAWASAKI KLX 230 CKD",
         "category": "Accessories",
@@ -406,7 +406,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_95",
+        "id": "kawasaki-klx-230-ckd-skidplate-ms-ckd",
         "name": "Skidplate MS CKD",
         "bike": "KAWASAKI KLX 230 CKD",
         "category": "Accessories",
@@ -421,7 +421,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_94",
+        "id": "kawasaki-klx-230-cbu-tailtidy",
         "name": "Tailtidy",
         "bike": "KAWASAKI KLX 230 CBU",
         "category": "Accessories",
@@ -436,7 +436,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_96",
+        "id": "kawasaki-klx-230-cbu-skidplate-ms-cbu",
         "name": "Skidplate MS CBU",
         "bike": "KAWASAKI KLX 230 CBU",
         "category": "Accessories",
@@ -451,7 +451,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_97",
+        "id": "kawasaki-klx-230-cbu-skidplate-alu-cbu",
         "name": "Skidplate ALU CBU",
         "bike": "KAWASAKI KLX 230 CBU",
         "category": "Accessories",
@@ -466,7 +466,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_0",
+        "id": "aprilia-rs-457-tuono-457-spools-m6",
         "name": "Spools M6",
         "bike": "APRILIA RS 457 & TUONO 457",
         "category": "Accessories",
@@ -508,7 +508,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_6",
+        "id": "aprilia-rs-457-frame-sliders-rs-457",
         "name": "Frame Sliders (RS 457)",
         "bike": "APRILIA RS 457",
         "category": "Accessories",
@@ -564,13 +564,13 @@ let PRODUCTS = [
         "mrp": 1200,
         "tag": "",
         "image": "./images/aprilia/tail tidy.JPG",
-        "description": "<p>REVVX Rear Tail Tidy – For Aprilia RS 457 & Tuono 457</p><p>Upgrade the rear profile of your motorcycle with the REVVX Rear Tail Tidy, designed specifically for the Aprilia RS 457 and Tuono 457. This tail tidy replaces the bulky stock fender with a sleek and compact mounting solution, giving your bike a cleaner and sportier rear-end look.</p><p>Crafted from high-quality metal with a durable powder-coated finish, the tail tidy offers excellent strength and long-lasting durability. Its precision-engineered design ensures proper alignment for the number plate and indicators while maintaining a factory-style fit.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with Aprilia RS 457 & Tuono 457</li><li><strong>Sporty Rear Look:</strong> Eliminates the bulky stock fender for a clean and aggressive appearance</li><li><strong>Durable Construction:</strong> High-quality metal build with corrosion-resistant powder coating</li><li><strong>Secure Mounting:</strong> Strong structure for stable number plate and indicator mounting</li><li><strong>Premium Finish:</strong> Laser-cut REVVX branding for a stylish touch</li><li><strong>Easy Installation:</strong> Direct bolt-on design using existing mounting points</li></ul>",
+        "description": "<p>REVVX Rear Tail Tidy \u2013 For Aprilia RS 457 & Tuono 457</p><p>Upgrade the rear profile of your motorcycle with the REVVX Rear Tail Tidy, designed specifically for the Aprilia RS 457 and Tuono 457. This tail tidy replaces the bulky stock fender with a sleek and compact mounting solution, giving your bike a cleaner and sportier rear-end look.</p><p>Crafted from high-quality metal with a durable powder-coated finish, the tail tidy offers excellent strength and long-lasting durability. Its precision-engineered design ensures proper alignment for the number plate and indicators while maintaining a factory-style fit.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with Aprilia RS 457 & Tuono 457</li><li><strong>Sporty Rear Look:</strong> Eliminates the bulky stock fender for a clean and aggressive appearance</li><li><strong>Durable Construction:</strong> High-quality metal build with corrosion-resistant powder coating</li><li><strong>Secure Mounting:</strong> Strong structure for stable number plate and indicator mounting</li><li><strong>Premium Finish:</strong> Laser-cut REVVX branding for a stylish touch</li><li><strong>Easy Installation:</strong> Direct bolt-on design using existing mounting points</li></ul>",
         "gallery": [
             "./images/aprilia/tail tidy.JPG"
         ]
     },
     {
-        "id": "hardcoded_83",
+        "id": "tvs-apache-rtx-spools-m8",
         "name": "Spools M8",
         "bike": "TVS APACHE RTX",
         "category": "Accessories",
@@ -585,7 +585,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_84",
+        "id": "tvs-apache-rtx-fork-sliders",
         "name": "Fork sliders",
         "bike": "TVS APACHE RTX",
         "category": "Accessories",
@@ -599,7 +599,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_85",
+        "id": "tvs-apache-rtx-swing-arm-sliders",
         "name": "Swing arm sliders",
         "bike": "TVS APACHE RTX",
         "category": "Accessories",
@@ -607,14 +607,14 @@ let PRODUCTS = [
         "mrp": 1100,
         "tag": "",
         "image": "./images/apache rtx/swing arm sliders 2.PNG",
-        "description": "<p><strong>REVVX Rear Swingarm Sliders – For TVS Apache RTX</strong></p><p>Protect your motorcycle's swingarm and rear axle area with the REVVX Rear Swingarm Sliders, designed specifically for the TVS Apache RTX. Built to minimize damage during accidental drops or slides, these sliders act as a protective barrier between the ground and critical components of your bike.</p><p>Made from high-density polyethylene, the sliders provide excellent impact resistance and abrasion protection while maintaining a lightweight profile. The kit includes a high-strength mounting rod and hardware, ensuring a secure fit and reliable protection during everyday rides or spirited track sessions.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with TVS Apache RTX</li><li><strong>HDPE Construction:</strong> Durable material designed to absorb impact and reduce damage during falls</li><li><strong>Swingarm Protection:</strong> Helps protect the swingarm, rear axle, and surrounding components</li><li><strong>Strong Mounting Hardware:</strong> Includes a high-strength rod and fasteners for secure installation</li><li><strong>Lightweight & Durable:</strong> Built for protection without adding unnecessary weight</li><li><strong>Premium Look:</strong> REVVX branding with a clean and sporty design</li></ul>",
+        "description": "<p><strong>REVVX Rear Swingarm Sliders \u2013 For TVS Apache RTX</strong></p><p>Protect your motorcycle's swingarm and rear axle area with the REVVX Rear Swingarm Sliders, designed specifically for the TVS Apache RTX. Built to minimize damage during accidental drops or slides, these sliders act as a protective barrier between the ground and critical components of your bike.</p><p>Made from high-density polyethylene, the sliders provide excellent impact resistance and abrasion protection while maintaining a lightweight profile. The kit includes a high-strength mounting rod and hardware, ensuring a secure fit and reliable protection during everyday rides or spirited track sessions.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with TVS Apache RTX</li><li><strong>HDPE Construction:</strong> Durable material designed to absorb impact and reduce damage during falls</li><li><strong>Swingarm Protection:</strong> Helps protect the swingarm, rear axle, and surrounding components</li><li><strong>Strong Mounting Hardware:</strong> Includes a high-strength rod and fasteners for secure installation</li><li><strong>Lightweight & Durable:</strong> Built for protection without adding unnecessary weight</li><li><strong>Premium Look:</strong> REVVX branding with a clean and sporty design</li></ul>",
         "gallery": [
             "./images/apache rtx/swing arm sliders 2.PNG",
             "./images/apache rtx/swing arm sliders.PNG"
         ]
     },
     {
-        "id": "hardcoded_86",
+        "id": "tvs-apache-rtx-ms-radiator-gaurd",
         "name": "MS Radiator Gaurd",
         "bike": "TVS APACHE RTX",
         "category": "Accessories",
@@ -629,7 +629,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_87",
+        "id": "tvs-apache-rtx-gps-mount",
         "name": "GPS Mount",
         "bike": "TVS APACHE RTX",
         "category": "Accessories",
@@ -644,7 +644,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_88",
+        "id": "re-himalayan-450-ms-radiator-gaurd",
         "name": "MS Radiator Gaurd",
         "bike": "RE HIMALAYAN 450",
         "category": "Accessories",
@@ -652,7 +652,7 @@ let PRODUCTS = [
         "mrp": 1600,
         "tag": "",
         "image": "./images/adv/radiator guard (2).jpeg",
-        "description": "<p>Conquer every trail with confidence using the RevvX Radiator Guard, purpose-built for the Royal Enfield Himalayan 450. Crafted from premium high-strength steel and precision laser-cut for a perfect fit, it provides exceptional protection against stones, gravel, mud, and road debris while maintaining optimum airflow to the radiator.</p><p>Whether you’re exploring rugged off-road terrain or cruising long-distance highways, the RevvX Radiator Guard safeguards one of your motorcycle’s most critical components without compromising cooling performance. Its durable corrosion-resistant powder-coated finish ensures long-lasting reliability in all weather and riding conditions, while the rugged design perfectly complements the adventure styling of the Himalayan 450.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Features:</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li>Premium laser-cut high-strength steel construction</li><li>Designed exclusively for the Royal Enfield Himalayan 450</li><li>Protects the radiator from stones, debris, and impact damage</li><li>Optimized airflow pattern for efficient engine cooling</li><li>Durable corrosion-resistant powder-coated finish</li><li>Direct bolt-on installation with no modifications required</li><li>Adventure-inspired premium styling</li><li>Built for touring, off-road, and everyday riding</li></ul><p>Ride farther. Ride tougher. Protect every adventure with RevvX.</p>",
+        "description": "<p>Conquer every trail with confidence using the RevvX Radiator Guard, purpose-built for the Royal Enfield Himalayan 450. Crafted from premium high-strength steel and precision laser-cut for a perfect fit, it provides exceptional protection against stones, gravel, mud, and road debris while maintaining optimum airflow to the radiator.</p><p>Whether you\u2019re exploring rugged off-road terrain or cruising long-distance highways, the RevvX Radiator Guard safeguards one of your motorcycle\u2019s most critical components without compromising cooling performance. Its durable corrosion-resistant powder-coated finish ensures long-lasting reliability in all weather and riding conditions, while the rugged design perfectly complements the adventure styling of the Himalayan 450.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Features:</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li>Premium laser-cut high-strength steel construction</li><li>Designed exclusively for the Royal Enfield Himalayan 450</li><li>Protects the radiator from stones, debris, and impact damage</li><li>Optimized airflow pattern for efficient engine cooling</li><li>Durable corrosion-resistant powder-coated finish</li><li>Direct bolt-on installation with no modifications required</li><li>Adventure-inspired premium styling</li><li>Built for touring, off-road, and everyday riding</li></ul><p>Ride farther. Ride tougher. Protect every adventure with RevvX.</p>",
         "gallery": [
             "./images/adv/radiator guard (2).jpeg",
             "./images/adv/radiator guard.jpeg",
@@ -660,7 +660,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_89",
+        "id": "re-himalayan-450-fork-sliders",
         "name": "Fork sliders",
         "bike": "RE HIMALAYAN 450",
         "category": "Accessories",
@@ -674,7 +674,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_90",
+        "id": "re-himalayan-450-gps-mount",
         "name": "GPS Mount",
         "bike": "RE HIMALAYAN 450",
         "category": "Accessories",
@@ -689,7 +689,7 @@ let PRODUCTS = [
         ]
     },
     {
-        "id": "hardcoded_91",
+        "id": "re-himalayan-450-rear-master-cylinder-gaurd",
         "name": "Rear Master Cylinder Gaurd",
         "bike": "RE HIMALAYAN 450",
         "category": "Accessories",
