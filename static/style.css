@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --red: #d40000;
   --black: #090909;
 }
@@ -971,7 +971,6 @@ footer {
     scroll-snap-align: start;
     border-radius: 4px;
   }
-}
 
 /* Light Theme Overrides */
 body.light {
