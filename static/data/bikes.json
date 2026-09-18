@@ -57,13 +57,37 @@
             "id": "KTM_DUKE_GEN3",
             "name": "KTM DUKE (GEN 3)",
             "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-            "categorySearch": "KTM DUKE (GEN 3)"
+            "categorySearch": "KTM DUKE (GEN 3)",
+            "subModels": [
+                {
+                    "name": "390",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
+                    "imageSequence": {
+                        "urlPattern": "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3724/closed-door/{N}.jpg",
+                        "frames": 72
+                    }
+                },
+                {
+                    "name": "250",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png"
+                }
+            ]
         },
         {
             "id": "KTM_DUKE_GEN2",
             "name": "KTM DUKE (GEN 2)",
             "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-            "categorySearch": "KTM DUKE (GEN 2)"
+            "categorySearch": "KTM DUKE (GEN 2)",
+            "subModels": [
+                {
+                    "name": "390",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg"
+                },
+                {
+                    "name": "250",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg"
+                }
+            ]
         }
     ],
     "Kawasaki": [
@@ -71,7 +95,17 @@
             "id": "Kawasaki_KLX_230",
             "name": "KAWASAKI KLX 230 CKD/CBU",
             "image": "./static/images/klx_transparent.png",
-            "categorySearch": "KAWASAKI KLX 230"
+            "categorySearch": "KAWASAKI KLX 230",
+            "subModels": [
+                {
+                    "name": "CKD",
+                    "image": "./static/images/klx_transparent.png"
+                },
+                {
+                    "name": "CBU",
+                    "image": "./static/images/klx_transparent.png"
+                }
+            ]
         }
     ],
     "TVS": [

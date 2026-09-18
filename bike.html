@@ -874,7 +874,7 @@
         if (matchedBike && matchedBike.subModels) {
            const otherSubModels = matchedBike.subModels.filter(sm => sm.name !== activeSubModel);
            for (let osm of otherSubModels) {
-               if (p.name.toLowerCase().includes(osm.name.toLowerCase())) {
+               if (p.name.toLowerCase().includes(osm.name.toLowerCase()) || p.bike.toLowerCase().includes(osm.name.toLowerCase())) {
                    return false; 
                }
            }
