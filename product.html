@@ -8,11 +8,12 @@
   <title>REVVX | Precision Motorcycle Accessories</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://drive.google.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./static/style.css">
-<link rel="icon" type="image/png" href="./static/images/1784811540903.png">
+  <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
 <body>
@@ -49,15 +50,6 @@
 
   <main>
     <style>
-      .nav {
-        position: relative;
-        z-index: 100 !important;
-        background: rgba(5, 7, 10, 0.88);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
       .showroom-stage {
         --red: #ff3855;
         position: relative;
@@ -475,23 +467,30 @@
     <section id="product-detail" class="wrap product-detail-layout">
       <!-- BREADCRUMBS -->
       <div class="product-top" style="text-align: center; margin-bottom: 10px;">
-        <nav class="product-breadcrumb" style="justify-content: center; margin-bottom: 10px;" aria-label="Breadcrumb"><a href="index.html">HOME</a><span>/</span><a id="pd-bike-link" href="bike.html">MOTORCYCLES</a><span>/</span><span id="pd-crumb-name">ACCESSORY</span></nav>
-        <span id="pd-bike" style="display: block; color: var(--red); font: 600 14px 'DM Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase;"></span>
+        <nav class="product-breadcrumb" style="justify-content: center; margin-bottom: 10px;" aria-label="Breadcrumb"><a
+            href="index.html">HOME</a><span>/</span><a id="pd-bike-link"
+            href="bike.html">MOTORCYCLES</a><span>/</span><span id="pd-crumb-name">ACCESSORY</span></nav>
+        <span id="pd-bike"
+          style="display: block; color: var(--red); font: 600 14px 'DM Mono', monospace; letter-spacing: 0.15em; text-transform: uppercase;"></span>
       </div>
 
       <!-- IMAGES -->
       <div style="display: flex; flex-direction: column; gap: 15px;">
         <div class="product-images"
-          style="position: relative; aspect-ratio: 4/3; max-height: 550px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #ffffff; border: 1px solid rgba(255,255,255,0.05); cursor: zoom-in;" onclick="openLightbox()">
+          style="position: relative; aspect-ratio: 4/3; max-height: 550px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #ffffff; border: 1px solid rgba(255,255,255,0.05); cursor: zoom-in;"
+          onclick="openLightbox()">
           <!-- Foreground full image -->
-          <img id="pd-image" src="" alt="Product Image" style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; padding: 0; transition: transform 0.3s; mix-blend-mode: multiply;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <img id="pd-image" src="" alt="Product Image" fetchpriority="high" decoding="async"
+            style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; padding: 0; transition: transform 0.3s; mix-blend-mode: multiply;"
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div id="pd-thumbnails" class="product-thumbnails"></div>
       </div>
 
       <!-- TITLE & PRICE -->
       <div class="product-header" style="text-align: center; margin-top: 15px;">
-        <h1 id="pd-name" style="font: 800 42px/1.1 'Barlow Condensed', sans-serif; margin: 0 0 10px 0; letter-spacing: 1px;"></h1>
+        <h1 id="pd-name"
+          style="font: 800 42px/1.1 'Barlow Condensed', sans-serif; margin: 0 0 10px 0; letter-spacing: 1px;"></h1>
         <div class="pricing" style="display: flex; justify-content: center; align-items: baseline; gap: 15px;">
           <b id="pd-price" style="font-size: 32px; color: #fff;"></b>
           <span id="pd-mrp" style="text-decoration: line-through; color: #64748b; font-size: 18px;"></span>
@@ -499,14 +498,98 @@
       </div>
 
       <!-- ACTION / BUY -->
-      <div class="product-buy" style="display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 20px;">
+      <div class="product-buy"
+        style="display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 20px;">
         <div id="pd-cart-controls" style="width: 100%; max-width: 350px; display: flex; justify-content: center;">
           <!-- Rendered by JS -->
         </div>
-        <div class="purchase-assurance" aria-label="Order information" style="width: 100%; max-width: 700px; margin: 0;">
-          <div style="text-align: center;"><span>FITMENT</span><b>CONFIRM BEFORE ORDER</b></div>
-          <div style="text-align: center;"><span>SUPPORT</span><b>WHATSAPP THE TEAM</b></div>
-          <div style="text-align: center;"><span>INSTALL</span><b>WORKSHOP ASSISTANCE</b></div>
+        <style>
+          .purchase-assurance {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 18px 24px;
+            gap: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 700px;
+            margin: 0;
+          }
+
+          .purchase-assurance-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            gap: 6px;
+          }
+
+          .purchase-assurance-item span {
+            font: 500 11px "DM Mono", monospace;
+            color: var(--red);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+          }
+
+          .purchase-assurance-item b {
+            font: 600 13px "Inter", sans-serif;
+            color: #fff;
+            text-align: center;
+            line-height: 1.3;
+          }
+
+          .purchase-assurance-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 10px;
+          }
+
+          body.light .purchase-assurance {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+          }
+
+          body.light .purchase-assurance-item span {
+            color: #d32f2f;
+          }
+
+          body.light .purchase-assurance-item b {
+            color: #111;
+          }
+
+          @media (max-width: 768px) {
+            .purchase-assurance {
+              flex-direction: column;
+              padding: 20px;
+              gap: 15px;
+            }
+
+            .purchase-assurance-divider {
+              width: 100%;
+              height: 1px;
+              margin: 5px 0;
+            }
+          }
+        </style>
+        <div class="purchase-assurance" aria-label="Order information">
+          <div class="purchase-assurance-item">
+            <span>FITMENT</span>
+            <b>CONFIRM BEFORE ORDER</b>
+          </div>
+          <div class="purchase-assurance-divider"></div>
+          <div class="purchase-assurance-item">
+            <span>SUPPORT</span>
+            <b>WHATSAPP THE TEAM</b>
+          </div>
+          <div class="purchase-assurance-divider"></div>
+          <div class="purchase-assurance-item">
+            <span>INSTALL</span>
+            <b>WORKSHOP ASSISTANCE</b>
+          </div>
         </div>
       </div>
 
@@ -516,7 +599,8 @@
         <h3
           style="font: 700 24px/1.2 'Barlow Condensed', sans-serif; letter-spacing: 1px; color: #fff; margin-bottom: 25px; text-align: center;">
           PRODUCT DETAILS</h3>
-        <div id="pd-description" style="color: #c7cbd1; font-size: 15px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+        <div id="pd-description"
+          style="color: #c7cbd1; font-size: 15px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
           <!-- Description placeholder for future data -->
         </div>
       </div>
@@ -566,7 +650,7 @@
       <div class="cart-total" id="cart-total">
         <span>SUBTOTAL <b id="subtotal">₹0</b></span>
         <button class="button primary full" onclick="whatsAppOrder()">Order via WhatsApp →</button>
-        <small>Shipping and installation confirmed on WhatsApp.</small>
+        <small>Shipping and installation are extra. Delivery charges are borne by the customer.</small>
       </div>
     </aside>
   </div>
@@ -577,9 +661,15 @@
   </div>
 
   <!-- Lightbox Modal -->
-  <div id="lightbox" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out;" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" style="max-width: 95vw; max-height: 95vh; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-    <button style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">&times;</button>
+  <div id="lightbox"
+    style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; cursor: zoom-out;"
+    onclick="closeLightbox()">
+    <img id="lightbox-img" src=""
+      style="max-width: 95vw; max-height: 95vh; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+    <button
+      style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: 0.2s;"
+      onmouseover="this.style.background='rgba(255,255,255,0.2)'"
+      onmouseout="this.style.background='rgba(255,255,255,0.1)'">&times;</button>
   </div>
 
   <script src="./static/products.js"></script>
@@ -591,12 +681,12 @@
     let currentProduct = null;
 
     function openLightbox() {
-       document.getElementById('lightbox-img').src = document.getElementById('pd-image').src;
-       document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = document.getElementById('pd-image').src;
+      document.getElementById('lightbox').style.display = 'flex';
     }
-    
+
     function closeLightbox() {
-       document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox').style.display = 'none';
     }
 
     function renderProductDetails() {
@@ -660,7 +750,7 @@
 
       if (currentProduct.description) {
         document.getElementById('pd-description').innerHTML = currentProduct.description;
-        
+
         // Transform Key Features into cards
         const descDiv = document.getElementById('pd-description');
         const h4s = descDiv.querySelectorAll('h4');
@@ -671,21 +761,21 @@
               h4.style.fontSize = '1.5em';
               h4.style.color = '#fff';
               h4.style.marginTop = '40px';
-              
+
               const grid = document.createElement('div');
               grid.className = 'feature-cards';
-              
+
               const lis = ul.querySelectorAll('li');
               lis.forEach(li => {
                 const card = document.createElement('div');
                 card.className = 'feature-card';
-                
+
                 const strong = li.querySelector('strong');
                 if (strong) {
                   const title = document.createElement('b');
                   title.textContent = strong.textContent.replace(':', '');
                   card.appendChild(title);
-                  
+
                   const p = document.createElement('p');
                   let text = li.innerHTML.replace(strong.outerHTML, '').trim();
                   if (text.startsWith(':')) text = text.substring(1).trim();
@@ -694,10 +784,10 @@
                 } else {
                   card.innerHTML = `<p>${li.innerHTML}</p>`;
                 }
-                
+
                 grid.appendChild(card);
               });
-              
+
               ul.parentNode.replaceChild(grid, ul);
             }
           }
@@ -714,10 +804,10 @@
 
       if (inCart) {
         container.innerHTML = `
-          <div style="display:flex; justify-content: space-between; align-items:center; background:rgba(255,255,255,0.05); border-radius:6px; padding: 6px; border: 1px solid rgba(255,255,255,0.08); max-width: 200px;">
-            <button style="background:rgba(255,255,255,0.1); color:white; border:none; width:44px; height:44px; border-radius: 4px; cursor:pointer; font-size: 1.2em; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" onclick="updateQty('${currentProduct.id}',-1)">−</button>
-            <span style="font-weight:700; font-size:1.2em; display:flex; align-items:center;">${inCart.qty}</span>
-            <button style="background:rgba(255,255,255,0.1); color:white; border:none; width:44px; height:44px; border-radius: 4px; cursor:pointer; font-size: 1.2em; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'" onclick="updateQty('${currentProduct.id}',1)">+</button>
+          <div style="display:flex; justify-content: space-between; align-items:center; background:transparent; border-radius:6px; border: 2px solid var(--red); width: 100%; max-width: 300px; overflow: hidden; height: 56px;">
+            <button style="background:var(--red); color:white; border:none; width:60px; height:100%; cursor:pointer; font-size: 1.5em; transition: 0.2s; display:flex; align-items:center; justify-content:center;" onmouseover="this.style.filter='brightness(0.8)'" onmouseout="this.style.filter='brightness(1)'" onclick="updateQty('${currentProduct.id}',-1)">−</button>
+            <span style="font-weight:800; font-size:1.1em; letter-spacing: 1px; color: white; display:flex; align-items:center; justify-content:center; flex:1;">${inCart.qty} </span>
+            <button style="background:var(--red); color:white; border:none; width:60px; height:100%; cursor:pointer; font-size: 1.5em; transition: 0.2s; display:flex; align-items:center; justify-content:center;" onmouseover="this.style.filter='brightness(0.8)'" onmouseout="this.style.filter='brightness(1)'" onclick="updateQty('${currentProduct.id}',1)">+</button>
           </div>
         `;
       } else {

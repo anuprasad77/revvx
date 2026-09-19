@@ -8,11 +8,12 @@
   <title>REVVX | Precision Motorcycle Accessories</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://drive.google.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./static/style.css">
-<link rel="icon" type="image/png" href="./static/images/1784811540903.png">
+  <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
 <body>
@@ -73,8 +74,8 @@
       }
 
       .loader-pct {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 11px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 14px;
         letter-spacing: 3px;
         color: #2a2c2e;
       }
@@ -174,12 +175,7 @@
         <div class="hero-actions"><a class="button primary" href="#machine-selector">Find your fit <span>→</span></a><a
             class="button ghost" href="#how-it-works">How it works</a></div>
       </div>
-      <aside class="hero-spec-card" aria-label="Revvx design principles">
-        <span class="spec-label">REVVX / 01</span>
-        <strong>BUILT AROUND<br>YOUR MACHINE.</strong>
-        <div><span>FITMENT</span><b>BIKE-SPECIFIC</b></div>
-        <div><span>FINISH</span><b>PRECISION MADE</b></div>
-      </aside>
+
       <div class="hero-stats">
         <div><strong>30+</strong><span>Bike platforms</span></div>
         <div><strong>CNC</strong><span>Precision made</span></div>
@@ -207,13 +203,30 @@
           <p>Thoughtful protection components that help safeguard key contact points without visual clutter.</p>
         </article>
         <article class="advantage-card">
-          <h3>Machine-Specific Fit</h3>
+          <h3>Machine-Precision Fit</h3>
           <p>Start with your motorcycle so you can browse a catalogue tailored to its intended fitment.</p>
         </article>
         <article class="advantage-card">
           <h3>Human Fitment Support</h3>
           <p>Need a second opinion? Talk through compatibility and installation with the REVVX team on WhatsApp.</p>
         </article>
+      </div>
+    </section>
+    <section class="spectrum">
+      <div class="marquee-container">
+        <div class="marquee">
+
+          <span>// NAKED STREETFIGHTERS</span>
+          <span>// ADVENTURE TOURERS</span>
+          <span>// PREMIUM SUPERBIKES</span>
+          <span>// CLASSIC RETROS</span>
+          <!-- Duplicate for seamless looping -->
+
+          <span aria-hidden="true">// NAKED STREETFIGHTERS</span>
+          <span aria-hidden="true">// ADVENTURE TOURERS</span>
+          <span aria-hidden="true">// PREMIUM SUPERBIKES</span>
+          <span aria-hidden="true">// CLASSIC RETROS</span>
+        </div>
       </div>
     </section>
     <section id="how-it-works" class="process wrap">
@@ -234,29 +247,6 @@
           <h3>Confirm &amp; ride</h3>
           <p>Order on WhatsApp and confirm delivery or fitment details with the team.</p>
         </article>
-      </div>
-    </section>
-    <section class="spectrum">
-      <div class="spectrum-content wrap">
-        <p class="section-kicker">ENGINEERED FOR EVERY MACHINE</p>
-        <h2>FROM SMALL BIKES<br>TO PREMIUM <i>SUPERBIKES.</i></h2>
-        <p>Whether you ride a nimble daily commuter or a high-performance superbike, we machine uncompromising
-          accessories tailored to perfection.</p>
-      </div>
-      <div class="marquee-container">
-        <div class="marquee">
-
-          <span>// NAKED STREETFIGHTERS</span>
-          <span>// ADVENTURE TOURERS</span>
-          <span>// PREMIUM SUPERBIKES</span>
-          <span>// CLASSIC RETROS</span>
-          <!-- Duplicate for seamless looping -->
-
-          <span aria-hidden="true">// NAKED STREETFIGHTERS</span>
-          <span aria-hidden="true">// ADVENTURE TOURERS</span>
-          <span aria-hidden="true">// PREMIUM SUPERBIKES</span>
-          <span aria-hidden="true">// CLASSIC RETROS</span>
-        </div>
       </div>
     </section>
     <section id="machine-selector" class="selector wrap">
@@ -319,30 +309,50 @@
           Revvx is for riders who respect power, value and quality.</p>
       </div>
     </section>
-    <section class="gallery">
-      <div class="gallery-kicker wrap">
 
-        <h2>SEEN ON <i>MACHINES.</i></h2>
-      </div>
-      <div class="gallery-strip">
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183751.png')"></div>
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183907.png')"></div>
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183807.png')"></div>
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183829.png')"></div>
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183728.png')"></div>
-        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183743.png')"></div>
-      </div>
-    </section>
     <section class="reviews wrap">
       <div class="review-head">
         <p class="section-kicker">RIDERS' WORD</p>
         <h2>TRUSTED ON<br><i>EVERY TERRAIN.</i></h2>
       </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <blockquote>“The fit and finish is exceptional. It looks factory, but tougher than anything the factory offers.”
-        </blockquote>
-        <p>ARJUN N. <span>— KTM ADVENTURE 390</span></p>
+      <div class="reviews-slider-container" id="reviews-slider">
+        <div class="reviews-track" id="reviews-track">
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Honestly, these sliders saved my Duke. Had a low-side slip at 40kmph last week, and the pucks
+              took the entire hit. Engine casing didn't even get a scratch.”
+            </blockquote>
+            <p>KIRAN R. <span>— KTM DUKE 390</span></p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Took the Himalayan off-roading in Spiti and dropped it twice on the rocks. The skid plate took
+              an absolute beating but kept the sump completely protected. Worth every penny.”
+            </blockquote>
+            <p>ROHIT M. <span>— RE HIMALAYAN 450</span></p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“The fitment is spot on. Slapped the tail tidy on my Tuono in under 20 minutes with zero cutting
+              or welding. Looks super clean and OEM+.”
+            </blockquote>
+            <p>VIKRAM S. <span>— APRILIA TUONO 457</span></p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“These guys actually know what they're doing. The radiator guard isn't just stamped metal, it
+              feels properly over-engineered. Highly recommend hitting them up on WhatsApp.”
+            </blockquote>
+            <p>ARJUN N. <span>— KTM ADVENTURE 390</span></p>
+          </div>
+          <div class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“I was worried about the spools clearing my exhaust, but they designed it perfectly. Machining
+              quality is easily on par with expensive imported brands, but made right here.”
+            </blockquote>
+            <p>KARAN S. <span>— TVS APACHE RTX</span></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -364,9 +374,9 @@
       </div>
     </div>
     <div class="footer-bottom wrap">
-      <span>© 2026 REVVX PERFORMANCE</span>
-      <span>Made with love from bikers to bikers</span>
-      <span>RIDE FEARLESS</span>
+      <span>ESTABLISHED IN 2025</span>
+      <span>10+ BIKE PLATFORMS</span>
+      <span>MADE WITH LOVE FROM BIKERS TO BIKERS ❤️</span>
     </div>
   </footer>
   <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
@@ -379,7 +389,7 @@
           collection</button></div>
       <div class="cart-total" id="cart-total"><span>SUBTOTAL <b id="subtotal">₹0</b></span><button
           class="button primary full" onclick="whatsAppOrder()">Order via WhatsApp →</button><small>Shipping and
-          installation confirmed on WhatsApp.</small></div>
+          installation are extra. Delivery charges are borne by the customer.</small></div>
     </aside>
   </div>
 
@@ -449,19 +459,19 @@
         `<button class="brand-tab ${brand === selectedBrand ? 'active' : ''}" type="button" onclick='selectBrand(${JSON.stringify(brand)})'>${brand}</button>`
       ).join('');
       document.getElementById('machine-count').textContent = `${visibleBikes.length} ${visibleBikes.length === 1 ? 'machine' : 'machines'} available`;
-        bikeGrid.innerHTML = visibleBikes.length ? visibleBikes.map(bike => {
-          let variantsAttr = '';
-          let arrows = '';
-          if (bike.variants) {
-              const safeVariants = JSON.stringify(bike.variants).replace(/'/g, "&apos;").replace(/"/g, "&quot;");
-              variantsAttr = `data-variants="${safeVariants}" data-current-variant="0"`;
-              arrows = `
+      bikeGrid.innerHTML = visibleBikes.length ? visibleBikes.map(bike => {
+        let variantsAttr = '';
+        let arrows = '';
+        if (bike.variants) {
+          const safeVariants = JSON.stringify(bike.variants).replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+          variantsAttr = `data-variants="${safeVariants}" data-current-variant="0"`;
+          arrows = `
                 <div class="variant-arrows">
                   <button class="variant-btn" onclick="event.stopPropagation(); switchVariant(this, -1)">&#10094;</button>
                   <button class="variant-btn" onclick="event.stopPropagation(); switchVariant(this, 1)">&#10095;</button>
                 </div>`;
-          }
-          return `
+        }
+        return `
               <article class="bike-card" ${variantsAttr} onclick="goToBike(this, '${bike.categorySearch}')">
                   <div class="bike-photo" style="position: relative;">
                       ${arrows}
@@ -471,7 +481,7 @@
                   <span class="view-parts">View compatible parts</span>
               </article>
           `;
-        }).join('') : `<div class="no-machines"><span>NO MATCH FOUND</span><p>Try another brand or search term.</p><button type="button" onclick="resetMachineSearch()">Clear search</button></div>`;
+      }).join('') : `<div class="no-machines"><span>NO MATCH FOUND</span><p>Try another brand or search term.</p><button type="button" onclick="resetMachineSearch()">Clear search</button></div>`;
     }
 
     function selectBrand(brand) { selectedBrand = brand; renderBrands(); }
@@ -541,35 +551,35 @@
         }
       });
     }
-      function switchVariant(btn, direction) {
-          const card = btn.closest('.bike-card');
-          const variantsStr = card.getAttribute('data-variants').replace(/&quot;/g, '"').replace(/&apos;/g, "'");
-          const variants = JSON.parse(variantsStr);
-          let currentIdx = parseInt(card.getAttribute('data-current-variant'));
-          
-          currentIdx += direction;
-          if (currentIdx < 0) currentIdx = variants.length - 1;
-          if (currentIdx >= variants.length) currentIdx = 0;
-          
-          card.setAttribute('data-current-variant', currentIdx);
-          
-          const variant = variants[currentIdx];
-          card.querySelector('img').src = variant.image;
-          card.querySelector('h3').textContent = variant.name;
-      }
+    function switchVariant(btn, direction) {
+      const card = btn.closest('.bike-card');
+      const variantsStr = card.getAttribute('data-variants').replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+      const variants = JSON.parse(variantsStr);
+      let currentIdx = parseInt(card.getAttribute('data-current-variant'));
 
-      function goToBike(card, defaultCategory) {
-          const variantsAttr = card.getAttribute('data-variants');
-          if (variantsAttr) {
-              const variantsStr = variantsAttr.replace(/&quot;/g, '"').replace(/&apos;/g, "'");
-              const variants = JSON.parse(variantsStr);
-              const currentIdx = parseInt(card.getAttribute('data-current-variant'));
-              window.location.href = 'bike.html?bike=' + encodeURIComponent(variants[currentIdx].categorySearch);
-          } else {
-              window.location.href = 'bike.html?bike=' + encodeURIComponent(defaultCategory);
-          }
+      currentIdx += direction;
+      if (currentIdx < 0) currentIdx = variants.length - 1;
+      if (currentIdx >= variants.length) currentIdx = 0;
+
+      card.setAttribute('data-current-variant', currentIdx);
+
+      const variant = variants[currentIdx];
+      card.querySelector('img').src = variant.image;
+      card.querySelector('h3').textContent = variant.name;
+    }
+
+    function goToBike(card, defaultCategory) {
+      const variantsAttr = card.getAttribute('data-variants');
+      if (variantsAttr) {
+        const variantsStr = variantsAttr.replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+        const variants = JSON.parse(variantsStr);
+        const currentIdx = parseInt(card.getAttribute('data-current-variant'));
+        window.location.href = 'bike.html?bike=' + encodeURIComponent(variants[currentIdx].categorySearch);
+      } else {
+        window.location.href = 'bike.html?bike=' + encodeURIComponent(defaultCategory);
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
 
 </html>

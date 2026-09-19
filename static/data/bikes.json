@@ -1,148 +1,152 @@
 {
-    "Aprilia":  [
-                    {
-                        "id":  "Aprilia_457",
-                        "name":  "APRILIA RS \u0026 TUONO 457",
-                        "image":  "./static/images/bikes/Aprilia_RS_457.webp",
-                        "categorySearch":  "APRILIA",
-                        "subModels":  [
-                                          {
-                                              "name":  "RS 457",
-                                              "imageSequence":  {
-                                                                    "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3643/closed-door/{N}.jpg",
-                                                                    "frames":  72
-                                                                },
-                                              "displayName":  "APRILIA RS 457"
-                                          },
-                                          {
-                                              "name":  "TUONO 457",
-                                              "imageSequence":  {
-                                                                    "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/aprilia/3073/closed-door/{N}.jpg",
-                                                                    "frames":  72
-                                                                },
-                                              "displayName":  "APRILIA TUONO 457"
-                                          }
-                                      ]
-                    }
-                ],
-    "KTM":  [
+    "Aprilia": [
+        {
+            "id": "Aprilia_457",
+            "name": "APRILIA RS & TUONO 457",
+            "image": "./static/images/bikes/Aprilia_RS_457.webp",
+            "categorySearch": "APRILIA",
+            "subModels": [
                 {
-                    "id":  "KTM_ADVENTURE",
-                    "name":  "KTM ADVENTURE 390 / 250",
-                    "image":  "./static/images/bikes/KTM_ADVENTURE_390.png",
-                    "categorySearch":  "KTM ADVENTURE",
-                    "subModels":  [
-                                      {
-                                          "name":  "390",
-                                          "imageSequence":  {
-                                                                "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3728/closed-door/{N}.jpg",
-                                                                "frames":  72
-                                                            },
-                                          "displayName":  "KTM ADVENTURE 390"
-                                      },
-                                      {
-                                          "name":  "250",
-                                          "image":  "./static/images/bikes/KTM_ADVENTURE_250.png",
-                                          "displayName":  "KTM ADVENTURE 250"
-                                      }
-                                  ]
+                    "name": "RS 457",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/Aprilia_457_RS_457/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "APRILIA RS 457"
                 },
                 {
-                    "id":  "KTM_ENDURO",
-                    "name":  "KTM ENDURO",
-                    "image":  "https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ktm-390-enduro-r-standard1738336905361.jpg?q=80",
-                    "categorySearch":  "KTM ENDURO",
-                    "imageSequence":  {
-                                          "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3057/closed-door/{N}.jpg",
-                                          "frames":  72
-                                      }
-                },
-                {
-                    "id":  "KTM_DUKE_GEN3",
-                    "name":  "KTM DUKE (GEN 3)",
-                    "image":  "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-                    "categorySearch":  "KTM DUKE (GEN 3)",
-                    "subModels":  [
-                                      {
-                                          "name":  "390",
-                                          "image":  "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-                                          "imageSequence":  {
-                                                                "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/ktm/3724/closed-door/{N}.jpg",
-                                                                "frames":  72
-                                                            },
-                                          "displayName":  "KTM DUKE 390 (GEN 3)"
-                                      },
-                                      {
-                                          "name":  "250",
-                                          "image":  "./static/images/bikes/KTM_DUKE_GEN3_390.png",
-                                          "displayName":  "KTM DUKE 250 (GEN 3)"
-                                      }
-                                  ]
-                },
-                {
-                    "id":  "KTM_DUKE_GEN2",
-                    "name":  "KTM DUKE (GEN 2)",
-                    "image":  "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-                    "categorySearch":  "KTM DUKE (GEN 2)",
-                    "subModels":  [
-                                      {
-                                          "name":  "390",
-                                          "image":  "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-                                          "displayName":  "KTM DUKE 390 (GEN 2)"
-                                      },
-                                      {
-                                          "name":  "250",
-                                          "image":  "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
-                                          "displayName":  "KTM DUKE 250 (GEN 2)"
-                                      }
-                                  ]
+                    "name": "TUONO 457",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/Aprilia_457_TUONO_457/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "APRILIA TUONO 457"
                 }
-            ],
-    "Kawasaki":  [
-                     {
-                         "id":  "Kawasaki_KLX_230",
-                         "name":  "KAWASAKI KLX 230 CKD/CBU",
-                         "image":  "./static/images/klx_transparent.png",
-                         "categorySearch":  "KAWASAKI KLX 230",
-                         "subModels":  [
-                                           {
-                                               "name":  "CKD",
-                                               "image":  "./static/images/klx_transparent.png",
-                                               "displayName":  "KAWASAKI KLX 230 CKD"
-                                           },
-                                           {
-                                               "name":  "CBU",
-                                               "imageSequence":  {
-                                                                     "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/kawasaki/3015/closed-door/{N}.jpg",
-                                                                     "frames":  72
-                                                                 },
-                                               "displayName":  "KAWASAKI KLX 230 CBU"
-                                           }
-                                       ]
-                     }
-                 ],
-    "TVS":  [
+            ]
+        }
+    ],
+    "KTM": [
+        {
+            "id": "KTM_ADVENTURE",
+            "name": "KTM ADVENTURE 390 / 250",
+            "image": "./static/images/bikes/KTM_ADVENTURE_390.png",
+            "categorySearch": "KTM ADVENTURE",
+            "subModels": [
                 {
-                    "id":  "TVS_APACHE_RTX",
-                    "name":  "TVS APACHE RTX",
-                    "image":  "./static/images/bikes/TVS_APACHE_RTX.png",
-                    "categorySearch":  "TVS APACHE RTX",
-                    "imageSequence":  {
-                                          "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/tvs/3153/closed-door/{N}.jpg",
-                                          "frames":  72
-                                      }
+                    "name": "390",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/KTM_ADVENTURE_390/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "KTM ADVENTURE 390"
+                },
+                {
+                    "name": "250",
+                    "image": "./static/images/bikes/KTM_ADVENTURE_250.png",
+                    "displayName": "KTM ADVENTURE 250"
                 }
-            ],
-    "RE":  [
-               {
-                   "id":  "RE_HIMALAYAN_450",
-                   "name":  "RE HIMALAYAN 450",
-                   "image":  "./static/images/bikes/RE_HIMALAYAN_450.jpg",
-                   "categorySearch":  "RE HIMALAYAN 450",
-                   "imageSequence":  {
-                                         "urlPattern":  "https://imgd.aeplcdn.com/860x484/bw/360/royalenfield/1789/closed-door/{N}.jpg",
-                                         "frames":  72
-                                     }
-               }
-           ]
+            ]
+        },
+        {
+            "id": "KTM_ENDURO",
+            "name": "KTM ENDURO",
+            "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ktm-390-enduro-r-standard1738336905361.jpg?q=80",
+            "categorySearch": "KTM ENDURO",
+            "imageSequence": {
+                "urlPattern": "./static/images/bikes/360/KTM_ENDURO/{N}.jpg",
+                "frames": 72
+            }
+        },
+        {
+            "id": "KTM_DUKE_GEN3",
+            "name": "KTM DUKE (GEN 3)",
+            "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
+            "categorySearch": "KTM DUKE (GEN 3)",
+            "subModels": [
+                {
+                    "name": "390",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/KTM_DUKE_GEN3_390/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "KTM DUKE 390 (GEN 3)"
+                },
+                {
+                    "name": "250",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN3_390.png",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/KTM_DUKE_GEN3_250/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "KTM DUKE 250 (GEN 3)"
+                }
+            ]
+        },
+        {
+            "id": "KTM_DUKE_GEN2",
+            "name": "KTM DUKE (GEN 2)",
+            "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
+            "categorySearch": "KTM DUKE (GEN 2)",
+            "subModels": [
+                {
+                    "name": "390",
+                    "image": "./static/images/bikes/KTM_DUKE_GEN2_390.jpg",
+                    "displayName": "KTM DUKE 390 (GEN 2)"
+                },
+                {
+                    "name": "250",
+                    "image": "https://imgd.aeplcdn.com/1056x594/n/bw/models/colors/ktm-select-model-dark-galvano-1608036691231.jpg?q=80&wm=3",
+                    "displayName": "KTM DUKE 250 (GEN 2)"
+                }
+            ]
+        }
+    ],
+    "Kawasaki": [
+        {
+            "id": "Kawasaki_KLX_230",
+            "name": "KAWASAKI KLX 230 CKD/CBU",
+            "image": "./static/images/klx_transparent.png",
+            "categorySearch": "KAWASAKI KLX 230",
+            "subModels": [
+                {
+                    "name": "CKD",
+                    "image": "./static/images/klx_transparent.png",
+                    "displayName": "KAWASAKI KLX 230 CKD"
+                },
+                {
+                    "name": "CBU",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/Kawasaki_KLX_230_CBU/{N}.jpg",
+                        "frames": 72
+                    },
+                    "displayName": "KAWASAKI KLX 230 CBU"
+                }
+            ]
+        }
+    ],
+    "TVS": [
+        {
+            "id": "TVS_APACHE_RTX",
+            "name": "TVS APACHE RTX",
+            "image": "./static/images/bikes/TVS_APACHE_RTX.png",
+            "categorySearch": "TVS APACHE RTX",
+            "imageSequence": {
+                "urlPattern": "./static/images/bikes/360/TVS_APACHE_RTX/{N}.jpg",
+                "frames": 72
+            }
+        }
+    ],
+    "RE": [
+        {
+            "id": "RE_HIMALAYAN_450",
+            "name": "RE HIMALAYAN 450",
+            "image": "./static/images/bikes/RE_HIMALAYAN_450.jpg",
+            "categorySearch": "RE HIMALAYAN 450",
+            "imageSequence": {
+                "urlPattern": "./static/images/bikes/360/RE_HIMALAYAN_450/{N}.jpg",
+                "frames": 72
+            }
+        }
+    ]
 }

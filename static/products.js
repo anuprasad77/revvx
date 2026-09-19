@@ -91,7 +91,13 @@ let PRODUCTS = [
         "bike": "KTM DUKE (GEN 2)",
         "category": "Protection",
         "mrp": 3500,
-        "price": 2999
+        "price": 2999,
+        "image": "./images/ktm gen 3/radiator guard (2).jpeg",
+        "gallery": [
+            "./images/ktm gen 3/radiator guard (2).jpeg",
+            "./images/ktm gen 3/radiator guard (3).jpeg",
+            "./images/ktm gen 3/radiator guard.jpeg"
+        ]
     },
     {
         "id": "ktmdukegen2-fork-sliders-front",
@@ -99,7 +105,13 @@ let PRODUCTS = [
         "bike": "KTM DUKE (GEN 2)",
         "category": "Protection",
         "mrp": 1100,
-        "price": 929
+        "price": 929,
+        "image": "./images/ktm gen 3/fork sliders 0.jpeg",
+        "gallery": [
+            "./images/ktm gen 3/fork sliders 0.jpeg",
+            "./images/ktm gen 3/fork sliders 2.jpeg",
+            "./images/ktm gen 3/fork sliders.jpeg"
+        ]
     },
     {
         "id": "ktmdukegen2-swing-arm-sliders-rear",
@@ -772,3 +784,77 @@ papaScript.onload = () => {
     });
 };
 document.head.appendChild(papaScript);
+
+// Header scroll logic
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.nav');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    }
+});
+
+// Reviews Slider Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('reviews-track');
+    
+    if (track) {
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            // Each slide takes 100% width + 20px margin-right
+            track.style.transform = `translateX(calc(-100% * ${index} - 20px * ${index}))`;
+        }
+        
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        function nextSlide() {
+            let nextIndex = currentIndex + 1;
+            if (nextIndex >= slides.length) nextIndex = 0;
+            goToSlide(nextIndex);
+        }
+        
+        function prevSlide() {
+            let prevIndex = currentIndex - 1;
+            if (prevIndex < 0) prevIndex = slides.length - 1;
+            goToSlide(prevIndex);
+        }
+        
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Swipe functionality for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        track.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            const swipeThreshold = 40; // minimum swipe distance
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide();
+                resetInterval();
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                prevSlide();
+                resetInterval();
+            }
+        }
+    }
+});
