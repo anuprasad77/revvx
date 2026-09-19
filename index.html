@@ -1,712 +1,467 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="REVVX premium CNC motorcycle accessories, engineered in Bangalore."
-    />
-    <title>REVVX | Precision Motorcycle Accessories</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./static/style.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./static/images/1784811540903.png"
-    />
-  </head>
 
-  <body>
-    <div
-      id="loader"
-      class="loader-overlay"
-      style="
-        background: #08090a;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="REVVX premium CNC motorcycle accessories, engineered in Bangalore.">
+  <title>REVVX | Precision Motorcycle Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+<link rel="icon" type="image/png" href="./static/images/1784811540903.png">
+</head>
+
+<body>
+  <div id="loader" class="loader-overlay"
+    style="background: #08090a; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif;">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=JetBrains+Mono:wght@500&display=swap');
+
+      .loader-stage {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        font-family: &quot;Oswald&quot;, sans-serif;
-      "
-    >
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=JetBrains+Mono:wght@500&display=swap");
+        gap: 18px;
+      }
 
-        .loader-stage {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 18px;
-        }
+      .loader-headline {
+        position: relative;
+        font-size: 52px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        white-space: nowrap;
+      }
 
-        .loader-headline {
-          position: relative;
-          font-size: 52px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          white-space: nowrap;
-        }
+      .loader-headline .base {
+        color: #2a2c2e;
+      }
 
-        .loader-headline .base {
-          color: #2a2c2e;
-        }
+      .loader-headline .reveal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        clip-path: inset(0 100% 0 0);
+      }
 
-        .loader-headline .reveal {
-          position: absolute;
-          left: 0;
-          top: 0;
-          clip-path: inset(0 100% 0 0);
-        }
+      .loader-headline .reveal .ride {
+        color: #f5f5f5;
+      }
 
-        .loader-headline .reveal .ride {
-          color: #f5f5f5;
-        }
+      .loader-headline .reveal .fearless {
+        color: #e2231a;
+      }
 
-        .loader-headline .reveal .fearless {
-          color: #e2231a;
-        }
+      .loader-bar {
+        width: 340px;
+        height: 2px;
+        background: #2a2c2e;
+        position: relative;
+      }
 
-        .loader-bar {
-          width: 340px;
-          height: 2px;
-          background: #2a2c2e;
-          position: relative;
-        }
+      .loader-bar-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #e2231a;
+      }
 
-        .loader-bar-fill {
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 0%;
-          background: #e2231a;
-        }
+      .loader-pct {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: #2a2c2e;
+      }
 
-        .loader-pct {
-          font-family: "JetBrains Mono", monospace;
-          font-size: 11px;
-          letter-spacing: 3px;
-          color: #2a2c2e;
-        }
+      .loader-pct b {
+        color: #f5f5f5;
+      }
 
-        .loader-pct b {
-          color: #f5f5f5;
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
         }
-
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            transition: none !important;
-          }
-        }
-      </style>
-      <div class="loader-stage">
-        <div class="loader-headline">
-          <span class="base">Ride Fearless</span>
-          <span class="reveal" id="reveal"
-            ><span class="ride">Ride </span
-            ><span class="fearless">Fearless</span></span
-          >
-        </div>
-        <div class="loader-bar">
-          <div class="loader-bar-fill" id="barFill"></div>
-        </div>
-        <div class="loader-pct"><b id="pctText">0%</b></div>
+      }
+    </style>
+    <div class="loader-stage">
+      <div class="loader-headline">
+        <span class="base">Ride Fearless</span>
+        <span class="reveal" id="reveal"><span class="ride">Ride </span><span class="fearless">Fearless</span></span>
       </div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill" id="barFill"></div>
+      </div>
+      <div class="loader-pct"><b id="pctText">0%</b></div>
     </div>
-    <script>
-      (function () {
-        const reveal = document.getElementById("reveal");
-        const barFill = document.getElementById("barFill");
-        const pctText = document.getElementById("pctText");
-        const loader = document.getElementById("loader");
+  </div>
+  <script>
+    (function () {
+      const reveal = document.getElementById('reveal');
+      const barFill = document.getElementById('barFill');
+      const pctText = document.getElementById('pctText');
+      const loader = document.getElementById('loader');
 
-        function setProgress(pct) {
-          pct = Math.max(0, Math.min(100, pct));
-          reveal.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-          barFill.style.width = pct + "%";
-          pctText.textContent = Math.round(pct) + "%";
+      function setProgress(pct) {
+        pct = Math.max(0, Math.min(100, pct));
+        reveal.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+        barFill.style.width = pct + '%';
+        pctText.textContent = Math.round(pct) + '%';
+      }
+
+      setProgress(0);
+      let progress = 0;
+      let loaded = false;
+      window.addEventListener('load', () => { loaded = true; });
+
+      function tick() {
+        progress += Math.random() * (loaded ? 25 : 8);
+        if (!loaded && progress > 92) progress = 92;
+        progress = Math.min(100, progress);
+        setProgress(progress);
+
+        if (progress < 100) {
+          setTimeout(tick, 60 + Math.random() * 80);
+        } else {
+          setTimeout(() => {
+            if (loader) {
+              loader.classList.add('hidden');
+              setTimeout(() => loader.style.display = 'none', 800);
+            }
+          }, 400);
         }
-
-        setProgress(0);
-        let progress = 0;
-        let loaded = false;
-        window.addEventListener("load", () => {
-          loaded = true;
-        });
-
-        function tick() {
-          progress += Math.random() * (loaded ? 25 : 8);
-          if (!loaded && progress > 92) progress = 92;
-          progress = Math.min(100, progress);
-          setProgress(progress);
-
-          if (progress < 100) {
-            setTimeout(tick, 60 + Math.random() * 80);
-          } else {
-            setTimeout(() => {
-              if (loader) {
-                loader.classList.add("hidden");
-                setTimeout(() => (loader.style.display = "none"), 800);
-              }
-            }, 400);
-          }
-        }
-        setTimeout(tick, 50);
-      })();
-    </script>
-    <nav class="nav">
-      <div class="brand-container">
-        <a class="brand-logo" href="index.html"
-          ><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"
-        /></a>
+      }
+      setTimeout(tick, 50);
+    })();
+  </script>
+  <nav class="nav">
+    <div class="brand-container">
+      <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"></a>
+    </div>
+    <div class="navlinks"><a href="#machine-selector">Products</a><a href="#fitment">Fitment</a><a href="#story">Our
+        Story</a><a href="#contact">Contact</a></div><button class="cart-button" onclick="openCart()"><svg width="22"
+        height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="7" rx="1" />
+        <path d="M5 5h14" />
+        <rect x="11" y="4" width="2" height="2" />
+        <rect x="1" y="10" width="6" height="10" rx="1" />
+        <path d="M1 13h6" />
+        <path d="M4 12v2" />
+        <rect x="17" y="10" width="6" height="10" rx="1" />
+        <path d="M17 13h6" />
+        <path d="M20 12v2" />
+        <path d="M8 9v1h8V9" />
+        <path d="M10 10v4h4v-4" />
+        <path d="M9 15v5a3 3 0 0 0 6 0v-5" />
+      </svg> <b id="cart-count">0</b></button><span class="mobile-menu">☰</span>
+  </nav>
+  <main>
+    <section id="top" class="hero">
+      <div class="hero-image" style="background-image:url('./static/images/IMG_0995.png')"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> ENGINEERED IN BANGALORE · EST. 2018</p>
+        <h1>PRECISION<br><i>BUILD.</i></h1>
+        <p class="hero-copy">Purpose-built motorcycle accessories designed around clean fitment, real-world use, and the
+          machine you ride.</p>
+        <div class="hero-actions"><a class="button primary" href="#machine-selector">Find your fit <span>→</span></a><a
+            class="button ghost" href="#how-it-works">How it works</a></div>
       </div>
-      <div class="navlinks">
-        <a href="#machine-selector">Products</a><a href="#fitment">Fitment</a
-        ><a href="#story">Our Story</a><a href="#contact">Contact</a>
-      </div>
-      <button class="cart-button" onclick="openCart()">
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <rect x="5" y="2" width="14" height="7" rx="1" />
-          <path d="M5 5h14" />
-          <rect x="11" y="4" width="2" height="2" />
-          <rect x="1" y="10" width="6" height="10" rx="1" />
-          <path d="M1 13h6" />
-          <path d="M4 12v2" />
-          <rect x="17" y="10" width="6" height="10" rx="1" />
-          <path d="M17 13h6" />
-          <path d="M20 12v2" />
-          <path d="M8 9v1h8V9" />
-          <path d="M10 10v4h4v-4" />
-          <path d="M9 15v5a3 3 0 0 0 6 0v-5" />
-        </svg>
-        <b id="cart-count">0</b></button
-      ><span class="mobile-menu">☰</span>
-    </nav>
-    <main>
-      <section id="top" class="hero">
-        <div
-          class="hero-image"
-          style="
-            background-image: url(&quot;./static/images/IMG_0995.png&quot;);
-          "
-        ></div>
-        <div class="hero-shade"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow hero-eyebrow">
-            <span class="pulse-dot"></span> ENGINEERED IN BANGALORE · EST. 2025
-          </p>
-          <h1>PRECISION<br /><i>BUILD.</i></h1>
-          <p class="hero-copy">
-            Purpose-built motorcycle accessories designed around clean fitment,
-            real-world use, and the machine you ride.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#machine-selector"
-              >Find your fit <span>→</span></a
-            ><a class="button ghost" href="#how-it-works">How it works</a>
-          </div>
-        </div>
-
-        <div class="hero-stats">
-          <div><strong>10+</strong><span>Bike platforms</span></div>
-          <div><strong>CNC</strong><span>Precision made</span></div>
-          <div><strong>INDIA</strong><span>Pan-India delivery</span></div>
-        </div>
-      </section>
-      <section class="trust">
-        <div>⌁ <span>In-house CNC machining</span></div>
-        <div>✓ <span>Built for Indian roads</span></div>
-        <div>◉ <span>Professional fitment</span></div>
-        <div>↗ <span>Pan India delivery</span></div>
-      </section>
-      <section class="advantage wrap">
-        <div class="heading-row">
-          <h2>ENGINEERED TO<br /><i>OUTPERFORM.</i></h2>
-        </div>
-        <div class="grid advantage-grid" style="margin-top: 32px">
-          <article class="advantage-card">
-            <h3>Aerospace Materials</h3>
-            <p>
-              Machined from solid billet 6061-T6 aluminium for an excellent
-              strength-to-weight balance.
-            </p>
-          </article>
-          <article class="advantage-card">
-            <h3>Purposeful Protection</h3>
-            <p>
-              Thoughtful protection components that help safeguard key contact
-              points without visual clutter.
-            </p>
-          </article>
-          <article class="advantage-card">
-            <h3>Machine-Specific Fit</h3>
-            <p>
-              Start with your motorcycle so you can browse a catalogue tailored
-              to its intended fitment.
-            </p>
-          </article>
-          <article class="advantage-card">
-            <h3>Human Fitment Support</h3>
-            <p>
-              Need a second opinion? Talk through compatibility and installation
-              with the REVVX team on WhatsApp.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="how-it-works" class="process wrap">
-        <div class="process-intro">
-          <h2>ONE MACHINE.<br /><i>ZERO GUESSWORK.</i></h2>
-        </div>
-        <div class="process-steps">
-          <article>
-            <span>01</span>
-            <h3>Pick your bike</h3>
-            <p>Start with the exact platform you ride.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>See compatible parts</h3>
-            <p>Browse the available parts list for that machine.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Confirm &amp; ride</h3>
-            <p>
-              Order on WhatsApp and confirm delivery or fitment details with the
-              team.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section class="spectrum">
-        <div class="spectrum-content wrap">
-          <p class="section-kicker">ENGINEERED FOR EVERY MACHINE</p>
-          <h2>FROM SMALL BIKES<br />TO PREMIUM <i>SUPERBIKES.</i></h2>
-          <p>
-            Whether you ride a nimble daily commuter or a high-performance
-            superbike, we machine uncompromising accessories tailored to
-            perfection.
-          </p>
-        </div>
-        <div class="marquee-container">
-          <div class="marquee">
-            <span>// NAKED STREETFIGHTERS</span>
-            <span>// ADVENTURE TOURERS</span>
-            <span>// PREMIUM SUPERBIKES</span>
-            <span>// CLASSIC RETROS</span>
-            <!-- Duplicate for seamless looping -->
-
-            <span aria-hidden="true">// NAKED STREETFIGHTERS</span>
-            <span aria-hidden="true">// ADVENTURE TOURERS</span>
-            <span aria-hidden="true">// PREMIUM SUPERBIKES</span>
-            <span aria-hidden="true">// CLASSIC RETROS</span>
-          </div>
-        </div>
-      </section>
-      <section id="machine-selector" class="selector wrap">
-        <div class="selector-top">
-          <h2>SELECT YOUR<br /><i>MOTORCYCLE.</i></h2>
-          <p>
-            Choose your machine and see the parts range designed for its
-            platform. Start with the bike, then narrow your setup.
-          </p>
-        </div>
-        <div class="selector-controls">
-          <div
-            class="brand-tabs"
-            id="brand-tabs"
-            aria-label="Filter motorcycles by brand"
-          ></div>
-          <div class="search machine-search">
-            ⌕
-            <input
-              id="search"
-              placeholder="Search your bike"
-              aria-label="Search your bike"
-            />
-          </div>
-        </div>
-        <p class="machine-count" id="machine-count" aria-live="polite"></p>
-        <div class="bike-grid" id="bike-grid">
-          <!-- Rendered by JS -->
-        </div>
-      </section>
-      <section id="fitment" class="fitment">
-        <div class="fitment-img"></div>
-        <div class="fitment-content">
-          <p class="eyebrow">REVVX WORKS · BANGALORE</p>
-          <h2>THE PERFECT FIT<br />IS <i>PERSONAL.</i></h2>
-          <p>
-            Bring your motorcycle to our workshop. Our specialists will help
-            select, install, and set up the exact parts your ride deserves.
-          </p>
-          <div class="fitment-list">
-            <span>✓ Expert consultation</span
-            ><span>✓ Precision installation</span
-            ><span>✓ Same day for most parts</span>
-          </div>
-          <a
-            class="button primary"
-            href="https://wa.me/916362777677?text=Hello%20REVVX%2C%20I%20would%20like%20to%20book%20a%20fitment."
-            target="_blank"
-            >Book a fitment →</a
-          >
-        </div>
-      </section>
-      <section id="story" class="story wrap">
-        <div>
-          <h2>THE PURSUIT<br />OF <i>BETTER.</i></h2>
-        </div>
-        <div class="story-copy">
-          <p
-            style="
-              margin-bottom: 24px;
-              color: #fff;
-              font-size: 1.1em;
-              line-height: 1.6;
-            "
-          >
-            At Revvx, we don't just manufacture motorcycle accessories -
-            <b>we engineer confidence.</b>
-          </p>
-          <ul
-            style="
-              list-style-type: none;
-              padding: 0;
-              display: grid;
-              gap: 16px;
-              margin-bottom: 24px;
-            "
-          >
-            <li style="display: flex; gap: 12px; align-items: start">
-              <span
-                style="color: var(--red); font-size: 1.2em; line-height: 1.4"
-                >✓</span
-              >
-              <span
-                >We specialize in premium crash guards and performance-focused
-                motorcycle accessories designed for riders who demand protection
-                without compromising style.</span
-              >
-            </li>
-            <li style="display: flex; gap: 12px; align-items: start">
-              <span
-                style="color: var(--red); font-size: 1.2em; line-height: 1.4"
-                >✓</span
-              >
-              <span
-                >Every product we build is crafted with precision, durability,
-                and real-world riding conditions in mind.</span
-              >
-            </li>
-            <li style="display: flex; gap: 12px; align-items: start">
-              <span
-                style="color: var(--red); font-size: 1.2em; line-height: 1.4"
-                >✓</span
-              >
-              <span
-                >It's our obsession with strength, fitment accuracy, and clean
-                design.</span
-              >
-            </li>
-          </ul>
-          <p
-            style="
-              color: #fff;
-              font-weight: 600;
-              font-size: 1.05em;
-              border-left: 2px solid var(--red);
-              padding-left: 12px;
-            "
-          >
-            Revvx is for riders who respect power, value and quality.
-          </p>
-        </div>
-      </section>
-      <section class="gallery">
-        <div class="gallery-kicker wrap">
-          <h2>SEEN ON <i>MACHINES.</i></h2>
-        </div>
-        <div class="gallery-strip">
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183751.png&quot;);
-            "
-          ></div>
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183907.png&quot;);
-            "
-          ></div>
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183807.png&quot;);
-            "
-          ></div>
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183829.png&quot;);
-            "
-          ></div>
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183728.png&quot;);
-            "
-          ></div>
-          <div
-            class="gallery-item"
-            style="
-              background-image: url(&quot;./static/images/Screenshot_20260723-183743.png&quot;);
-            "
-          ></div>
-        </div>
-      </section>
-      <section class="reviews wrap">
-        <div class="review-head">
-          <p class="section-kicker">RIDERS' WORD</p>
-          <h2>TRUSTED ON<br /><i>EVERY TERRAIN.</i></h2>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <blockquote>
-            “The fit and finish is exceptional. It looks factory, but tougher
-            than anything the factory offers.”
-          </blockquote>
-          <p>ARJUN N. <span>— KTM ADVENTURE 390</span></p>
-        </div>
-      </section>
-    </main>
-    <footer id="contact">
-      <div class="footer-main wrap">
-        <div>
-          <a class="brand-logo footer-logo" href="#top"
-            ><img src="./static/images/1784811540903.png" alt="REVVX"
-          /></a>
-          <p>
-            Precision motorcycle accessories.<br />Made in Bangalore, India.
-          </p>
-        </div>
-        <div>
-          <b>EXPLORE</b><a href="#machine-selector">Products</a
-          ><a href="#fitment">Book Fitment</a><a href="#story">About REVVX</a>
-        </div>
-        <div>
-          <b>VISIT THE WORKS</b>
-          <p>Peenya, Bangalore<br />Mon–Sat · 9:00am–6:30pm</p>
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-              margin-top: 15px;
-            "
-          >
-            <a href="mailto:revvx.automotive@gmail.com"
-              >revvx.automotive@gmail.com</a
-            >
-            <a href="https://instagram.com/revvx.in" target="_blank"
-              >IG: @revvx.in</a
-            >
-            <a
-              class="red-link"
-              href="https://wa.me/916362777677"
-              target="_blank"
-              >WhatsApp us →</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom wrap">
-        <span>© 2026 REVVX PERFORMANCE</span>
-        <span>Made with love from bikers to bikers</span>
-        <span>RIDE FEARLESS</span>
-      </div>
-    </footer>
-    <div
-      class="overlay"
-      id="overlay"
-      onclick="if (event.target === this) closeCart();"
-    >
-      <aside class="drawer">
-        <div class="drawer-title">
-          <h2>YOUR GARAGE</h2>
-          <button onclick="closeCart()">×</button>
-        </div>
-        <div class="cart-items" id="cart-items"></div>
-        <div class="empty" id="cart-empty">
-          Your garage is empty.<br /><button onclick="closeCart()">
-            Explore the collection
-          </button>
-        </div>
-        <div class="cart-total" id="cart-total">
-          <span>SUBTOTAL <b id="subtotal">₹0</b></span
-          ><button class="button primary full" onclick="whatsAppOrder()">
-            Order via WhatsApp →</button
-          ><small>Shipping and installation confirmed on WhatsApp.</small>
-        </div>
+      <aside class="hero-spec-card" aria-label="Revvx design principles">
+        <span class="spec-label">REVVX / 01</span>
+        <strong>BUILT AROUND<br>YOUR MACHINE.</strong>
+        <div><span>FITMENT</span><b>BIKE-SPECIFIC</b></div>
+        <div><span>FINISH</span><b>PRECISION MADE</b></div>
       </aside>
+      <div class="hero-stats">
+        <div><strong>30+</strong><span>Bike platforms</span></div>
+        <div><strong>CNC</strong><span>Precision made</span></div>
+        <div><strong>INDIA</strong><span>Pan-India delivery</span></div>
+      </div>
+    </section>
+    <section class="trust">
+      <div>⌁ <span>In-house CNC machining</span></div>
+      <div>✓ <span>Built for Indian roads</span></div>
+      <div>◉ <span>Professional fitment</span></div>
+      <div>↗ <span>Pan India delivery</span></div>
+    </section>
+    <section class="advantage wrap">
+
+      <div class="heading-row">
+        <h2>ENGINEERED TO<br><i>OUTPERFORM.</i></h2>
+      </div>
+      <div class="grid advantage-grid" style="margin-top: 32px;">
+        <article class="advantage-card">
+          <h3>Aerospace Materials</h3>
+          <p>Machined from solid billet 6061-T6 aluminium for an excellent strength-to-weight balance.</p>
+        </article>
+        <article class="advantage-card">
+          <h3>Purposeful Protection</h3>
+          <p>Thoughtful protection components that help safeguard key contact points without visual clutter.</p>
+        </article>
+        <article class="advantage-card">
+          <h3>Machine-Specific Fit</h3>
+          <p>Start with your motorcycle so you can browse a catalogue tailored to its intended fitment.</p>
+        </article>
+        <article class="advantage-card">
+          <h3>Human Fitment Support</h3>
+          <p>Need a second opinion? Talk through compatibility and installation with the REVVX team on WhatsApp.</p>
+        </article>
+      </div>
+    </section>
+    <section id="how-it-works" class="process wrap">
+      <div class="process-intro">
+
+        <h2>ONE MACHINE.<br><i>ZERO GUESSWORK.</i></h2>
+      </div>
+      <div class="process-steps">
+        <article><span>01</span>
+          <h3>Pick your bike</h3>
+          <p>Start with the exact platform you ride.</p>
+        </article>
+        <article><span>02</span>
+          <h3>See compatible parts</h3>
+          <p>Browse the available parts list for that machine.</p>
+        </article>
+        <article><span>03</span>
+          <h3>Confirm &amp; ride</h3>
+          <p>Order on WhatsApp and confirm delivery or fitment details with the team.</p>
+        </article>
+      </div>
+    </section>
+    <section class="spectrum">
+      <div class="spectrum-content wrap">
+        <p class="section-kicker">ENGINEERED FOR EVERY MACHINE</p>
+        <h2>FROM SMALL BIKES<br>TO PREMIUM <i>SUPERBIKES.</i></h2>
+        <p>Whether you ride a nimble daily commuter or a high-performance superbike, we machine uncompromising
+          accessories tailored to perfection.</p>
+      </div>
+      <div class="marquee-container">
+        <div class="marquee">
+
+          <span>// NAKED STREETFIGHTERS</span>
+          <span>// ADVENTURE TOURERS</span>
+          <span>// PREMIUM SUPERBIKES</span>
+          <span>// CLASSIC RETROS</span>
+          <!-- Duplicate for seamless looping -->
+
+          <span aria-hidden="true">// NAKED STREETFIGHTERS</span>
+          <span aria-hidden="true">// ADVENTURE TOURERS</span>
+          <span aria-hidden="true">// PREMIUM SUPERBIKES</span>
+          <span aria-hidden="true">// CLASSIC RETROS</span>
+        </div>
+      </div>
+    </section>
+    <section id="machine-selector" class="selector wrap">
+
+      <div class="selector-top">
+        <h2>SELECT YOUR<br><i>MOTORCYCLE.</i></h2>
+        <p>Choose your machine and see the parts range designed for its platform. Start with the bike, then narrow your
+          setup.</p>
+      </div>
+      <div class="selector-controls">
+        <div class="brand-tabs" id="brand-tabs" aria-label="Filter motorcycles by brand"></div>
+        <div class="search machine-search">⌕ <input id="search" placeholder="Search your bike"
+            aria-label="Search your bike">
+        </div>
+      </div>
+      <p class="machine-count" id="machine-count" aria-live="polite"></p>
+      <div class="bike-grid" id="bike-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+    <section id="fitment" class="fitment">
+      <div class="fitment-img"></div>
+      <div class="fitment-content">
+        <p class="eyebrow">REVVX WORKS · BANGALORE</p>
+        <h2>THE PERFECT FIT<br>IS <i>PERSONAL.</i></h2>
+        <p>Bring your motorcycle to our workshop. Our specialists will help select, install, and set up the exact parts
+          your ride deserves.</p>
+        <div class="fitment-list"><span>✓ Expert consultation</span><span>✓ Precision installation</span><span>✓ Same
+            day for most parts</span></div><a class="button primary"
+          href="https://wa.me/916362777677?text=Hello%20REVVX%2C%20I%20would%20like%20to%20book%20a%20fitment."
+          target="_blank">Book a fitment →</a>
+      </div>
+    </section>
+    <section id="story" class="story wrap">
+      <div>
+
+        <h2>THE PURSUIT<br>OF <i>BETTER.</i></h2>
+      </div>
+      <div class="story-copy">
+        <p style="margin-bottom: 24px; color: #fff; font-size: 1.1em; line-height: 1.6;">At Revvx, we don't just
+          manufacture motorcycle accessories - <b>we engineer confidence.</b></p>
+        <ul style="list-style-type: none; padding: 0; display: grid; gap: 16px; margin-bottom: 24px;">
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span>
+            <span>We specialize in premium crash guards and performance-focused motorcycle accessories designed for
+              riders who demand protection without compromising style.</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span>
+            <span>Every product we build is crafted with precision, durability, and real-world riding conditions in
+              mind.</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: start;">
+            <span style="color: var(--red); font-size: 1.2em; line-height: 1.4;">✓</span>
+            <span>It's our obsession with strength, fitment accuracy, and clean design.</span>
+          </li>
+        </ul>
+        <p
+          style="color: #fff; font-weight: 600; font-size: 1.05em; border-left: 2px solid var(--red); padding-left: 12px;">
+          Revvx is for riders who respect power, value and quality.</p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery-kicker wrap">
+
+        <h2>SEEN ON <i>MACHINES.</i></h2>
+      </div>
+      <div class="gallery-strip">
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183751.png')"></div>
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183907.png')"></div>
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183807.png')"></div>
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183829.png')"></div>
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183728.png')"></div>
+        <div class="gallery-item" style="background-image:url('./static/images/Screenshot_20260723-183743.png')"></div>
+      </div>
+    </section>
+    <section class="reviews wrap">
+      <div class="review-head">
+        <p class="section-kicker">RIDERS' WORD</p>
+        <h2>TRUSTED ON<br><i>EVERY TERRAIN.</i></h2>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>“The fit and finish is exceptional. It looks factory, but tougher than anything the factory offers.”
+        </blockquote>
+        <p>ARJUN N. <span>— KTM ADVENTURE 390</span></p>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="footer-main wrap">
+      <div><a class="brand-logo footer-logo" href="#top"><img src="./static/images/1784811540903.png" alt="REVVX"></a>
+        <p>Precision motorcycle accessories.<br>Made in Bangalore, India.</p>
+      </div>
+      <div><b>EXPLORE</b><a href="#machine-selector">Products</a><a href="#fitment">Book Fitment</a><a
+          href="#story">About
+          REVVX</a></div>
+      <div><b>VISIT THE WORKS</b>
+        <p>Peenya, Bangalore<br>Mon–Sat · 9:00am–6:30pm</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+          <a href="mailto:revvx.automotive@gmail.com">revvx.automotive@gmail.com</a>
+          <a href="https://instagram.com/revvx.in" target="_blank">IG: @revvx.in</a>
+          <a class="red-link" href="https://wa.me/916362777677" target="_blank">WhatsApp us →</a>
+        </div>
+      </div>
     </div>
-
-    <div class="scroll-tracker">
-      <div class="scroll-progress" id="scroll-progress"></div>
-      <img
-        src="./static/images/klx_transparent.png"
-        class="scroll-bike"
-        id="scroll-bike"
-        alt=""
-      />
+    <div class="footer-bottom wrap">
+      <span>© 2026 REVVX PERFORMANCE</span>
+      <span>Made with love from bikers to bikers</span>
+      <span>RIDE FEARLESS</span>
     </div>
+  </footer>
+  <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
+    <aside class="drawer">
+      <div class="drawer-title">
+        <h2>YOUR GARAGE</h2><button onclick="closeCart()">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="empty" id="cart-empty">Your garage is empty.<br><button onclick="closeCart()">Explore the
+          collection</button></div>
+      <div class="cart-total" id="cart-total"><span>SUBTOTAL <b id="subtotal">₹0</b></span><button
+          class="button primary full" onclick="whatsAppOrder()">Order via WhatsApp →</button><small>Shipping and
+          installation confirmed on WhatsApp.</small></div>
+    </aside>
+  </div>
 
-    <script src="./static/products.js"></script>
-    <script>
-      const money = (n) =>
-        new Intl.NumberFormat("en-IN", {
-          style: "currency",
-          currency: "INR",
-          maximumFractionDigits: 0,
-        }).format(n);
-      let cart = JSON.parse(localStorage.getItem("revvx_cart")) || {};
+  <div class="scroll-tracker">
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <img src="./static/images/klx_transparent.png" class="scroll-bike" id="scroll-bike" alt="">
+  </div>
 
-      function saveCart() {
-        localStorage.setItem("revvx_cart", JSON.stringify(cart));
-      }
+  <script src="./static/products.js"></script>
+  <script>
+    const money = n => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(n);
+    let cart = JSON.parse(localStorage.getItem('revvx_cart')) || {};
 
-      function addProduct(product) {
-        cart[product.id]
-          ? cart[product.id].qty++
-          : (cart[product.id] = { ...product, qty: 1 });
-        saveCart();
-        renderCart();
-      }
+    function saveCart() { localStorage.setItem('revvx_cart', JSON.stringify(cart)); }
 
-      function updateQty(id, amount) {
-        cart[id].qty += amount;
-        if (cart[id].qty < 1) delete cart[id];
-        saveCart();
-        renderCart();
-      }
-
-      function renderCart() {
-        const items = Object.values(cart),
-          count = items.reduce((a, p) => a + p.qty, 0),
-          total = items.reduce((a, p) => a + p.qty * p.price, 0);
-        document.getElementById("cart-count").textContent = count;
-        document.getElementById("cart-empty").style.display = items.length
-          ? "none"
-          : "block";
-        document.getElementById("cart-total").style.display = items.length
-          ? "grid"
-          : "none";
-        document.getElementById("subtotal").textContent = money(total);
-        document.getElementById("cart-items").innerHTML = items
-          .map(
-            (p) =>
-              `<div class="cart-item"><img src="${p.image}" alt=""><div><p>${p.name}</p><small>${p.bike}</small><b>${money(p.price)}</b></div><div class="qty"><button onclick="updateQty('${p.id}',-1)">−</button><span>${p.qty}</span><button onclick="updateQty('${p.id}',1)">+</button></div></div>`,
-          )
-          .join("");
-      }
-
-      function openCart() {
-        document.getElementById("overlay").classList.add("show");
-        renderCart();
-      }
-      function closeCart() {
-        document.getElementById("overlay").classList.remove("show");
-      }
-
-      function whatsAppOrder() {
-        const items = Object.values(cart)
-          .map(
-            (p) => `• ${p.name} (for ${p.bike}) x${p.qty} - ${money(p.price)}`,
-          )
-          .join("\n");
-        const totalAmount = Object.values(cart).reduce(
-          (sum, p) => sum + p.price * p.qty,
-          0,
-        );
-
-        const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
-
-        window.open(
-          `https://wa.me/916362777677?text=${encodeURIComponent(message)}`,
-          "_blank",
-        );
-      }
-
-      let selectedBrand = "All";
-      function filterProducts() {
-        renderBrands();
-      }
-      document
-        .getElementById("search")
-        .addEventListener("input", filterProducts);
-
+    function addProduct(product) {
+      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 };
+      saveCart();
       renderCart();
+    }
 
-      function renderBrands() {
-        const bikeGrid = document.getElementById("bike-grid");
-        if (!bikeGrid) return;
+    function updateQty(id, amount) {
+      cart[id].qty += amount;
+      if (cart[id].qty < 1) delete cart[id];
+      saveCart();
+      renderCart();
+    }
 
-        const search = document
-          .getElementById("search")
-          .value.trim()
-          .toLowerCase();
-        const allBikes = Object.entries(BIKES_DATA).flatMap(([brand, bikes]) =>
-          bikes.map((bike) => ({ ...bike, brand })),
-        );
-        const visibleBikes = allBikes.filter(
-          (bike) =>
-            (selectedBrand === "All" || bike.brand === selectedBrand) &&
-            bike.name.toLowerCase().includes(search),
-        );
-        const tabs = ["All", ...Object.keys(BIKES_DATA)];
-        document.getElementById("brand-tabs").innerHTML = tabs
-          .map(
-            (brand) =>
-              `<button class="brand-tab ${brand === selectedBrand ? "active" : ""}" type="button" onclick='selectBrand(${JSON.stringify(brand)})'>${brand}</button>`,
-          )
-          .join("");
-        document.getElementById("machine-count").textContent =
-          `${visibleBikes.length} ${visibleBikes.length === 1 ? "machine" : "machines"} available`;
-        bikeGrid.innerHTML = visibleBikes.length
-          ? visibleBikes
-              .map((bike) => {
-                let variantsAttr = "";
-                let arrows = "";
-                if (bike.variants) {
-                  const safeVariants = JSON.stringify(bike.variants)
-                    .replace(/'/g, "&apos;")
-                    .replace(/"/g, "&quot;");
-                  variantsAttr = `data-variants="${safeVariants}" data-current-variant="0"`;
-                  arrows = `
+    function renderCart() {
+      const items = Object.values(cart), count = items.reduce((a, p) => a + p.qty, 0), total = items.reduce((a, p) => a + p.qty * p.price, 0);
+      document.getElementById('cart-count').textContent = count;
+      document.getElementById('cart-empty').style.display = items.length ? 'none' : 'block';
+      document.getElementById('cart-total').style.display = items.length ? 'grid' : 'none';
+      document.getElementById('subtotal').textContent = money(total);
+      document.getElementById('cart-items').innerHTML = items.map(p => `<div class="cart-item"><img src="${p.image}" alt=""><div><p>${p.name}</p><small>${p.bike}</small><b>${money(p.price)}</b></div><div class="qty"><button onclick="updateQty('${p.id}',-1)">−</button><span>${p.qty}</span><button onclick="updateQty('${p.id}',1)">+</button></div></div>`).join('');
+    }
+
+    function openCart() { document.getElementById('overlay').classList.add('show'); renderCart(); }
+    function closeCart() { document.getElementById('overlay').classList.remove('show'); }
+
+    function whatsAppOrder() {
+      const items = Object.values(cart).map(p => `• ${p.name} (for ${p.bike}) x${p.qty} - ${money(p.price)}`).join('\n');
+      const totalAmount = Object.values(cart).reduce((sum, p) => sum + (p.price * p.qty), 0);
+
+      const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
+
+      window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    let selectedBrand = 'All';
+    function filterProducts() { renderBrands(); }
+    document.getElementById('search').addEventListener('input', filterProducts);
+
+    renderCart();
+
+    function renderBrands() {
+      const bikeGrid = document.getElementById('bike-grid');
+      if (!bikeGrid) return;
+
+      const search = document.getElementById('search').value.trim().toLowerCase();
+      const allBikes = Object.entries(BIKES_DATA).flatMap(([brand, bikes]) => bikes.map(bike => ({ ...bike, brand })));
+      const visibleBikes = allBikes.filter(bike =>
+        (selectedBrand === 'All' || bike.brand === selectedBrand) && bike.name.toLowerCase().includes(search)
+      );
+      const tabs = ['All', ...Object.keys(BIKES_DATA)];
+      document.getElementById('brand-tabs').innerHTML = tabs.map(brand =>
+        `<button class="brand-tab ${brand === selectedBrand ? 'active' : ''}" type="button" onclick='selectBrand(${JSON.stringify(brand)})'>${brand}</button>`
+      ).join('');
+      document.getElementById('machine-count').textContent = `${visibleBikes.length} ${visibleBikes.length === 1 ? 'machine' : 'machines'} available`;
+        bikeGrid.innerHTML = visibleBikes.length ? visibleBikes.map(bike => {
+          let variantsAttr = '';
+          let arrows = '';
+          if (bike.variants) {
+              const safeVariants = JSON.stringify(bike.variants).replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+              variantsAttr = `data-variants="${safeVariants}" data-current-variant="0"`;
+              arrows = `
                 <div class="variant-arrows">
                   <button class="variant-btn" onclick="event.stopPropagation(); switchVariant(this, -1)">&#10094;</button>
                   <button class="variant-btn" onclick="event.stopPropagation(); switchVariant(this, 1)">&#10095;</button>
                 </div>`;
-                }
-                return `
+          }
+          return `
               <article class="bike-card" ${variantsAttr} onclick="goToBike(this, '${bike.categorySearch}')">
                   <div class="bike-photo" style="position: relative;">
                       ${arrows}
@@ -716,130 +471,105 @@
                   <span class="view-parts">View compatible parts</span>
               </article>
           `;
-              })
-              .join("")
-          : `<div class="no-machines"><span>NO MATCH FOUND</span><p>Try another brand or search term.</p><button type="button" onclick="resetMachineSearch()">Clear search</button></div>`;
-      }
+        }).join('') : `<div class="no-machines"><span>NO MATCH FOUND</span><p>Try another brand or search term.</p><button type="button" onclick="resetMachineSearch()">Clear search</button></div>`;
+    }
 
-      function selectBrand(brand) {
-        selectedBrand = brand;
-        renderBrands();
-      }
-      function resetMachineSearch() {
-        selectedBrand = "All";
-        document.getElementById("search").value = "";
-        renderBrands();
-      }
+    function selectBrand(brand) { selectedBrand = brand; renderBrands(); }
+    function resetMachineSearch() { selectedBrand = 'All'; document.getElementById('search').value = ''; renderBrands(); }
 
-      renderBrands();
+    renderBrands();
 
-      // Scroll Tracker Logic
-      const scrollProgress = document.getElementById("scroll-progress");
-      const scrollBike = document.getElementById("scroll-bike");
-      let lastRawScrollTop = 0;
+    // Scroll Tracker Logic
+    const scrollProgress = document.getElementById('scroll-progress');
+    const scrollBike = document.getElementById('scroll-bike');
+    let lastRawScrollTop = 0;
 
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        // Robust document height calculation for mobile (handles address bar show/hide)
-        const docHeight = Math.max(
-          document.body.scrollHeight,
-          document.documentElement.scrollHeight,
-          document.body.offsetHeight,
-          document.documentElement.offsetHeight,
-          document.body.clientHeight,
-          document.documentElement.clientHeight,
-        );
-        const scrollHeight = docHeight - window.innerHeight;
+      // Robust document height calculation for mobile (handles address bar show/hide)
+      const docHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+      const scrollHeight = docHeight - window.innerHeight;
 
-        // Clamp scrollTop to prevent position going out of bounds
-        const boundedScrollTop = Math.max(0, Math.min(scrollTop, scrollHeight));
-        const scrollPercent =
-          scrollHeight > 0 ? (boundedScrollTop / scrollHeight) * 100 : 0;
+      // Clamp scrollTop to prevent position going out of bounds
+      const boundedScrollTop = Math.max(0, Math.min(scrollTop, scrollHeight));
+      const scrollPercent = scrollHeight > 0 ? (boundedScrollTop / scrollHeight) * 100 : 0;
 
-        if (scrollProgress && scrollBike) {
-          scrollProgress.style.width = scrollPercent + "%";
-          // Adjust left position to keep logo within bounds (bike width is roughly 40px)
-          scrollBike.style.left = `calc(${scrollPercent}% - ${scrollPercent * 0.01 * 40}px)`;
+      if (scrollProgress && scrollBike) {
+        scrollProgress.style.width = scrollPercent + '%';
+        // Adjust left position to keep logo within bounds (bike width is roughly 40px)
+        scrollBike.style.left = `calc(${scrollPercent}% - ${scrollPercent * 0.01 * 40}px)`;
 
-          // Only update direction if we are NOT bouncing (i.e., within the actual page bounds)
-          if (scrollTop > 0 && scrollTop < scrollHeight) {
-            if (scrollTop > lastRawScrollTop) {
-              // Scrolling down - moving right
-              scrollBike.style.transform = "scaleX(1)";
-            } else if (scrollTop < lastRawScrollTop) {
-              // Scrolling up - moving left
-              scrollBike.style.transform = "scaleX(-1)";
-            }
+        // Only update direction if we are NOT bouncing (i.e., within the actual page bounds)
+        if (scrollTop > 0 && scrollTop < scrollHeight) {
+          if (scrollTop > lastRawScrollTop) {
+            // Scrolling down - moving right
+            scrollBike.style.transform = 'scaleX(1)';
+          } else if (scrollTop < lastRawScrollTop) {
+            // Scrolling up - moving left
+            scrollBike.style.transform = 'scaleX(-1)';
           }
+        }
 
-          lastRawScrollTop = scrollTop;
+        lastRawScrollTop = scrollTop;
+      }
+    });
+
+    // Mobile Menu Toggle & Auto-Close
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.navlinks');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
         }
       });
 
-      // Mobile Menu Toggle & Auto-Close
-      const mobileMenuBtn = document.querySelector(".mobile-menu");
-      const navLinks = document.querySelector(".navlinks");
-
-      if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          navLinks.classList.toggle("show");
-        });
-
-        document.addEventListener("click", (e) => {
-          if (
-            !navLinks.contains(e.target) &&
-            navLinks.classList.contains("show")
-          ) {
-            navLinks.classList.remove("show");
-          }
-        });
-
-        window.addEventListener("scroll", () => {
-          if (navLinks.classList.contains("show")) {
-            navLinks.classList.remove("show");
-          }
-        });
-      }
+      window.addEventListener('scroll', () => {
+        if (navLinks.classList.contains('show')) {
+          navLinks.classList.remove('show');
+        }
+      });
+    }
       function switchVariant(btn, direction) {
-        const card = btn.closest(".bike-card");
-        const variantsStr = card
-          .getAttribute("data-variants")
-          .replace(/&quot;/g, '"')
-          .replace(/&apos;/g, "'");
-        const variants = JSON.parse(variantsStr);
-        let currentIdx = parseInt(card.getAttribute("data-current-variant"));
-
-        currentIdx += direction;
-        if (currentIdx < 0) currentIdx = variants.length - 1;
-        if (currentIdx >= variants.length) currentIdx = 0;
-
-        card.setAttribute("data-current-variant", currentIdx);
-
-        const variant = variants[currentIdx];
-        card.querySelector("img").src = variant.image;
-        card.querySelector("h3").textContent = variant.name;
+          const card = btn.closest('.bike-card');
+          const variantsStr = card.getAttribute('data-variants').replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+          const variants = JSON.parse(variantsStr);
+          let currentIdx = parseInt(card.getAttribute('data-current-variant'));
+          
+          currentIdx += direction;
+          if (currentIdx < 0) currentIdx = variants.length - 1;
+          if (currentIdx >= variants.length) currentIdx = 0;
+          
+          card.setAttribute('data-current-variant', currentIdx);
+          
+          const variant = variants[currentIdx];
+          card.querySelector('img').src = variant.image;
+          card.querySelector('h3').textContent = variant.name;
       }
 
       function goToBike(card, defaultCategory) {
-        const variantsAttr = card.getAttribute("data-variants");
-        if (variantsAttr) {
-          const variantsStr = variantsAttr
-            .replace(/&quot;/g, '"')
-            .replace(/&apos;/g, "'");
-          const variants = JSON.parse(variantsStr);
-          const currentIdx = parseInt(
-            card.getAttribute("data-current-variant"),
-          );
-          window.location.href =
-            "bike.html?bike=" +
-            encodeURIComponent(variants[currentIdx].categorySearch);
-        } else {
-          window.location.href =
-            "bike.html?bike=" + encodeURIComponent(defaultCategory);
-        }
+          const variantsAttr = card.getAttribute('data-variants');
+          if (variantsAttr) {
+              const variantsStr = variantsAttr.replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+              const variants = JSON.parse(variantsStr);
+              const currentIdx = parseInt(card.getAttribute('data-current-variant'));
+              window.location.href = 'bike.html?bike=' + encodeURIComponent(variants[currentIdx].categorySearch);
+          } else {
+              window.location.href = 'bike.html?bike=' + encodeURIComponent(defaultCategory);
+          }
       }
     </script>
   </body>
+
 </html>
