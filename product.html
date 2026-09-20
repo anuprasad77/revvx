@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./static/style.css?v=1.2">
+  <link rel="stylesheet" href="./static/style.css?v=1.3">
   <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
@@ -432,15 +432,14 @@
       .product-thumbnails img {
         width: 80px;
         height: 80px;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 8px;
         cursor: pointer;
         border: 2px solid transparent;
         transition: 0.2s;
-        background: #ffffff;
+        background: transparent;
         opacity: 0.6;
         flex-shrink: 0;
-        padding: 5px;
       }
 
       .product-thumbnails img:hover {
@@ -477,11 +476,11 @@
       <!-- IMAGES -->
       <div style="display: flex; flex-direction: column; gap: 15px;">
         <div class="product-images"
-          style="position: relative; aspect-ratio: 4/3; max-height: 550px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #ffffff; border: 1px solid rgba(255,255,255,0.05); cursor: zoom-in;"
+          style="position: relative; aspect-ratio: 1/1; max-height: 550px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: transparent; cursor: zoom-in;"
           onclick="openLightbox()">
           <!-- Foreground full image -->
           <img id="pd-image" src="" alt="Product Image" fetchpriority="high" decoding="async"
-            style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; padding: 0; transition: transform 0.3s; mix-blend-mode: multiply;"
+            style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: contain; padding: 0; transition: transform 0.3s;"
             onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div id="pd-thumbnails" class="product-thumbnails"></div>

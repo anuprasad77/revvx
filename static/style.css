@@ -347,17 +347,18 @@ h2 i {
   gap: 35px 18px;
 }
 .product-photo {
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   height: auto;
-  background: #151515;
+  background: transparent;
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
 }
 .product-photo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center;
   filter: saturate(0.85);
   transition: transform 0.5s;
 }
@@ -977,7 +978,7 @@ footer {
   gap: 27px 12px;
 }
 .product-photo {
-  aspect-ratio: 16/9;
+  aspect-ratio: 1/1;
   height: auto;
 }
 .quick {
@@ -1126,7 +1127,7 @@ body.light .selector-box label {
 }
 /* Products */
 body.light .product-photo {
-  background: #e8e8e8;
+  background: transparent;
 }
 body.light .product h3 {
   color: #090909;

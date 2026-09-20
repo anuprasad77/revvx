@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./static/style.css?v=1.2">
+  <link rel="stylesheet" href="./static/style.css?v=1.4">
   <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
@@ -660,7 +660,9 @@
 
       <div class="bike-meta">
 
-        <h2 id="bike-name" style="color: #ff0000;"></h2>
+        <h2 id="bike-name"
+          style="color: #ff0000; font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; line-height: 1; margin-bottom: 5px;">
+        </h2>
         <p style="color:#aaaaaa;margin-bottom:0;">Discover compatible parts engineered to fit perfectly.</p>
       </div>
     </section>
@@ -728,7 +730,7 @@
     <img src="./static/images/klx_transparent.png" class="scroll-bike" id="scroll-bike" alt="">
   </div>
 
-  <script src="./static/products.js?v=1.1"></script>
+  <script src="./static/products.js?v=1.4"></script>
   <script>
     let cart = JSON.parse(localStorage.getItem('revvx_cart')) || {};
     const money = n => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(n);
@@ -782,7 +784,7 @@
           if (nextBtn) nextBtn.style.display = 'none';
         }
 
-        document.getElementById('bike-name').innerHTML = `<i>${displayName}</i>`;
+        document.getElementById('bike-name').innerHTML = `<i style="color:#ff0000">${displayName}</i>`;
         const imgEl = document.getElementById('bike-image');
         const viewer360El = document.getElementById('bike-360-viewer');
         const hint = document.getElementById('drag-hint');
