@@ -7,11 +7,11 @@ let PRODUCTS = [
         "price": 849,
         "mrp": 1000,
         "tag": "",
-        "image": "./images/ktm gen 3/spools & swing arm sliders.jpeg?v=2.0",
+        "image": "./images/ktm gen 3/spools.jpeg?v=2.0",
         "description": "<p><strong>REVVX Spools M10</strong></p><p>Compatible with KTM DUKE GEN 3 390</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
-            "./images/ktm gen 3/spools & swing arm sliders.jpeg?v=2.0",
             "./images/ktm gen 3/spools.jpeg?v=2.0",
+            "./images/ktm gen 3/spools & swing arm sliders.jpeg?v=2.0",
             "./images/ktm gen 3/swing arm sliders and spools.jpeg?v=2.0"
         ]
     },
@@ -37,10 +37,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 3500,
         "price": 2999,
-        "image": "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
+        "image": "./images/ktm gen 3/radiator guard (3).jpeg?v=2.0",
         "gallery": [
-            "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
             "./images/ktm gen 3/radiator guard (3).jpeg?v=2.0",
+            "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
             "./images/ktm gen 3/radiator guard.jpeg?v=2.0"
         ]
     },
@@ -65,10 +65,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 1100,
         "price": 929,
-        "image": "./images/ktm gen 3/swing arm sliders and spools.jpeg?v=2.0",
+        "image": "./images/ktm gen 3/swing arm sliders.jpeg?v=2.0",
         "gallery": [
-            "./images/ktm gen 3/swing arm sliders and spools.jpeg?v=2.0",
-            "./images/ktm gen 3/swing arm sliders.jpeg?v=2.0"
+            "./images/ktm gen 3/swing arm sliders.jpeg?v=2.0",
+            "./images/ktm gen 3/swing arm sliders and spools.jpeg?v=2.0"
         ]
     },
     {
@@ -92,10 +92,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 3500,
         "price": 2999,
-        "image": "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
+        "image": "./images/ktm gen 3/radiator guard (3).jpeg?v=2.0",
         "gallery": [
-            "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
             "./images/ktm gen 3/radiator guard (3).jpeg?v=2.0",
+            "./images/ktm gen 3/radiator guard (2).jpeg?v=2.0",
             "./images/ktm gen 3/radiator guard.jpeg?v=2.0"
         ]
     },
@@ -134,7 +134,8 @@ let PRODUCTS = [
         "price": 799,
         "image": "./images/ktm gen 2/tail tidy.jpeg?v=2.0",
         "gallery": [
-            "./images/ktm gen 2/tail tidy.jpeg?v=2.0"
+            "./images/ktm gen 2/tail tidy.jpeg?v=2.0",
+            "./images/ktm gen 2/tail tidy1.jpeg?v=2.0"
         ]
     },
     {
@@ -148,7 +149,6 @@ let PRODUCTS = [
         "image": "./images/adv/spools.jpeg?v=2.0",
         "description": "<p><strong>REVVX Spools M10</strong></p><p>Compatible with KTM ADVENTURE 390</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
-            "./images/adv/spools.jpeg?v=2.0",
             "./images/adv/spools.jpeg?v=2.0"
         ]
     },
@@ -187,11 +187,11 @@ let PRODUCTS = [
         "price": 2129,
         "mrp": 2500,
         "tag": "",
-        "image": "./images/adv/crash guard.PNG?v=2.0",
+        "image": "./images/adv/frame sliders.jpeg?v=2.0",
         "description": "<p><strong>REVVX Frame Sliders</strong></p><p>Compatible with KTM ADVENTURE 390</p><p>Protect your investment with REVVX Frame Sliders. Designed to keep your engine casings, fairings, and frame off the ground in the event of a drop or low-side crash, these sliders absorb impact and resist abrasion.</p><p>Featuring high-density polymer pucks and high-strength mounting brackets, they offer robust protection without compromising the aesthetics of your motorcycle.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Maximum Protection:</strong> Helps prevent expensive damage to critical components</li><li><strong>High-Density Polymer:</strong> Absorbs impact and slides smoothly</li><li><strong>No Modification Required:</strong> Designed for a direct fit on factory mounting points</li></ul>",
         "gallery": [
-            "./images/adv/crash guard.PNG?v=2.0",
-            "./images/adv/frame sliders.jpeg?v=2.0"
+            "./images/adv/frame sliders.jpeg?v=2.0",
+            "./images/adv/crash guard.PNG?v=2.0"
         ]
     },
     {
@@ -237,9 +237,7 @@ let PRODUCTS = [
         "description": "<p>REVVX Fog Lamp Clamps \u2013 For KTM Adventure 390 / 250 (Gen 2) / Enduro R</p><p>Upgrade your visibility with REVVX Fog Lamp Clamps, specially designed for KTM Adventure 390, 250 Gen 2 and Enduro R motorcycles. These precision-engineered clamps mount directly to the front suspension setup, providing a strong and stable base for installing auxiliary fog lamps.</p><p>Built from high-quality metal with a durable black finish, the clamps are designed to withstand vibrations, rough terrain, and harsh weather conditions, making them perfect for touring and adventure riding. The compact and clean design ensures a factory-like fit without interfering with the bike's aesthetics or suspension movement.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with KTM Adventure 390, 250 Gen 2 and Enduro R</li><li><strong>Suspension Mount Design:</strong> Attaches securely to the front suspension setup</li><li><strong>Strong & Durable:</strong> High-quality metal construction with powder-coated finish</li><li><strong>Stable Light Mounting:</strong> Minimizes vibration for better lighting stability</li><li><strong>Clean & Functional Design:</strong> Compact design</li><li><strong>Easy Installation:</strong> Direct fit for quick and hassle-free mounting</li></ul>",
         "gallery": [
             "./images/adv/foglamp clamps 2.jpeg?v=2.0",
-            "./images/adv/IMG_0926.jpg?v=2.0.jpeg?v=2.0",
-            "./images/adv/foglamp clamps.jpeg?v=2.0",
-            "./images/adv/foglamp clamps3.jpeg?v=2.0"
+            "./images/adv/foglamp clamps.jpeg?v=2.0"
         ]
     },
     {
@@ -250,12 +248,11 @@ let PRODUCTS = [
         "price": 929,
         "mrp": 1100,
         "tag": "",
-        "image": "./images/adv/tail tidy (2).jpeg?v=2.0",
+        "image": "./images/adv/tail tidy 0 (2).jpeg?v=2.0",
         "description": "<p>Introducing the RevvX Tail Tidy for KTM Adventure & Enduro R Series - engineered to give your machine a cleaner, sharper, and more aggressive rear profile. Crafted with precision and finished in premium black coating, this tail tidy transforms the bulky stock setup into a sleek rally-inspired look.</p><ul style=\"padding-left: 20px; margin-top: 15px; margin-bottom: 20px; list-style-type: disc;\"><li>Precision laser-cut design</li><li>Strong & durable metal construction</li><li>Premium powder-coated finish</li><li>Minimalistic race-inspired styling</li><li>Perfect fit for KTM Adventure / Enduro R series</li><li>Built to handle every ride - from city streets to off-road trails</li></ul><p>Less clutter. More attitude.</p><p>Upgrade your KTM with the bold RevvX look.</p>",
         "gallery": [
-            "./images/adv/tail tidy (2).jpeg?v=2.0",
             "./images/adv/tail tidy 0 (2).jpeg?v=2.0",
-            "./images/adv/tail tidy.jpeg?v=2.0",
+            "./images/adv/tail tidy (2).jpeg?v=2.0",
             "./images/adv/tail tidy.jpeg?v=2.0"
         ]
     },
@@ -270,7 +267,6 @@ let PRODUCTS = [
         "image": "./images/adv/tail tidy.jpeg?v=2.0",
         "description": "<p>Introducing the RevvX Tail Tidy for KTM Adventure & Enduro R Series - engineered to give your machine a cleaner, sharper, and more aggressive rear profile. Crafted with precision and finished in premium black coating, this tail tidy transforms the bulky stock setup into a sleek rally-inspired look.</p><ul style=\"padding-left: 20px; margin-top: 15px; margin-bottom: 20px; list-style-type: disc;\"><li>Precision laser-cut design</li><li>Strong & durable metal construction</li><li>Premium powder-coated finish</li><li>Minimalistic race-inspired styling</li><li>Perfect fit for KTM Adventure / Enduro R series</li><li>Built to handle every ride - from city streets to off-road trails</li></ul><p>Less clutter. More attitude.</p><p>Upgrade your KTM with the bold RevvX look.</p>",
         "gallery": [
-            "./images/adv/tail tidy.jpeg?v=2.0",
             "./images/adv/tail tidy.jpeg?v=2.0"
         ],
         "matched": true
@@ -286,7 +282,6 @@ let PRODUCTS = [
         "image": "./images/enduro/spools.jpeg?v=2.0",
         "description": "<p><strong>REVVX Spools M10</strong></p><p>Compatible with KTM ENDURO</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
-            "./images/enduro/spools.jpeg?v=2.0",
             "./images/enduro/spools.jpeg?v=2.0"
         ]
     },
@@ -323,11 +318,11 @@ let PRODUCTS = [
         "price": 2129,
         "mrp": 2500,
         "tag": "",
-        "image": "./images/enduro/crash guard.PNG?v=2.0",
+        "image": "./images/enduro/frame sliders.jpeg?v=2.0",
         "description": "<p><strong>REVVX Crash Guard</strong></p><p>Compatible with KTM ENDURO</p><p>Protect your investment with REVVX Crash Guard. Designed to keep your engine casings, fairings, and frame off the ground in the event of a drop or low-side crash, these guards absorb impact and resist abrasion.</p><p>Featuring high-density polymer pucks and high-strength mounting brackets, they offer robust protection without compromising the aesthetics of your motorcycle.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Maximum Protection:</strong> Helps prevent expensive damage to critical components</li><li><strong>High-Density Polymer:</strong> Absorbs impact and slides smoothly</li><li><strong>No Modification Required:</strong> Designed for a direct fit on factory mounting points</li></ul>",
         "gallery": [
-            "./images/enduro/crash guard.PNG?v=2.0",
-            "./images/enduro/frame sliders.jpeg?v=2.0"
+            "./images/enduro/frame sliders.jpeg?v=2.0",
+            "./images/enduro/crash guard.PNG?v=2.0"
         ]
     },
     {
@@ -381,11 +376,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 1100,
         "price": 929,
-        "image": "./images/enduro/tail tidy (2).jpeg?v=2.0",
+        "image": "./images/enduro/tail tidy 0 (2).jpeg?v=2.0",
         "gallery": [
-            "./images/enduro/tail tidy (2).jpeg?v=2.0",
             "./images/enduro/tail tidy 0 (2).jpeg?v=2.0",
-            "./images/enduro/tail tidy.jpeg?v=2.0",
+            "./images/enduro/tail tidy (2).jpeg?v=2.0",
             "./images/enduro/tail tidy.jpeg?v=2.0"
         ]
     },
@@ -398,7 +392,6 @@ let PRODUCTS = [
         "price": 929,
         "image": "./images/enduro/tail tidy.jpeg?v=2.0",
         "gallery": [
-            "./images/enduro/tail tidy.jpeg?v=2.0",
             "./images/enduro/tail tidy.jpeg?v=2.0"
         ]
     },
@@ -485,11 +478,11 @@ let PRODUCTS = [
         "price": 849,
         "mrp": 1000,
         "tag": "",
-        "image": "./images/aprilia/spools 2.jpg?v=2.0",
+        "image": "./images/aprilia/spools.JPG?v=2.0",
         "description": "<p><strong>REVVX Spools M6</strong></p><p>Compatible with APRILIA RS 457</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
-            "./images/aprilia/spools 2.jpg?v=2.0",
-            "./images/aprilia/spools.jpg?v=2.0"
+            "./images/aprilia/spools.JPG?v=2.0",
+            "./images/aprilia/spools 2.JPG?v=2.0"
         ]
     },
     {
@@ -499,10 +492,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 1500,
         "price": 1269,
-        "image": "./images/aprilia/swing arm sliders 0.jpg?v=2.0",
+        "image": "./images/aprilia/swing arm sliders 0.JPG?v=2.0",
         "gallery": [
-            "./images/aprilia/swing arm sliders 0.jpg?v=2.0",
-            "./images/aprilia/swing arm sliders.jpg?v=2.0"
+            "./images/aprilia/swing arm sliders 0.JPG?v=2.0",
+            "./images/aprilia/swing arm sliders.JPG?v=2.0"
         ]
     },
     {
@@ -513,10 +506,10 @@ let PRODUCTS = [
         "price": 1269,
         "mrp": 1500,
         "tag": "",
-        "image": "./images/aprilia/fork sliders.jpg?v=2.0",
+        "image": "./images/aprilia/fork sliders.JPG?v=2.0",
         "description": "<p><strong>Revvx HDPE Fork Sliders</strong></p><p>Compatible with Aprilia RS 457 & Tuono 457</p><p>Upgrade your motorcycle's protection with Revvx HDPE Fork Sliders, engineered to safeguard the front end of your bike during unexpected drops or slides. Designed specifically for the Aprilia RS 457 and Tuono 457, these sliders help protect critical components such as the front forks, axle mounts, and brake calipers by keeping them from direct contact with the ground in the event of a fall.</p><p>Built with high-density polyethylene (HDPE) and paired with a high-strength threaded rod mounting system, Revvx fork sliders offer reliable crash protection while maintaining a sleek, performance-focused look that complements the aggressive design of your Aprilia.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>High-Strength HDPE Construction:</strong> Manufactured from durable HDPE material that absorbs impact energy and allows controlled sliding during a fall, helping reduce damage to expensive components.</li><li><strong>Front-End Protection:</strong> Strategically designed to protect fork lowers, front axle, and brake components, reducing the risk of costly repairs during tip-overs or slides.</li><li><strong>Bike-Specific Fitment:</strong> Engineered for precise compatibility with Aprilia RS 457 and Tuono 457, ensuring perfect alignment and hassle-free installation.</li><li><strong>Heavy-Duty Mounting Hardware:</strong> Includes a high-strength stainless steel threaded rod and locking nuts for secure installation and long-lasting durability.</li><li><strong>Minimalist Performance Design:</strong> Compact and lightweight design integrates seamlessly with the motorcycle's aesthetics while maintaining optimal protection.</li></ul><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">What's in the Box</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li>2 &times; Revvx HDPE Fork Sliders</li><li>1 &times; High-Strength Threaded Rod</li><li>2 &times; Locking Nuts</li></ul>",
         "gallery": [
-            "./images/aprilia/fork sliders.jpg?v=2.0"
+            "./images/aprilia/fork sliders.JPG?v=2.0"
         ]
     },
     {
@@ -527,14 +520,14 @@ let PRODUCTS = [
         "price": 5099,
         "mrp": 6000,
         "tag": "",
-        "image": "./images/aprilia/frame sliders 2.jpg?v=2.0",
+        "image": "./images/aprilia/frame sliders0.JPG?v=2.0",
         "description": "<p><strong>REVVX Frame Sliders</strong></p><p>Compatible with APRILIA RS 457</p><p>Protect your investment with REVVX Frame Sliders. Designed to keep your engine casings, fairings, and frame off the ground in the event of a drop or low-side crash, these sliders absorb impact and resist abrasion.</p><p>Featuring high-density polymer pucks and high-strength mounting brackets, they offer robust protection without compromising the aesthetics of your motorcycle.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Maximum Protection:</strong> Helps prevent expensive damage to critical components</li><li><strong>High-Density Polymer:</strong> Absorbs impact and slides smoothly</li><li><strong>No Modification Required:</strong> Designed for a direct fit on factory mounting points</li></ul>",
         "gallery": [
-            "./images/aprilia/frame sliders 2.jpg?v=2.0",
-            "./images/aprilia/frame sliders 3.jpg?v=2.0",
-            "./images/aprilia/frame sliders.jpg?v=2.0",
-            "./images/aprilia/frame sliders0.jpg?v=2.0",
-            "./images/aprilia/frame sliders1.jpg?v=2.0"
+            "./images/aprilia/frame sliders0.JPG?v=2.0",
+            "./images/aprilia/frame sliders 2.JPG?v=2.0",
+            "./images/aprilia/frame sliders 3.JPG?v=2.0",
+            "./images/aprilia/frame sliders.JPG?v=2.0",
+            "./images/aprilia/frame sliders1.JPG?v=2.0"
         ]
     },
     {
@@ -544,11 +537,11 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 800,
         "price": 679,
-        "image": "./images/aprilia/master cylider guard.jpg?v=2.0",
+        "image": "./images/aprilia/master cylider guard.JPG?v=2.0",
         "gallery": [
-            "./images/aprilia/master cylider guard.jpg?v=2.0",
-            "./images/aprilia/rear master cylinder guard 2.jpg?v=2.0",
-            "./images/aprilia/rear master cylinder guard.jpg?v=2.0"
+            "./images/aprilia/master cylider guard.JPG?v=2.0",
+            "./images/aprilia/rear master cylinder guard 2.JPG?v=2.0",
+            "./images/aprilia/rear master cylinder guard.JPG?v=2.0"
         ]
     },
     {
@@ -563,8 +556,8 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Aluminium Radiator Guard</strong></p><p>Compatible with Aprilia RS 457 & Tuono 457</p><p>Protect the heart of your motorcycle with the REVVX Aluminium Radiator Guard, engineered specifically for the Aprilia RS 457 and Tuono 457. Designed with precision and performance in mind, this radiator guard offers superior protection against stones, debris, and road hazards while maintaining optimal airflow for efficient engine cooling.</p><p>Crafted from high-strength aluminium, the guard features a precision hexagonal honeycomb pattern that ensures maximum airflow to the radiator while preventing harmful debris from damaging delicate radiator fins. This intelligent design keeps your cooling system working efficiently even during aggressive riding or long highway runs.</p><p>Finished in a durable matte black coating, the REVVX radiator guard not only enhances the aggressive look of your motorcycle but also provides excellent resistance against corrosion and harsh weather conditions. Its bike-specific design ensures a perfect fit with factory mounting points, allowing quick installation without any modifications.</p><p>Built for riders who demand both protection and style, the REVVX radiator guard is an essential upgrade to safeguard your motorcycle's cooling system and maintain long-term engine performance.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Aluminium Construction:</strong> Lightweight yet extremely durable protection.</li><li><strong>Hexagonal Honeycomb Design:</strong> Maximizes airflow while blocking debris.</li><li><strong>Superior Radiator Protection:</strong> Shields radiator fins from stones, gravel, and road hazards.</li><li><strong>Corrosion-Resistant Finish:</strong> Powder-coated matte black for long-lasting durability.</li><li><strong>Precision Fit:</strong> Designed specifically for Aprilia RS 457 & Tuono 457.</li><li><strong>Easy Bolt-On Installation:</strong> No cutting or modification required.</li><li><strong>Enhanced Styling:</strong> Adds a premium, aggressive look to your motorcycle.</li></ul>",
         "gallery": [
             "./images/aprilia/radiator guard 10.PNG?v=2.0",
-            "./images/aprilia/radiator guard 2.jpg?v=2.0",
-            "./images/aprilia/radiator guard.jpg?v=2.0"
+            "./images/aprilia/radiator guard 2.JPG?v=2.0",
+            "./images/aprilia/radiator guard.JPG?v=2.0"
         ]
     },
     {
@@ -575,10 +568,10 @@ let PRODUCTS = [
         "price": 1049,
         "mrp": 1200,
         "tag": "",
-        "image": "./images/aprilia/tail tidy.jpg?v=2.0",
+        "image": "./images/aprilia/tail tidy.JPG?v=2.0",
         "description": "<p>REVVX Rear Tail Tidy \u2013 For Aprilia RS 457 & Tuono 457</p><p>Upgrade the rear profile of your motorcycle with the REVVX Rear Tail Tidy, designed specifically for the Aprilia RS 457 and Tuono 457. This tail tidy replaces the bulky stock fender with a sleek and compact mounting solution, giving your bike a cleaner and sportier rear-end look.</p><p>Crafted from high-quality metal with a durable powder-coated finish, the tail tidy offers excellent strength and long-lasting durability. Its precision-engineered design ensures proper alignment for the number plate and indicators while maintaining a factory-style fit.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with Aprilia RS 457 & Tuono 457</li><li><strong>Sporty Rear Look:</strong> Eliminates the bulky stock fender for a clean and aggressive appearance</li><li><strong>Durable Construction:</strong> High-quality metal build with corrosion-resistant powder coating</li><li><strong>Secure Mounting:</strong> Strong structure for stable number plate and indicator mounting</li><li><strong>Premium Finish:</strong> Laser-cut REVVX branding for a stylish touch</li><li><strong>Easy Installation:</strong> Direct bolt-on design using existing mounting points</li></ul>",
         "gallery": [
-            "./images/aprilia/tail tidy.jpg?v=2.0"
+            "./images/aprilia/tail tidy.JPG?v=2.0"
         ]
     },
     {
@@ -592,7 +585,6 @@ let PRODUCTS = [
         "image": "./images/apache rtx/spools.jpeg?v=2.0",
         "description": "<p><strong>REVVX Spools M8</strong></p><p>Compatible with TVS APACHE RTX</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
-            "./images/apache rtx/spools.jpeg?v=2.0",
             "./images/apache rtx/spools.jpeg?v=2.0"
         ]
     },
@@ -618,10 +610,9 @@ let PRODUCTS = [
         "price": 929,
         "mrp": 1100,
         "tag": "",
-        "image": "./images/apache rtx/swing arm sliders 2.PNG?v=2.0",
+        "image": "./images/apache rtx/swing arm sliders.PNG?v=2.0",
         "description": "<p><strong>REVVX Rear Swingarm Sliders \u2013 For TVS Apache RTX</strong></p><p>Protect your motorcycle's swingarm and rear axle area with the REVVX Rear Swingarm Sliders, designed specifically for the TVS Apache RTX. Built to minimize damage during accidental drops or slides, these sliders act as a protective barrier between the ground and critical components of your bike.</p><p>Made from high-density polyethylene, the sliders provide excellent impact resistance and abrasion protection while maintaining a lightweight profile. The kit includes a high-strength mounting rod and hardware, ensuring a secure fit and reliable protection during everyday rides or spirited track sessions.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Perfect Fit:</strong> Compatible with TVS Apache RTX</li><li><strong>HDPE Construction:</strong> Durable material designed to absorb impact and reduce damage during falls</li><li><strong>Swingarm Protection:</strong> Helps protect the swingarm, rear axle, and surrounding components</li><li><strong>Strong Mounting Hardware:</strong> Includes a high-strength rod and fasteners for secure installation</li><li><strong>Lightweight & Durable:</strong> Built for protection without adding unnecessary weight</li><li><strong>Premium Look:</strong> REVVX branding with a clean and sporty design</li></ul>",
         "gallery": [
-            "./images/apache rtx/swing arm sliders 2.PNG?v=2.0",
             "./images/apache rtx/swing arm sliders.PNG?v=2.0"
         ]
     },
