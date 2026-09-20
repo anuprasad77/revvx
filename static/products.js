@@ -645,62 +645,6 @@ let PRODUCTS = [
             "./images/apache rtx/gps mobile golder.jpeg?v=2.0",
             "./images/apache rtx/mobile mount.jpeg?v=2.0"
         ]
-    },
-    {
-        "id": "re-himalayan-450-ms-radiator-gaurd",
-        "name": "MS Radiator Gaurd",
-        "bike": "RE HIMALAYAN 450",
-        "category": "Accessories",
-        "price": 1359,
-        "mrp": 1600,
-        "tag": "",
-        "image": "./images/adv/radiator guard (2).jpeg?v=2.0",
-        "description": "<p>Conquer every trail with confidence using the RevvX Radiator Guard, purpose-built for the Royal Enfield Himalayan 450. Crafted from premium high-strength steel and precision laser-cut for a perfect fit, it provides exceptional protection against stones, gravel, mud, and road debris while maintaining optimum airflow to the radiator.</p><p>Whether you\u2019re exploring rugged off-road terrain or cruising long-distance highways, the RevvX Radiator Guard safeguards one of your motorcycle\u2019s most critical components without compromising cooling performance. Its durable corrosion-resistant powder-coated finish ensures long-lasting reliability in all weather and riding conditions, while the rugged design perfectly complements the adventure styling of the Himalayan 450.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Features:</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li>Premium laser-cut high-strength steel construction</li><li>Designed exclusively for the Royal Enfield Himalayan 450</li><li>Protects the radiator from stones, debris, and impact damage</li><li>Optimized airflow pattern for efficient engine cooling</li><li>Durable corrosion-resistant powder-coated finish</li><li>Direct bolt-on installation with no modifications required</li><li>Adventure-inspired premium styling</li><li>Built for touring, off-road, and everyday riding</li></ul><p>Ride farther. Ride tougher. Protect every adventure with RevvX.</p>",
-        "gallery": [
-            "./images/adv/radiator guard (2).jpeg?v=2.0",
-            "./images/adv/radiator guard.jpeg?v=2.0",
-            "./images/adv/radiator guard2.jpeg?v=2.0"
-        ]
-    },
-    {
-        "id": "re-himalayan-450-fork-sliders",
-        "name": "Fork sliders",
-        "bike": "RE HIMALAYAN 450",
-        "category": "Accessories",
-        "price": 929,
-        "mrp": 1100,
-        "tag": "",
-        "image": "./images/adv/fork sliders.jpeg?v=2.0",
-        "description": "<p><strong>REVVX Fork sliders</strong></p><p>Compatible with RE HIMALAYAN 450</p><p>Enhance your riding experience with the REVVX Fork sliders. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
-        "gallery": [
-            "./images/adv/fork sliders.jpeg?v=2.0"
-        ]
-    },
-    {
-        "id": "re-himalayan-450-gps-mount",
-        "name": "GPS Mount",
-        "bike": "RE HIMALAYAN 450",
-        "category": "Accessories",
-        "price": 849,
-        "mrp": 1000,
-        "tag": "",
-        "image": "./images/adv/gps mobile golder.jpeg?v=2.0",
-        "description": "<p><strong>REVVX GPS Mount</strong></p><p>Compatible with RE HIMALAYAN 450</p><p>Enhance your riding experience with the REVVX GPS Mount. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
-        "gallery": [
-            "./images/adv/gps mobile golder.jpeg?v=2.0",
-            "./images/adv/mobile mount.jpeg?v=2.0"
-        ]
-    },
-    {
-        "id": "re-himalayan-450-rear-master-cylinder-gaurd",
-        "name": "Rear Master Cylinder Gaurd",
-        "bike": "RE HIMALAYAN 450",
-        "category": "Accessories",
-        "price": 679,
-        "mrp": 800,
-        "tag": "",
-        "image": "",
-        "description": "<p><strong>REVVX Rear Master Cylinder Gaurd</strong></p><p>Compatible with RE HIMALAYAN 450</p><p>Enhance your riding experience with the REVVX Rear Master Cylinder Gaurd. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>"
     }
 ];
 
