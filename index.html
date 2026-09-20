@@ -475,7 +475,7 @@
               <article class="bike-card" ${variantsAttr} onclick="goToBike(this, '${bike.categorySearch}')">
                   <div class="bike-photo" style="position: relative;">
                       ${arrows}
-                      <img src="${bike.image}" alt="${bike.name}">
+                      <img src="${bike.image}" alt="${bike.name}" loading="lazy" decoding="async">
                   </div>
                   <h3>${bike.name}</h3>
                   <span class="view-parts">View compatible parts</span>
