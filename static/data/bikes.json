@@ -111,7 +111,10 @@
             "subModels": [
                 {
                     "name": "CKD",
-                    "image": "./static/images/klx_transparent.png",
+                    "imageSequence": {
+                        "urlPattern": "./static/images/bikes/360/Kawasaki_KLX_230_CBU/{N}.jpg?v=2.0",
+                        "frames": 72
+                    },
                     "displayName": "KAWASAKI KLX 230 CKD"
                 },
                 {
