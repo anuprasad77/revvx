@@ -1,34 +1,30 @@
 {
     "Aprilia": [
         {
-            "id": "Aprilia_457",
-            "name": "APRILIA RS & TUONO 457",
+            "id": "Aprilia_RS_457",
+            "name": "APRILIA RS 457",
             "image": "./static/images/bikes/Aprilia_RS_457.webp?v=2.0",
-            "categorySearch": "APRILIA",
-            "subModels": [
-                {
-                    "name": "RS 457",
-                    "imageSequence": {
-                        "urlPattern": "./static/images/bikes/360/Aprilia_457_RS_457/{N}.jpg?v=2.0",
-                        "frames": 72
-                    },
-                    "displayName": "APRILIA RS 457"
-                },
-                {
-                    "name": "TUONO 457",
-                    "imageSequence": {
-                        "urlPattern": "./static/images/bikes/360/Aprilia_457_TUONO_457/{N}.jpg?v=2.0",
-                        "frames": 72
-                    },
-                    "displayName": "APRILIA TUONO 457"
-                }
-            ]
+            "categorySearch": "APRILIA RS 457",
+            "imageSequence": {
+                "urlPattern": "./static/images/bikes/360/Aprilia_457_RS_457/{N}.jpg?v=2.0",
+                "frames": 72
+            }
+        },
+        {
+            "id": "Aprilia_TUONO_457",
+            "name": "APRILIA TUONO 457",
+            "image": "./static/images/bikes/360/Aprilia_457_TUONO_457/1.jpg?v=2.0",
+            "categorySearch": "APRILIA TUONO 457",
+            "imageSequence": {
+                "urlPattern": "./static/images/bikes/360/Aprilia_457_TUONO_457/{N}.jpg?v=2.0",
+                "frames": 72
+            }
         }
     ],
     "KTM": [
         {
             "id": "KTM_ADVENTURE",
-            "name": "KTM ADVENTURE 390 / 250",
+            "name": "KTM ADVENTURE 390 / 350 / 250",
             "image": "./static/images/bikes/KTM_ADVENTURE_390.png",
             "categorySearch": "KTM ADVENTURE",
             "subModels": [
@@ -39,6 +35,11 @@
                         "frames": 72
                     },
                     "displayName": "KTM ADVENTURE 390"
+                },
+                {
+                    "name": "350",
+                    "image": "./static/images/bikes/KTM_ADVENTURE_390.png",
+                    "displayName": "KTM ADVENTURE 350"
                 },
                 {
                     "name": "250",
