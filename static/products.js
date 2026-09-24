@@ -11,8 +11,6 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Spools M6</strong></p><p>Compatible with APRILIA RS 457</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
             "./images/aprilia rs457/spools (1).webp",
-            "./images/aprilia rs457/spools (1).webp",
-            "./images/aprilia rs457/spools (2).webp",
             "./images/aprilia rs457/spools (2).webp",
             "./images/aprilia rs457/spools (3).webp",
             "./images/aprilia rs457/last image.webp"
@@ -29,10 +27,7 @@ let PRODUCTS = [
         "gallery": [
             "./images/aprilia rs457/swingarm sliders (1).webp",
             "./images/aprilia rs457/swingarm sliders (3).webp",
-            "./images/aprilia rs457/swingarm sliders (1).webp",
             "./images/aprilia rs457/swingarm sliders (2).webp",
-            "./images/aprilia rs457/swingarm sliders (2).webp",
-            "./images/aprilia rs457/swingarm sliders (3).webp",
             "./images/aprilia rs457/swingarm sliders (4).webp",
             "./images/aprilia rs457/last image.webp"
         ]
@@ -51,8 +46,6 @@ let PRODUCTS = [
             "./images/aprilia rs457/fork sliders (1).webp",
             "./images/aprilia rs457/fork sliders (4).webp",
             "./images/aprilia rs457/fork sliders (2).webp",
-            "./images/aprilia rs457/fork sliders (2).webp",
-            "./images/aprilia rs457/fork sliders (3).webp",
             "./images/aprilia rs457/fork sliders (3).webp",
             "./images/aprilia rs457/last image.webp"
         ]
@@ -109,7 +102,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/aprilia rs457/radiator guard (1).webp",
             "./images/aprilia rs457/radiator guard (2).webp",
-            "./images/aprilia rs457/radiator guard (1).webp",
             "./images/aprilia rs457/radiator guard (3).webp",
             "./images/aprilia rs457/radiator guard (4).webp",
             "./images/aprilia rs457/radiator guard (5).webp",
@@ -129,7 +121,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/aprilia rs457/tail tidy  (1).webp",
             "./images/aprilia rs457/tail tidy (6).webp",
-            "./images/aprilia rs457/tail tidy (1).webp",
             "./images/aprilia rs457/tail tidy (1).webp",
             "./images/aprilia rs457/tail tidy (2).webp",
             "./images/aprilia rs457/tail tidy (3).webp",
@@ -151,8 +142,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/tuono 457/spools (1).webp",
             "./images/tuono 457/spools (3).webp",
-            "./images/tuono 457/spools (1).webp",
-            "./images/tuono 457/spools (2).webp",
             "./images/tuono 457/spools (2).webp",
             "./images/tuono 457/last image.webp"
         ]
@@ -168,10 +157,7 @@ let PRODUCTS = [
         "gallery": [
             "./images/tuono 457/swingarm sliders (1).webp",
             "./images/tuono 457/swingarm sliders (3).webp",
-            "./images/tuono 457/swingarm sliders (1).webp",
             "./images/tuono 457/swingarm sliders (2).webp",
-            "./images/tuono 457/swingarm sliders (2).webp",
-            "./images/tuono 457/swingarm sliders (3).webp",
             "./images/tuono 457/swingarm sliders (4).webp",
             "./images/tuono 457/last image.webp"
         ]
@@ -190,9 +176,7 @@ let PRODUCTS = [
             "./images/tuono 457/fork sliders 0.webp",
             "./images/tuono 457/fork sliders (4).webp",
             "./images/tuono 457/fork sliders (1).webp",
-            "./images/tuono 457/fork sliders (1).webp",
             "./images/tuono 457/fork sliders (2).webp",
-            "./images/tuono 457/fork sliders (3).webp",
             "./images/tuono 457/fork sliders (3).webp",
             "./images/tuono 457/last image.webp"
         ]
@@ -227,7 +211,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/tuono 457/radiator guard (1).webp",
             "./images/tuono 457/radiator guard (2).webp",
-            "./images/tuono 457/radiator guard (2).webp",
             "./images/tuono 457/radiator guard (3).webp",
             "./images/tuono 457/radiator guard (4).webp",
             "./images/tuono 457/last image.webp"
@@ -246,7 +229,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/tuono 457/tail tidy  (1).webp",
             "./images/tuono 457/tail tidy (6).webp",
-            "./images/tuono 457/tail tidy (1).webp",
             "./images/tuono 457/tail tidy (1).webp",
             "./images/tuono 457/tail tidy (2).webp",
             "./images/tuono 457/tail tidy (3).webp",
@@ -267,7 +249,6 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Spools M10</strong></p><p>Compatible with KTM ADVENTURE 390</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
             "./images/ktm adv gen 2/aluminum spools (2).webp",
-            "./images/ktm adv gen 2/aluminum spools (1).webp",
             "./images/ktm adv gen 2/aluminum spools (1).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
@@ -321,10 +302,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Frame Sliders</strong></p><p>Compatible with KTM ADVENTURE 390</p><p>Protect your investment with REVVX Frame Sliders. Designed to keep your engine casings, fairings, and frame off the ground in the event of a drop or low-side crash, these sliders absorb impact and resist abrasion.</p><p>Featuring high-density polymer pucks and high-strength mounting brackets, they offer robust protection without compromising the aesthetics of your motorcycle.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Maximum Protection:</strong> Helps prevent expensive damage to critical components</li><li><strong>High-Density Polymer:</strong> Absorbs impact and slides smoothly</li><li><strong>No Modification Required:</strong> Designed for a direct fit on factory mounting points</li></ul>",
         "gallery": [
             "./images/ktm adv gen 2/frame sliders (1).webp",
-            "./images/ktm adv gen 2/frame sliders (1).webp",
             "./images/ktm adv gen 2/frame sliders (2).webp",
-            "./images/ktm adv gen 2/frame sliders (2).webp",
-            "./images/ktm adv gen 2/frame sliders (3).webp",
             "./images/ktm adv gen 2/frame sliders (3).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
@@ -342,7 +320,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/ktm adv gen 2/radiator guard (2).webp",
             "./images/ktm adv gen 2/radiator guard (1).webp",
-            "./images/ktm adv gen 2/radiator guard (1).webp",
             "./images/ktm adv gen 2/radiator guard (3).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
@@ -359,8 +336,6 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX GPS Mount</strong></p><p>Compatible with KTM ADVENTURE 390 / 350 / 250 (Gen 2)</p><p>Keep your navigation secure and accessible with the REVVX Premium GPS Mount. Built for rough terrains and high speeds, this mount ensures your device stays firmly in place while reducing vibrations that can damage sensitive components.</p><p>Features a versatile adjustable grip and a quick-release mechanism for ultimate convenience on your rides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Secure Grip:</strong> Multi-point locking system for maximum device safety</li><li><strong>Vibration Dampening:</strong> Helps protect smartphone cameras</li><li><strong>Universal Fit:</strong> Accommodates most modern smartphones</li></ul>",
         "gallery": [
             "./images/ktm adv gen 2/gps mount (1).webp",
-            "./images/ktm adv gen 2/gps mount (1).webp",
-            "./images/ktm adv gen 2/gps mount (2).webp",
             "./images/ktm adv gen 2/gps mount (2).webp",
             "./images/ktm adv gen 2/gps mount (3).webp",
             "./images/ktm adv gen 2/gps mount (4).webp",
@@ -456,7 +431,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/ktm adv gen 2/aluminum spools (2).webp",
             "./images/ktm adv gen 2/aluminum spools (1).webp",
-            "./images/ktm adv gen 2/aluminum spools (1).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
     },
@@ -508,9 +482,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/enduro r/frame sliders (2).webp",
             "./images/enduro r/frame sliders (1).webp",
-            "./images/enduro r/frame sliders (1).webp",
-            "./images/enduro r/frame sliders (2).webp",
-            "./images/enduro r/frame sliders (3).webp",
             "./images/enduro r/frame sliders (3).webp",
             "./images/enduro r/last image after every product (1).webp"
         ]
@@ -564,8 +535,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/enduro r/tail tidy  (1).webp",
             "./images/enduro r/tail tidy  (5).webp",
-            "./images/enduro r/tail tidy  (1).webp",
-            "./images/enduro r/tail tidy  (2).webp",
             "./images/enduro r/tail tidy  (2).webp",
             "./images/enduro r/tail tidy  (3).webp",
             "./images/enduro r/tail tidy  (4).webp",
@@ -581,7 +550,6 @@ let PRODUCTS = [
         "price": 929,
         "image": "./images/enduro r/tail tidy with light slot (1).webp",
         "gallery": [
-            "./images/enduro r/tail tidy with light slot (1).webp",
             "./images/enduro r/tail tidy with light slot (1).webp",
             "./images/enduro r/tail tidy with light slot (2).webp",
             "./images/enduro r/tail tidy with light slot (3).webp",
@@ -609,7 +577,6 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Spools M10</strong></p><p>Compatible with KTM DUKE GEN 3 390</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
             "./images/ktm duke gen 3/spools (1).webp",
-            "./images/ktm duke gen 3/spools (1).webp",
             "./images/ktm duke gen 3/spools (2).webp",
             "./images/ktm duke gen 3/spools (3).webp",
             "./images/ktm duke gen 3/last image.webp"
@@ -628,14 +595,10 @@ let PRODUCTS = [
         "gallery": [
             "./images/ktm duke gen 3/tail tidy (1).webp",
             "./images/ktm duke gen 3/tail tidy (5).webp",
-            "./images/ktm duke gen 3/tail tidy (1).webp",
-            "./images/ktm duke gen 3/tail tidy (2).webp",
             "./images/ktm duke gen 3/tail tidy (2).webp",
             "./images/ktm duke gen 3/tail tidy (3).webp",
-            "./images/ktm duke gen 3/tail tidy (3).webp",
             "./images/ktm duke gen 3/tail tidy (4).webp",
-            "./images/ktm duke gen 3/tail tidy (4).webp",
-            "./images/ktm duke gen 3/last image.webp",
+            "./images/ktm duke gen 3/last image.webp"
         ]
     },
     {
@@ -664,10 +627,7 @@ let PRODUCTS = [
         "gallery": [
             "./images/ktm duke gen 3/fork sliders (1).webp",
             "./images/ktm duke gen 3/fork sliders (4).webp",
-            "./images/ktm duke gen 3/fork sliders (1).webp",
             "./images/ktm duke gen 3/fork sliders (2).webp",
-            "./images/ktm duke gen 3/fork sliders (2).webp",
-            "./images/ktm duke gen 3/fork sliders (3).webp",
             "./images/ktm duke gen 3/fork sliders (3).webp",
             "./images/ktm duke gen 3/last image.webp"
         ]
@@ -681,8 +641,6 @@ let PRODUCTS = [
         "price": 929,
         "image": "./images/ktm duke gen 3/swingarm sliders (1).webp",
         "gallery": [
-            "./images/ktm duke gen 3/swingarm sliders (1).webp",
-            "./images/ktm duke gen 3/swingarm sliders (2).webp",
             "./images/ktm duke gen 3/swingarm sliders (1).webp",
             "./images/ktm duke gen 3/swingarm sliders (2).webp",
             "./images/ktm duke gen 3/swingarm sliders (3).webp",
@@ -874,7 +832,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/tvs apache rtx/radiator guard (1).webp",
             "./images/tvs apache rtx/radiator guard 0.webp",
-            "./images/tvs apache rtx/radiator guard (1).webp",
             "./images/tvs apache rtx/radiator guard (2).webp",
             "./images/tvs apache rtx/radiator guard (3).webp",
             "./images/tvs apache rtx/last image.webp"
