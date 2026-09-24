@@ -46,6 +46,24 @@ button {
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition: background 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+@media (min-width: 801px) {
+  body.home-page {
+    padding-top: 0;
+  }
+  body.home-page .nav {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  body.home-page .nav.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 .brand {
   font: 900 48px/1 "Barlow Condensed";
@@ -123,6 +141,11 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   animation: slowzoom 16s ease-out forwards;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: high-quality;
 }
 .hero-shade {
   position: absolute;

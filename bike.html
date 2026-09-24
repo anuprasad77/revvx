@@ -25,8 +25,7 @@
       <a href="#products">Products</a>
       <a href="#fitment">Fitment</a>
       <a href="#story">Our Story</a>
-      <a href="#contact">Contact</a>
-    </div>
+      <a href="#contact">Contact</a><a href="policies.html">Policies</a></div>
     <button class="cart-button" onclick="openCart()">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
         stroke-linecap="round" stroke-linejoin="round">
@@ -1103,6 +1102,26 @@
         }
       });
     }
+  </script>
+
+  <script>
+    // Header Scroll Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      
+      const checkScroll = () => {
+        // Change header background immediately when scrolling down a little bit
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      };
+      
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll(); // Check on load
+    });
   </script>
 </body>
 

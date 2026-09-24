@@ -59,8 +59,7 @@
       <a href="index.html#machine-selector">Products</a>
       <a href="index.html#fitment">Fitment</a>
       <a href="index.html#story">Our Story</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
+      <a href="index.html#contact">Contact</a><a href="policies.html">Policies</a></div>
   </nav>
 
   <main class="policy-container">
@@ -114,6 +113,26 @@
     <p>We reserve the right to correct any errors, inaccuracies, or omissions, and to change or update information or
       cancel orders if any information on the website is inaccurate at any time without prior notice.</p>
   </main>
+
+  <script>
+    // Header Scroll Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      
+      const checkScroll = () => {
+        // Change header background immediately when scrolling down a little bit
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      };
+      
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll(); // Check on load
+    });
+  </script>
 </body>
 
 </html>

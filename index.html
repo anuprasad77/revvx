@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" href="./static/images/1784811540903.png">
 </head>
 
-<body>
+<body class="home-page">
   <div id="loader" class="loader-overlay"
     style="background: #08090a; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif;">
     <style>
@@ -145,9 +145,9 @@
       <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"></a>
     </div>
     <div class="navlinks"><a href="#machine-selector">Products</a><a href="#fitment">Fitment</a><a href="#story">Our
-        Story</a><a href="#contact">Contact</a></div><button class="cart-button" onclick="openCart()"><svg width="22"
-        height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-        stroke-linejoin="round">
+        Story</a><a href="#contact">Contact</a><a href="policies.html">Policies</a></div><button class="cart-button"
+      onclick="openCart()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="5" y="2" width="14" height="7" rx="1" />
         <path d="M5 5h14" />
         <rect x="11" y="4" width="2" height="2" />
@@ -168,7 +168,7 @@
       <div class="hero-shade"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> ENGINEERED IN BANGALORE · EST. 2018</p>
+        <p class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> ENGINEERED IN BANGALORE · EST. 2025</p>
         <h1>PRECISION<br><i>BUILD.</i></h1>
         <p class="hero-copy">Purpose-built motorcycle accessories designed around clean fitment, real-world use, and the
           machine you ride.</p>
@@ -177,7 +177,7 @@
       </div>
 
       <div class="hero-stats">
-        <div><strong>30+</strong><span>Bike platforms</span></div>
+        <div><strong>10+</strong><span>Bike platforms</span></div>
         <div><strong>CNC</strong><span>Precision made</span></div>
         <div><strong>INDIA</strong><span>Pan-India delivery</span></div>
       </div>
@@ -585,6 +585,26 @@
         window.location.href = 'bike.html?bike=' + encodeURIComponent(defaultCategory);
       }
     }
+  </script>
+
+  <script>
+    // Header Scroll Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+
+      const checkScroll = () => {
+        // Change header background immediately when scrolling down a little bit
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      };
+
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll(); // Check on load
+    });
   </script>
 </body>
 
