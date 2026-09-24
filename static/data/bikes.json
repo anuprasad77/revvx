@@ -13,7 +13,7 @@
         {
             "id": "Aprilia_TUONO_457",
             "name": "APRILIA TUONO 457",
-            "image": "./static/images/bikes/Aprilia_TUONO_457.jpg?v=2.0",
+            "image": "./static/images/bikes/Aprilia_Tuono_457.jpg?v=2.0",
             "categorySearch": "APRILIA TUONO 457",
             "imageSequence": {
                 "urlPattern": "./static/images/bikes/360/Aprilia_457_TUONO_457/{N}.jpg?v=2.0",
