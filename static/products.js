@@ -836,9 +836,6 @@ let PRODUCTS = [
         "gallery": [
             "./images/tvs apache rtx/spools 0.PNG?v=2.0",
             "./images/tvs apache rtx/spools 00.jpeg?v=2.0",
-            "./images/tvs apache rtx/spools (1).PNG?v=2.0",
-            "./images/tvs apache rtx/spools (2).PNG?v=2.0",
-            "./images/tvs apache rtx/spools (3).PNG?v=2.0",
             "./images/tvs apache rtx/last image.jpeg?v=2.0"
         ]
     },
@@ -888,10 +885,6 @@ let PRODUCTS = [
         "description": "<p>Built for riders who demand maximum protection without compromising airflow, the RevvX Radiator Guard is engineered specifically for the TVS Apache RTX 300. Precision laser-cut from high-quality steel, it provides superior defense against stones, road debris, mud, and other hazards encountered during touring, adventure rides, and daily commuting.</p><p>Designed for a perfect OEM fit, the guard ensures unrestricted airflow to the radiator, maintaining efficient engine cooling while adding a rugged premium look to your motorcycle. Finished with a durable corrosion-resistant powder coating, it is built to withstand harsh weather and challenging riding conditions.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Features:</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li>Precision laser-cut high-strength steel construction</li><li>Designed exclusively for the TVS Apache RTX 300</li><li>Protects the radiator from stones, debris, and impacts</li><li>Optimized mesh pattern for maximum airflow and cooling efficiency</li><li>Heavy-duty corrosion-resistant powder-coated finish</li><li>Direct bolt-on installation with no modifications required</li><li>Premium rugged styling that complements the Apache RTX 300</li></ul><p>Ride with confidence. Protect what powers your adventure with RevvX.</p>",
         "gallery": [
             "./images/tvs apache rtx/radiator guard 0.PNG?v=2.0",
-            "./images/tvs apache rtx/radiator guard (1).jpeg?v=2.0",
-            "./images/tvs apache rtx/radiator guard (1).PNG?v=2.0",
-            "./images/tvs apache rtx/radiator guard (2).jpeg?v=2.0",
-            "./images/tvs apache rtx/radiator guard (3).jpeg?v=2.0",
             "./images/tvs apache rtx/last image.jpeg?v=2.0"
         ]
     },
