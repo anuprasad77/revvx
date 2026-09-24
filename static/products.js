@@ -705,7 +705,7 @@ let PRODUCTS = [
             "./images/ktm duke gen 2/spools.jpeg?v=3.0",
             "./images/ktm duke gen 2/spools (2).jpeg?v=3.0",
             "./images/ktm duke gen 2/spools (3).jpeg?v=3.0",
-            "./images/ktm duke gen 2/last image.jpg?v=3.0"
+            "./images/ktm duke gen 2/last image.webp?v=2.0"
         ]
     },
     {
@@ -721,7 +721,7 @@ let PRODUCTS = [
             "./images/ktm duke gen 2/swing arm sliders.jpeg?v=3.0",
             "./images/ktm duke gen 2/swingarm sliders (2).jpeg?v=3.0",
             "./images/ktm duke gen 2/swingarm sliders (3).jpeg?v=3.0",
-            "./images/ktm duke gen 2/last image.jpg?v=3.0"
+            "./images/ktm duke gen 2/last image.webp?v=2.0"
         ]
     },
     {
@@ -774,7 +774,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Steel Skidplate CKD</strong></p><p>Compatible with KAWASAKI KLX 230 CKD</p><p>Enhance your riding experience with the REVVX Steel Skidplate CKD. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd steel skidplate.jpeg?v=2.0",
-            "./images/kawasaki klx/last image.HEIF?v=2.0"
+            "./images/kawasaki klx/last image.jpeg?v=2.0"
         ]
     },
     {
@@ -789,7 +789,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Steel Skidplate CBU</strong></p><p>Compatible with KAWASAKI KLX 230 CBU</p><p>Enhance your riding experience with the REVVX Steel Skidplate CBU. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd steel skidplate.jpeg?v=2.0",
-            "./images/kawasaki klx/last image.HEIF?v=2.0"
+            "./images/kawasaki klx/last image.jpeg?v=2.0"
         ]
     },
     {
@@ -804,7 +804,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Aluminium Skidplate CBU</strong></p><p>Compatible with KAWASAKI KLX 230 CBU</p><p>Enhance your riding experience with the REVVX Aluminium Skidplate CBU. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd aluminium skidplate.jpeg?v=2.0",
-            "./images/kawasaki klx/last image.HEIF?v=2.0"
+            "./images/kawasaki klx/last image.jpeg?v=2.0"
         ]
     },
     {
