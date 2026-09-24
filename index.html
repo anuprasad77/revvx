@@ -388,8 +388,13 @@
   <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
     <aside class="drawer">
       <div class="drawer-title">
-        <h2>YOUR GARAGE</h2><button onclick="closeCart()">×</button>
-      </div>
+          <h2>YOUR GARAGE</h2>
+          <button class="close-cart-btn" onclick="closeCart()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       <div class="cart-items" id="cart-items"></div>
       <div class="empty" id="cart-empty">Your garage is empty.<br><button onclick="closeCart()">Explore the
           collection</button></div>
@@ -433,8 +438,8 @@
       document.getElementById('cart-items').innerHTML = items.map(p => `<div class="cart-item"><img src="${p.image}" alt=""><div><p>${p.name}</p><small>${p.bike}</small><b>${money(p.price)}</b></div><div class="qty"><button onclick="updateQty('${p.id}',-1)">−</button><span>${p.qty}</span><button onclick="updateQty('${p.id}',1)">+</button></div></div>`).join('');
     }
 
-    function openCart() { document.getElementById('overlay').classList.add('show'); renderCart(); }
-    function closeCart() { document.getElementById('overlay').classList.remove('show'); }
+    function openCart() {  document.getElementById('overlay').classList.add('show'); document.body.style.overflow = 'hidden'; document.documentElement.style.overflow = 'hidden'; renderCart(); }
+    function closeCart() {  document.getElementById('overlay').classList.remove('show'); document.body.style.overflow = ''; document.documentElement.style.overflow = ''; }
 
     function whatsAppOrder() {
       const items = Object.values(cart).map(p => `• ${p.name} (for ${p.bike}) x${p.qty} - ${money(p.price)}`).join('\n');
