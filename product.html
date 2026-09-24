@@ -19,7 +19,7 @@
 <body>
   <nav class="nav">
     <div class="brand-container">
-      <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.JPG" alt="REVVX Ride Fearless"></a>
+      <a class="brand-logo" href="index.html"><img src="./images/IMG_0499.webp" alt="REVVX Ride Fearless"></a>
     </div>
     <div class="navlinks">
       <a href="#products">Products</a>
@@ -711,7 +711,7 @@
       document.title = `${currentProduct.name} | REVVX`;
 
       // Find fallback bike image
-      let fallbackImage = './images/IMG_0499.JPG';
+      let fallbackImage = './images/IMG_0499.webp';
       if (typeof BIKES_DATA !== 'undefined') {
         const allBikes = Object.values(BIKES_DATA).flat();
         const matchedBike = allBikes.find(b => currentProduct.bike.toLowerCase().includes(b.categorySearch.toLowerCase()) || b.categorySearch.toLowerCase().includes(currentProduct.bike.toLowerCase()));
