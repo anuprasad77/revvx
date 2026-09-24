@@ -11,8 +11,8 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Spools M6</strong></p><p>Compatible with APRILIA RS 457</p><p>Upgrade your motorcycle's functionality with REVVX Paddock Stand Spools. Machined from high-grade aluminium and finished with a durable anodized coating, these spools allow for secure and stable lifting of your bike's rear end using a paddock stand.</p><p>Essential for chain maintenance, tire changes, and winter storage, they also double as a minor protective element for your swingarm during low-speed slides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Precision Machined:</strong> High-quality aluminium construction</li><li><strong>Secure Lifting:</strong> Deep grooves for stable paddock stand engagement</li><li><strong>Easy Installation:</strong> Direct bolt-on to factory swingarm mounts</li></ul>",
         "gallery": [
             "./images/aprilia rs457/spools (1).webp",
-            "./images/aprilia rs457/spools (2).webp",
             "./images/aprilia rs457/spools (3).webp",
+            "./images/aprilia rs457/spools (2).webp",
             "./images/aprilia rs457/last image.webp"
         ]
     },
@@ -298,11 +298,11 @@ let PRODUCTS = [
         "price": 2129,
         "mrp": 2500,
         "tag": "",
-        "image": "./images/ktm adv gen 2/frame sliders (1).webp",
+        "image": "./images/ktm adv gen 2/frame sliders (2).webp",
         "description": "<p><strong>REVVX Frame Sliders</strong></p><p>Compatible with KTM ADVENTURE 390</p><p>Protect your investment with REVVX Frame Sliders. Designed to keep your engine casings, fairings, and frame off the ground in the event of a drop or low-side crash, these sliders absorb impact and resist abrasion.</p><p>Featuring high-density polymer pucks and high-strength mounting brackets, they offer robust protection without compromising the aesthetics of your motorcycle.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Maximum Protection:</strong> Helps prevent expensive damage to critical components</li><li><strong>High-Density Polymer:</strong> Absorbs impact and slides smoothly</li><li><strong>No Modification Required:</strong> Designed for a direct fit on factory mounting points</li></ul>",
         "gallery": [
-            "./images/ktm adv gen 2/frame sliders (1).webp",
             "./images/ktm adv gen 2/frame sliders (2).webp",
+            "./images/ktm adv gen 2/frame sliders (1).webp",
             "./images/ktm adv gen 2/frame sliders (3).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
@@ -336,13 +336,13 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX GPS Mount</strong></p><p>Compatible with KTM ADVENTURE 390 / 350 / 250 (Gen 2)</p><p>Keep your navigation secure and accessible with the REVVX Premium GPS Mount. Built for rough terrains and high speeds, this mount ensures your device stays firmly in place while reducing vibrations that can damage sensitive components.</p><p>Features a versatile adjustable grip and a quick-release mechanism for ultimate convenience on your rides.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Secure Grip:</strong> Multi-point locking system for maximum device safety</li><li><strong>Vibration Dampening:</strong> Helps protect smartphone cameras</li><li><strong>Universal Fit:</strong> Accommodates most modern smartphones</li></ul>",
         "gallery": [
             "./images/ktm adv gen 2/gps mount (1).webp",
+            "./images/ktm adv gen 2/gps mount (8).webp",
             "./images/ktm adv gen 2/gps mount (2).webp",
             "./images/ktm adv gen 2/gps mount (3).webp",
             "./images/ktm adv gen 2/gps mount (4).webp",
             "./images/ktm adv gen 2/gps mount (5).webp",
             "./images/ktm adv gen 2/gps mount (6).webp",
             "./images/ktm adv gen 2/gps mount (7).webp",
-            "./images/ktm adv gen 2/gps mount (8).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
     },
@@ -377,24 +377,19 @@ let PRODUCTS = [
         "price": 929,
         "mrp": 1100,
         "tag": "",
-        "image": "./images/ktm adv gen 2/tail tidy with light slot (4).webp",
+        "image": "./images/ktm adv gen 2/tail tidy  (1).webp",
         "description": "<p>Introducing the RevvX Tail Tidy for KTM Adventure & Enduro R Series - engineered to give your machine a cleaner, sharper, and more aggressive rear profile. Crafted with precision and finished in premium black coating, this tail tidy transforms the bulky stock setup into a sleek rally-inspired look.</p><ul style=\"padding-left: 20px; margin-top: 15px; margin-bottom: 20px; list-style-type: disc;\"><li>Precision laser-cut design</li><li>Strong & durable metal construction</li><li>Premium powder-coated finish</li><li>Minimalistic race-inspired styling</li><li>Perfect fit for KTM Adventure / Enduro R series</li><li>Built to handle every ride - from city streets to off-road trails</li></ul><p>Less clutter. More attitude.</p><p>Upgrade your KTM with the bold RevvX look.</p>",
         "gallery": [
-            "./images/ktm adv gen 2/tail tidy with light slot (4).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (1).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (2).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (3).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (5).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (6).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (7).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (8).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (9).webp",
-            "./images/ktm adv gen 2/tail tidy with light slot (10).webp",
+            "./images/ktm adv gen 2/tail tidy  (1).webp",
+            "./images/ktm adv gen 2/tail tidy  (5).webp",
+            "./images/ktm adv gen 2/tail tidy  (2).webp",
+            "./images/ktm adv gen 2/tail tidy  (3).webp",
+            "./images/ktm adv gen 2/tail tidy  (4).webp",
             "./images/ktm adv gen 2/last image after every product (2).webp"
         ]
     },
     {
-        "id": "ktm_adventure_390_ktm_adv_enduro_tailtidy",
+        "id": "ktm_adventure_390_ktm_adv_enduro_tailtidy_lightslot",
         "name": "Tail Tidy (with light slot)",
         "bike": "KTM ADVENTURE 390 / 350 / 250",
         "category": "Accessories",
@@ -496,6 +491,7 @@ let PRODUCTS = [
         "image": "./images/enduro r/radiator guard (1).webp",
         "gallery": [
             "./images/enduro r/radiator guard (1).webp",
+            "./images/ktm adv gen 2/radiator guard (1).webp",
             "./images/enduro r/radiator guard (2).webp",
             "./images/enduro r/radiator guard (3).webp",
             "./images/enduro r/last image after every product (1).webp"
@@ -548,10 +544,10 @@ let PRODUCTS = [
         "category": "Protection",
         "mrp": 1100,
         "price": 929,
-        "image": "./images/enduro r/tail tidy with light slot (1).webp",
+        "image": "./images/enduro r/tail tidy with light slot (2).webp",
         "gallery": [
-            "./images/enduro r/tail tidy with light slot (1).webp",
             "./images/enduro r/tail tidy with light slot (2).webp",
+            "./images/enduro r/tail tidy with light slot (1).webp",
             "./images/enduro r/tail tidy with light slot (3).webp",
             "./images/enduro r/tail tidy with light slot (4).webp",
             "./images/enduro r/tail tidy with light slot (5).webp",
@@ -717,8 +713,7 @@ let PRODUCTS = [
             "./images/kawasaki klx/tail tidy (4).webp",
             "./images/kawasaki klx/tail tidy (5).webp",
             "./images/kawasaki klx/tail tidy (6).webp",
-            "./images/kawasaki klx/tail tidy (7).webp",
-            "./images/ktm duke gen 2/last image.webp?v=2.0"
+            "./images/kawasaki klx/last image.webp",
         ]
     },
     {
@@ -733,7 +728,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Steel Skidplate CKD</strong></p><p>Compatible with KAWASAKI KLX 230 CKD</p><p>Enhance your riding experience with the REVVX Steel Skidplate CKD. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd steel skidplate.webp",
-            "./images/ktm duke gen 2/last image.webp?v=2.0"
+            "./images/kawasaki klx/last image.webp",
         ]
     },
     {
@@ -748,7 +743,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Steel Skidplate CBU</strong></p><p>Compatible with KAWASAKI KLX 230 CBU</p><p>Enhance your riding experience with the REVVX Steel Skidplate CBU. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd steel skidplate.webp",
-            "./images/ktm duke gen 2/last image.webp?v=2.0"
+            "./images/kawasaki klx/last image.webp",
         ]
     },
     {
@@ -763,7 +758,7 @@ let PRODUCTS = [
         "description": "<p><strong>REVVX Aluminium Skidplate CBU</strong></p><p>Compatible with KAWASAKI KLX 230 CBU</p><p>Enhance your riding experience with the REVVX Aluminium Skidplate CBU. Engineered for precision and built to withstand the rigors of the road, this accessory offers a perfect blend of performance, protection, and style.</p><p>Manufactured using premium materials to ensure a factory-quality fit and long-lasting durability.</p><h4 style=\"color: #fff; margin-top: 20px; margin-bottom: 10px;\">Key Features</h4><ul style=\"padding-left: 20px; margin-bottom: 20px; list-style-type: disc;\"><li><strong>Premium Build:</strong> High-quality materials for enhanced longevity</li><li><strong>Precision Fit:</strong> Designed specifically for your motorcycle</li><li><strong>Easy Installation:</strong> Bolt-on design requiring no major modifications</li></ul>",
         "gallery": [
             "./images/kawasaki klx/ckd aluminium skidplate.webp",
-            "./images/ktm duke gen 2/last image.webp?v=2.0"
+            "./images/kawasaki klx/last image.webp",
         ]
     },
     {
