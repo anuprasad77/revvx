@@ -164,11 +164,11 @@
   </nav>
   <main>
     <section id="top" class="hero">
-      <div class="hero-image" style="background-image:url('./static/images/IMG_0995.png')"></div>
+      <div class="hero-image" style="background-image:url('./static/images/hero_garage.jpg')"></div>
       <div class="hero-shade"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> ENGINEERED IN BANGALORE · EST. 2025</p>
+        <p class="eyebrow hero-eyebrow"><span class="pulse-dot"></span> ENGINEERED IN BANGALORE, KARNATAKA</p>
         <h1>PRECISION<br><i>BUILD.</i></h1>
         <p class="hero-copy">Purpose-built motorcycle accessories designed around clean fitment, real-world use, and the
           machine you ride.</p>
@@ -326,10 +326,10 @@
           </div>
           <div class="review">
             <div class="stars">★★★★★</div>
-            <blockquote>“Took the Himalayan off-roading in Spiti and dropped it twice on the rocks. The skid plate took
-              an absolute beating but kept the sump completely protected. Worth every penny.”
+            <blockquote>“Took the KLX 230 off-roading in the hills and dropped it twice on the rocks. The steel skidplate took
+              an absolute beating but kept the engine completely protected. Worth every penny.”
             </blockquote>
-            <p>ROHIT M. <span>— RE HIMALAYAN 450</span></p>
+            <p>ROHIT M. <span>— KAWASAKI KLX 230</span></p>
           </div>
           <div class="review">
             <div class="stars">★★★★★</div>
@@ -370,7 +370,9 @@
           First stage, Behind SBI Bank,<br>
           PEENYA, BANGALORE -560058,<br>
           Karnataka.<br>
-          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;" href="https://www.google.com/maps/dir/?api=1&destination=B/130/A/1,+3RD+Cross,+Peenya+Industrial+Area,+First+stage,+Behind+SBI+Bank,+PEENYA,+BANGALORE+-560058" target="_blank">Get Directions →</a><br>
+          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;"
+            href="https://www.google.com/maps/dir/?api=1&destination=B/130/A/1,+3RD+Cross,+Peenya+Industrial+Area,+First+stage,+Behind+SBI+Bank,+PEENYA,+BANGALORE+-560058"
+            target="_blank">Get Directions →</a><br>
           Mon–Sat · 9:00am–6:30pm
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
@@ -381,7 +383,7 @@
       </div>
     </div>
     <div class="footer-bottom wrap">
-      <span>ESTABLISHED IN 2025</span>
+      <span>BENGALURU, KARNATAKA</span>
       <span>10+ BIKE PLATFORMS</span>
       <span>MADE WITH LOVE FROM BIKERS TO BIKERS ❤️</span>
     </div>
@@ -389,13 +391,15 @@
   <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
     <aside class="drawer">
       <div class="drawer-title">
-          <h2>YOUR GARAGE</h2>
-          <button class="close-cart-btn" onclick="closeCart()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
+        <h2>YOUR GARAGE</h2>
+        <button class="close-cart-btn" onclick="closeCart()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
       <div class="cart-items" id="cart-items"></div>
       <div class="empty" id="cart-empty">Your garage is empty.<br><button onclick="closeCart()">Explore the
           collection</button></div>
@@ -439,8 +443,8 @@
       document.getElementById('cart-items').innerHTML = items.map(p => `<div class="cart-item"><img src="${p.image}" alt=""><div><p>${p.name}</p><small>${p.bike}</small><b>${money(p.price)}</b></div><div class="qty"><button onclick="updateQty('${p.id}',-1)">−</button><span>${p.qty}</span><button onclick="updateQty('${p.id}',1)">+</button></div></div>`).join('');
     }
 
-    function openCart() {  document.getElementById('overlay').classList.add('show'); document.body.style.overflow = 'hidden'; document.documentElement.style.overflow = 'hidden'; renderCart(); }
-    function closeCart() {  document.getElementById('overlay').classList.remove('show'); document.body.style.overflow = ''; document.documentElement.style.overflow = ''; }
+    function openCart() { document.getElementById('overlay').classList.add('show'); document.body.style.overflow = 'hidden'; document.documentElement.style.overflow = 'hidden'; renderCart(); }
+    function closeCart() { document.getElementById('overlay').classList.remove('show'); document.body.style.overflow = ''; document.documentElement.style.overflow = ''; }
 
     function whatsAppOrder() {
       const items = Object.values(cart).map(p => `• ${p.name} (for ${p.bike}) x${p.qty} - ${money(p.price)}`).join('\n');
