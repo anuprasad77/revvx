@@ -714,6 +714,14 @@ h2 i {
   margin-bottom: 20px;
 }
 
+.star-half {
+  background: linear-gradient(90deg, var(--red) 50%, #444 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .review blockquote {
   font: 600 clamp(18px, 2vw, 28px)/1.25 "Barlow Condensed";
   margin: 25px 0 35px;
