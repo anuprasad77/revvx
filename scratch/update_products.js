@@ -1,68 +1,41 @@
+
 const fs = require('fs');
-const filePath = 'c:/Users/anoop/OneDrive/Desktop/revvx/static/products.js';
-let content = fs.readFileSync(filePath, 'utf8');
 
-const insertions = [
-    {
-        id: "aprilia_rs_457_aprilia-rs-457-tuono-457-spools-m6",
-        images: [
-            '"./images/aprilia rs457/spools new (1).PNG"',
-            '"./images/aprilia rs457/spools new (2).PNG"'
-        ]
-    },
-    {
-        id: "aprilia_rs_457_apriliarstuono457-swing-arm-sliders-rear",
-        images: [
-            '"./images/aprilia rs457/swingarm sliders new (1).PNG"',
-            '"./images/aprilia rs457/swingarm sliders new (2).PNG"'
-        ]
-    },
-    {
-        id: "aprilia_tuono_457_aprilia-rs-457-tuono-457-spools-m6",
-        images: [
-            '"./images/tuono 457/spools new (1).PNG"',
-            '"./images/tuono 457/spools new (2).PNG"'
-        ]
-    },
-    {
-        id: "aprilia_tuono_457_apriliarstuono457-swing-arm-sliders-rear",
-        images: [
-            '"./images/tuono 457/swingarm sliders new (1).PNG"',
-            '"./images/tuono 457/swingarm sliders new (2).PNG"'
-        ]
-    },
-    {
-        id: "ktm_enduro_ktm-enduro-frame-sliders",
-        images: [
-            '"./images/enduro r/crash guard (1).PNG"',
-            '"./images/enduro r/crash guard (2).PNG"',
-            '"./images/enduro r/crash guard (3).webp"'
-        ]
-    }
-];
+let content = fs.readFileSync('./static/products.js', 'utf8');
+let START = content.indexOf('let PRODUCTS = [');
+let scriptCode = content.substring(START, content.lastIndexOf('];') + 2);
+scriptCode = scriptCode.replace('let PRODUCTS =', 'global.PRODUCTS =');
+eval(scriptCode); 
 
-for (const insertion of insertions) {
-    const idIndex = content.indexOf("id": " + insertion.id + "");
-    if (idIndex === -1) {
-        console.log("Could not find ID:", insertion.id);
-        continue;
+// Update KTM Adventure
+PRODUCTS.forEach(p => {
+    if (p.bike === 'KTM ADVENTURE 390 / 350 / 250' || p.bike === 'KTM ADVENTURE 390') {
+        let newDesc = p.description;
+        
+        // General patterns for numbers
+        newDesc = newDesc.replace(/KTM ADVENTURE 390 \/ 350 \/ 250/gi, 'KTM Adventure Series');
+        newDesc = newDesc.replace(/KTM ADVENTURE 390\/350\/250/gi, 'KTM Adventure Series');
+        newDesc = newDesc.replace(/KTM Adventure 390, 350, 250/gi, 'KTM Adventure Series');
+        newDesc = newDesc.replace(/KTM ADVENTURE 390/gi, 'KTM Adventure Series');
+        
+        // Tail Tidy with light slot
+        newDesc = newDesc.replace(/KTM Adventure 390 Series/gi, 'KTM Adventure Series');
+        
+        // Fork sliders
+        newDesc = newDesc.replace(/KTM Duke 390\/350\/250/gi, 'KTM Adventure Series');
+        newDesc = newDesc.replace(/KTM Duke 390\/250 Gen 3, Adventure 390\/250 Gen 2, and Enduro R/gi, 'KTM Adventure Series');
+        
+        // Any lingering Enduro R
+        newDesc = newDesc.replace(/Enduro R/gi, '');
+        // Sometimes it leaves weird commas like '... Gen 2, and ' -> if we removed Enduro R it might be 'KTM Adventure Series for seamless...'
+        
+        p.description = newDesc;
     }
-    
-    const galleryIndex = content.indexOf('"gallery": [', idIndex);
-    if (galleryIndex !== -1) {
-        const galleryEndIndex = content.indexOf(']', galleryIndex);
-        
-        let ptr = galleryEndIndex - 1;
-        while(ptr > 0 && /\s/.test(content[ptr])) {
-            ptr--;
-        }
-        
-        const prefix = content[ptr] === ',' ? '' : ',';
-        const strToInsert = prefix + '\n            ' + insertion.images.join(',\n            ') + '\n        ';
-        
-        content = content.substring(0, ptr + 1) + strToInsert + content.substring(galleryEndIndex);
-    }
-}
+});
 
-fs.writeFileSync(filePath, content);
-console.log("Updated products.js");
+let newScript = 'let PRODUCTS = ' + JSON.stringify(PRODUCTS, null, 4) + ';\n\n';
+let footer = content.substring(content.lastIndexOf('];') + 2);
+
+fs.writeFileSync('./static/products.js', newScript + footer.trim() + '\n', 'utf8');
+console.log('Updated products.js');
+
