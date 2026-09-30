@@ -622,7 +622,7 @@
           First stage, Behind SBI Bank,<br>
           PEENYA, BANGALORE -560058,<br>
           Karnataka.<br>
-          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;" href="https://www.google.com/maps/dir/?api=1&destination=B/130/A/1,+3RD+Cross,+Peenya+Industrial+Area,+First+stage,+Behind+SBI+Bank,+PEENYA,+BANGALORE+-560058" target="_blank">Get Directions →</a><br>
+          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;" href="https://www.google.com/maps/dir/?api=1&destination=13.034000,77.522861" target="_blank">Get Directions →</a><br>
           Mon–Sat · 9:00am–6:30pm
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
@@ -748,7 +748,9 @@
         thumbContainer.innerHTML = '';
       }
 
-      document.getElementById('pd-bike').textContent = `FITMENT: ${currentProduct.bike}`;
+      const passedBike = urlParams.get('bike');
+      const displayBike = passedBike ? decodeURIComponent(passedBike) : currentProduct.bike;
+      document.getElementById('pd-bike').textContent = `FITMENT: ${displayBike}`;
       document.getElementById('pd-name').textContent = currentProduct.name;
       document.getElementById('pd-price').textContent = money(currentProduct.price);
 

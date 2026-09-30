@@ -693,7 +693,7 @@
           First stage, Behind SBI Bank,<br>
           PEENYA, BANGALORE -560058,<br>
           Karnataka.<br>
-          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;" href="https://www.google.com/maps/dir/?api=1&destination=B/130/A/1,+3RD+Cross,+Peenya+Industrial+Area,+First+stage,+Behind+SBI+Bank,+PEENYA,+BANGALORE+-560058" target="_blank">Get Directions →</a><br>
+          <a class="red-link" style="display:inline-block; margin-top:2px; margin-bottom:8px;" href="https://www.google.com/maps/dir/?api=1&destination=13.034000,77.522861" target="_blank">Get Directions →</a><br>
           Mon–Sat · 9:00am–6:30pm
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
@@ -965,13 +965,14 @@
           }
         }
 
+        const currentBikeName = document.getElementById('bike-name') ? document.getElementById('bike-name').textContent.trim() : (selectedBikeSearch || '');
         const isComingSoon = product.tag && product.tag.toLowerCase() === 'coming soon';
         const photoCursor = isComingSoon ? 'default' : 'pointer';
         const photoHover = isComingSoon ? '' : `onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'"`;
-        const photoClick = isComingSoon ? '' : `onclick="window.location.href='product.html?id=${product.id}'"`;
+        const photoClick = isComingSoon ? '' : `onclick="window.location.href='product.html?id=${product.id}&bike=${encodeURIComponent(currentBikeName)}'"`;
         const titleCursor = isComingSoon ? 'default' : 'pointer';
         const titleHover = isComingSoon ? '' : `onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='white'"`;
-        const titleClick = isComingSoon ? '' : `onclick="window.location.href='product.html?id=${product.id}'"`;
+        const titleClick = isComingSoon ? '' : `onclick="window.location.href='product.html?id=${product.id}&bike=${encodeURIComponent(currentBikeName)}'"`;
 
         return `
         <article class="product" data-category="${product.category}" data-search="${product.name} ${product.bike}">
