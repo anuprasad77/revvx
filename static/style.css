@@ -1088,18 +1088,24 @@ footer {
     aspect-ratio: 1376 / 768;
     background-size: 100% 100%;
     background-position: center;
-    margin-bottom: -100;
+    margin-bottom: 0;
+    animation: none;
   }
 
   .hero-shade {
     height: auto;
     aspect-ratio: 1376 / 768;
     bottom: auto;
+    background: 
+      linear-gradient(0deg, #0a0a0a 0%, rgba(10,10,10, 0.8) 15%, transparent 40%),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.6), transparent 60%);
+    transform: scaleY(1.02);
+    transform-origin: top;
   }
 
   .hero-content {
     margin-left: 20px;
-    padding-top: 0;
+    padding-top: 24px;
   }
 
   .hero h1 {
