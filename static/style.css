@@ -284,7 +284,7 @@ h2 i {
   align-items: center;
   gap: 11px;
   color: #d1d1d1;
-  font: 500 10px "DM Mono";
+  font: 500 16px Manrope, Arial, sans-serif;
   letter-spacing: 0.05em;
 }
 
@@ -518,6 +518,7 @@ h2 i {
   background: #151515;
   display: grid;
   grid-template-columns: 0.90fr 1fr;
+  padding-left: 8vw;
 }
 
 .fitment-img {
@@ -529,7 +530,7 @@ h2 i {
 }
 
 .fitment-content {
-  padding: 60px 5vw 50px 50px;
+  padding: 60px 5vw 50px 8vw;
   background: #141414;
 }
 
@@ -1077,13 +1078,11 @@ footer {
     position: relative;
     width: 100%;
     height: 60vw;
-    background-size: 100% auto;
-    background-position: top;
     margin-bottom: 20px;
   }
 
   .hero-shade {
-    height: 80vw;
+    height: 60vw;
     bottom: auto;
   }
 
@@ -1196,6 +1195,7 @@ footer {
 
   .fitment {
     grid-template-columns: 1fr;
+    padding-left: 0;
   }
 
   .fitment-img {
