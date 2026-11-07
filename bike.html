@@ -1017,7 +1017,9 @@
     function saveCart() { localStorage.setItem('revvx_cart', JSON.stringify(cart)); }
 
     function addProduct(product) {
-      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...product, qty: 1 };
+      const bike = product.bike || selectedBikeSearch || '';
+      const prodToAdd = { ...product, bike: bike || product.bike };
+      cart[product.id] ? cart[product.id].qty++ : cart[product.id] = { ...prodToAdd, qty: 1 };
       saveCart();
       renderCart();
       renderProductsList();
@@ -1043,11 +1045,13 @@
     function closeCart() {  document.getElementById('overlay').classList.remove('show'); document.body.style.overflow = ''; document.documentElement.style.overflow = ''; }
 
     function whatsAppOrder() {
-      const bikeName = selectedBikeSearch ? selectedBikeSearch : 'my motorcycle';
-      const items = Object.values(cart).map(p => `• ${p.name} x${p.qty} - ${money(p.price)}`).join('\n');
+      const items = Object.values(cart).map(p => {
+        const bikeInfo = p.bike ? ` (for ${p.bike})` : (selectedBikeSearch ? ` (for ${selectedBikeSearch})` : '');
+        return `• ${p.name}${bikeInfo} x${p.qty} - ${money(p.price)}`;
+      }).join('\n');
       const totalAmount = Object.values(cart).reduce((sum, p) => sum + (p.price * p.qty), 0);
 
-      const message = `Hello REVVX,\n\nI would like to order the following accessories for my ${bikeName}:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
+      const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
 
       window.open(`https://wa.me/916362777677?text=${encodeURIComponent(message)}`, '_blank');
     }

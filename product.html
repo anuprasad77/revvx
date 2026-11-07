@@ -875,6 +875,7 @@
 
       const passedBike = urlParams.get('bike');
       const displayBike = passedBike ? decodeURIComponent(passedBike) : currentProduct.bike;
+      if (displayBike) currentProduct.bike = displayBike;
       document.getElementById('pd-product-label').textContent = `PRODUCT: ${currentProduct.name}`;
       document.getElementById('pd-bike').textContent = `FITMENT: ${displayBike}`;
       document.getElementById('pd-name').textContent = currentProduct.name;
@@ -1120,7 +1121,10 @@
     function closeCart() {  document.getElementById('overlay').classList.remove('show'); document.body.style.overflow = ''; document.documentElement.style.overflow = ''; }
 
     function whatsAppOrder() {
-      const items = Object.values(cart).map(p => `• ${p.name} x${p.qty} - ${money(p.price)}`).join('\n');
+      const items = Object.values(cart).map(p => {
+        const bikeInfo = p.bike ? ` (for ${p.bike})` : '';
+        return `• ${p.name}${bikeInfo} x${p.qty} - ${money(p.price)}`;
+      }).join('\n');
       const totalAmount = Object.values(cart).reduce((sum, p) => sum + (p.price * p.qty), 0);
 
       const message = `Hello REVVX,\n\nI would like to order the following accessories:\n\n${items}\n\n*Total:* ${money(totalAmount)}\n\nPlease share availability and fitment details.`;
