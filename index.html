@@ -20,13 +20,72 @@
   <div id="loader" class="loader-overlay"
     style="background: #08090a; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif;">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=JetBrains+Mono:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+      .cracker-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
 
       .loader-stage {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 18px;
+        gap: 16px;
+      }
+
+      /* Festive HAPPY DEEPAWALI on Top */
+      .loader-festive {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        opacity: 0;
+        transform: scale(0.65) translateY(12px);
+        transition: opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        margin-bottom: 2px;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .loader-festive.show {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      .loader-festive-badge {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        background: linear-gradient(135deg, #FFFFFF 0%, #FFF3C4 20%, #FFD166 45%, #FF9F1C 75%, #E2231A 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 16px rgba(255, 183, 3, 0.85));
+        animation: festiveShimmer 2.5s infinite alternate ease-in-out;
+      }
+
+      .loader-festive-spark {
+        font-size: 16px;
+        color: #ffd166;
+        animation: sparkPulse 1.2s infinite alternate ease-in-out;
+      }
+
+      @keyframes festiveShimmer {
+        0% { filter: drop-shadow(0 0 12px rgba(255, 183, 3, 0.7)); }
+        100% { filter: drop-shadow(0 0 24px rgba(255, 209, 102, 1)); }
+      }
+
+      @keyframes sparkPulse {
+        0% { transform: scale(0.85) rotate(0deg); opacity: 0.7; }
+        100% { transform: scale(1.25) rotate(20deg); opacity: 1; filter: drop-shadow(0 0 8px #ffb703); }
       }
 
       .loader-headline {
@@ -62,6 +121,7 @@
         height: 2px;
         background: #2a2c2e;
         position: relative;
+        border-radius: 2px;
       }
 
       .loader-bar-fill {
@@ -70,7 +130,9 @@
         top: 0;
         height: 100%;
         width: 0%;
-        background: #e2231a;
+        background: linear-gradient(90deg, #e2231a 0%, #ff9f1c 60%, #ffd166 100%);
+        box-shadow: 0 0 8px rgba(226, 35, 26, 0.8);
+        border-radius: 2px;
       }
 
       .loader-pct {
@@ -84,20 +146,47 @@
         color: #f5f5f5;
       }
 
+      @media (max-width: 480px) {
+        .loader-festive-badge {
+          font-size: 16px;
+          letter-spacing: 3px;
+        }
+        .loader-headline {
+          font-size: 38px;
+          letter-spacing: 1.5px;
+        }
+        .loader-bar {
+          width: 280px;
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * {
           transition: none !important;
         }
       }
     </style>
+
+    <canvas id="crackerCanvas" class="cracker-canvas"></canvas>
+
     <div class="loader-stage">
+      <!-- Festive Happy Deepawali shown on top after cracker burst -->
+      <div class="loader-festive" id="deepawaliText">
+        <span class="loader-festive-spark">✨</span>
+        <span class="loader-festive-badge">HAPPY DEEPAWALI</span>
+        <span class="loader-festive-spark">✨</span>
+      </div>
+
+      <!-- Classic Ride Fearless -->
       <div class="loader-headline">
         <span class="base">Ride Fearless</span>
         <span class="reveal" id="reveal"><span class="ride">Ride </span><span class="fearless">Fearless</span></span>
       </div>
+
       <div class="loader-bar">
         <div class="loader-bar-fill" id="barFill"></div>
       </div>
+
       <div class="loader-pct"><b id="pctText">0%</b></div>
     </div>
   </div>
@@ -107,7 +196,157 @@
       const barFill = document.getElementById('barFill');
       const pctText = document.getElementById('pctText');
       const loader = document.getElementById('loader');
+      const deepawaliText = document.getElementById('deepawaliText');
 
+      // Cracker Canvas setup
+      const canvas = document.getElementById('crackerCanvas');
+      const ctx = canvas.getContext('2d');
+      let cw = (canvas.width = window.innerWidth);
+      let ch = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        cw = canvas.width = window.innerWidth;
+        ch = canvas.height = window.innerHeight;
+      });
+
+      const colors = ['#FFD166', '#FFB703', '#FF5400', '#E2231A', '#FFFFFF', '#FFF0AA'];
+      let rockets = [];
+      let particles = [];
+      let firstBurstDone = false;
+
+      class Rocket {
+        constructor(startX, startY, targetX, targetY) {
+          this.x = startX;
+          this.y = startY;
+          this.targetX = targetX;
+          this.targetY = targetY;
+          this.speed = 11 + Math.random() * 4;
+          this.angle = Math.atan2(targetY - startY, targetX - startX);
+          this.trail = [];
+          this.dead = false;
+        }
+        update() {
+          this.trail.push({ x: this.x, y: this.y });
+          if (this.trail.length > 5) this.trail.shift();
+
+          const dist = Math.hypot(this.targetX - this.x, this.targetY - this.y);
+          if (dist < this.speed || this.y <= this.targetY) {
+            this.dead = true;
+            createBurst(this.targetX, this.targetY);
+          } else {
+            this.x += Math.cos(this.angle) * this.speed;
+            this.y += Math.sin(this.angle) * this.speed;
+          }
+        }
+        draw() {
+          for (let i = 0; i < this.trail.length; i++) {
+            const p = this.trail[i];
+            ctx.fillStyle = `rgba(255, 209, 102, ${(i + 1) / this.trail.length})`;
+            ctx.fillRect(p.x - 1, p.y - 1, 2, 2);
+          }
+          ctx.fillStyle = '#FFF';
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      class Particle {
+        constructor(x, y, color) {
+          this.x = x;
+          this.y = y;
+          this.color = color;
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 6.5 + 1.5;
+          this.vx = Math.cos(angle) * speed;
+          this.vy = Math.sin(angle) * speed;
+          this.alpha = 1;
+          this.decay = Math.random() * 0.02 + 0.015;
+          this.gravity = 0.08;
+          this.size = Math.random() * 2.5 + 1.2;
+        }
+        update() {
+          this.vx *= 0.96;
+          this.vy *= 0.96;
+          this.vy += this.gravity;
+          this.x += this.vx;
+          this.y += this.vy;
+          this.alpha -= this.decay;
+        }
+        draw() {
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, this.alpha);
+          ctx.fillStyle = this.color;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = this.color;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      function createBurst(x, y) {
+        if (!firstBurstDone) {
+          firstBurstDone = true;
+          if (deepawaliText) deepawaliText.classList.add('show');
+        }
+        const count = 50 + Math.floor(Math.random() * 25);
+        for (let i = 0; i < count; i++) {
+          const col = colors[Math.floor(Math.random() * colors.length)];
+          particles.push(new Particle(x, y, col));
+        }
+      }
+
+      let animId;
+      function loop() {
+        ctx.clearRect(0, 0, cw, ch);
+
+        for (let i = rockets.length - 1; i >= 0; i--) {
+          rockets[i].update();
+          rockets[i].draw();
+          if (rockets[i].dead) rockets.splice(i, 1);
+        }
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].update();
+          particles[i].draw();
+          if (particles[i].alpha <= 0) particles.splice(i, 1);
+        }
+
+        animId = requestAnimationFrame(loop);
+      }
+      loop();
+
+      // Launch cracker sequence
+      function launchInitialCrackers() {
+        const stage = document.querySelector('.loader-stage');
+        const rect = stage ? stage.getBoundingClientRect() : { left: cw / 2, top: ch / 2 };
+        const centerX = rect.left + (rect.width ? rect.width / 2 : 0);
+        const topY = rect.top - 40;
+
+        // Rocket 1 (Center-top burst above headline, triggers HAPPY DEEPAWALI)
+        rockets.push(new Rocket(centerX - 30, ch, centerX, Math.max(80, topY)));
+
+        // Rocket 2 (Left burst)
+        setTimeout(() => {
+          rockets.push(new Rocket(centerX - 120, ch, centerX - 140, Math.max(100, topY + 20)));
+        }, 220);
+
+        // Rocket 3 (Right burst)
+        setTimeout(() => {
+          rockets.push(new Rocket(centerX + 120, ch, centerX + 140, Math.max(90, topY + 10)));
+        }, 440);
+
+        // Additional celebratory sparkles
+        setTimeout(() => {
+          rockets.push(new Rocket(centerX - 20, ch, centerX + 60, Math.max(70, topY - 30)));
+        }, 1000);
+      }
+
+      setTimeout(launchInitialCrackers, 250);
+
+      // Loading Progress logic
       function setProgress(pct) {
         pct = Math.max(0, Math.min(100, pct));
         reveal.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
@@ -121,20 +360,23 @@
       window.addEventListener('load', () => { loaded = true; });
 
       function tick() {
-        progress += Math.random() * (loaded ? 25 : 8);
+        progress += Math.random() * (loaded ? 22 : 7);
         if (!loaded && progress > 92) progress = 92;
         progress = Math.min(100, progress);
         setProgress(progress);
 
         if (progress < 100) {
-          setTimeout(tick, 60 + Math.random() * 80);
+          setTimeout(tick, 60 + Math.random() * 70);
         } else {
           setTimeout(() => {
             if (loader) {
               loader.classList.add('hidden');
-              setTimeout(() => loader.style.display = 'none', 800);
+              setTimeout(() => {
+                loader.style.display = 'none';
+                cancelAnimationFrame(animId);
+              }, 800);
             }
-          }, 400);
+          }, 600);
         }
       }
       setTimeout(tick, 50);
